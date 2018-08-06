@@ -1,0 +1,38 @@
+fn build
+fn bump
+fn config
+fn create
+fn create app
+fn create context
+fn create function
+fn create route
+fn create trigger
+fn deploy
+fn get
+fn get call
+fn get config
+fn help
+fn init
+fn inspect
+fn list
+fn list apps
+fn list calls
+fn list config
+fn list contexts
+fn list routes
+fn list triggers
+fn push
+fn run
+fn start
+fn stop
+fn test
+fn unset
+fn update
+fn update app
+fn update context
+fn update function
+fn update route
+fn update server
+fn update trigger
+fn use
+fn version
