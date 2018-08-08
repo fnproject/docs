@@ -1,0 +1,31 @@
+## <img src="https://fnproject.io/images/fn-300x125.png" alt="Fn Project Logo" height="21" width="50"> Documentation for Developers
+
+## For Developers
+
+If you are a developer using Fn through the API, this section is for you.
+
+### Getting Started
+
+* [Quickstart](https://github.com/fnproject/fn#quickstart)
+* [Applications - groups of functions](apps.md)
+* [Async functions](async.md)
+* [Config Vars for Functions](configs.md)
+* [FAQ](faq.md)
+* [Function file (func.yaml)](func-file.md)
+* [FDKs](fdks.md)
+* [Hot functions](hot-functions.md)
+* [Testing functions](testing.md)
+* [Triggers](triggers.md)
+
+### Examples and Tutorials
+
+* [Examples](../examples)
+* [Tutorials](https://github.com/fnproject/tutorials)
+
+### Advanced
+
+* [API Reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger.yml)
+* [API Clients](clients.md)
+* [CLI Source](https://github.com/fnproject/cli/)
+* [Open Function Format](function-format.md)
+* [Packaging functions](packaging.md)
