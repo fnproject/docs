@@ -6,7 +6,7 @@ features of the `fn` Java FDK:
 * Plain java code support (`string-reverse`)
 * Functional testing of your functions (`regex-query` and `qr-code`)
 * Built-in JSON coercion (`regex-query`)
-* [InputEvent and OutputEvent](/docs/DataBinding.md) handling (`qr-code`)
+* [InputEvent and OutputEvent](../../fdks/fdk-java/DataBinding.md) handling (`qr-code`)
 
 ## 1. [String reverse](https://github.com/fnproject/fdk-java/tree/master/examples/string-reverse)
 
