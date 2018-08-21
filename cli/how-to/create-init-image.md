@@ -57,7 +57,7 @@ OLLEH
 
 ### Creating the init-image
 
-Firstly we need to create `func.init.yaml`.  It'll be the same as the existing `func.yaml` but without `name` and `version` (these are provided by the CLI when the init-image is used.
+Firstly we need to create `func.init.yaml`.  It'll be the same as the existing `func.yaml` but without `name` and `version` (these are provided by the CLI when the init-image is used).
 
 ```
 $ cat func.init.yaml
