@@ -9,7 +9,7 @@ templating.
 
 The requirements for an init-image are:
 
-  - it will be run with `docker run init_image_name`
+  - it will be run with `docker run -e FN_FUNCTION_NAME=<function_name> init_image_name`
   - the output will be treated as a [tarball](https://en.wikipedia.org/wiki/Tar_(computing))
   - the files in the tarball should form a valid function which can be run using `fn run`, with the exception of `func.yaml`
   - the output _should not_ contain a `func.yaml` file
