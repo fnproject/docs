@@ -118,4 +118,4 @@ Building image new:0.0.1
 ETAM SEY
 ```
 
-You can `docker push` this image to a registry to share it with others, and it should be clear how to create more complex init-images too. Remember that you are not limited to `COPY` for adding a tarball, you could create it on the fly within the image if you wanted to do some deeper customization.
+You can `docker push` this image to a registry to share it with others, and it should be clear how to create more complex init-images too. Remember that you are not limited to `COPY` for adding a tarball, you could create it on the fly within the init-image if you wanted to do some deeper customization.
