@@ -41,5 +41,11 @@
 [fn use](ref/fn-use.md)  
 [fn version](ref/fn-version.md)  
 
+<sub>version: 0.4.149</sub>
+
 ### [Fn CLI How-to Guides](how-to/README.md)
+
+#### Deploy Apps with Fn
 * [Manage an Fn Server](how-to/manage-server.md)
+* [Create and Run Functions with Fn](how-to/create-run-fn.md)
+* [Create an init-image for Fn](how-to/create-init-image.md)
