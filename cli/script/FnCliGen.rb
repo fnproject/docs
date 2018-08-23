@@ -14,6 +14,7 @@ class FnCliGen
         @cmdListFile = aCmdListFile # Get command list
         @cmdListArr = Array.new # Array of commands from file
         @fileNameArr = Array.new  # Array of output filenames
+        @fnVersion = getFnVersion
 
         # @fileOutArr == Temp output array
         @cmdListArr = IO.readlines(File.expand_path(@cmdListFile))
@@ -21,6 +22,16 @@ class FnCliGen
         @fileNameArr = Marshal.load(Marshal.dump(@cmdListArr))
 
     end
+
+    def getFnVersion
+        # Get Current Fn Version
+        tempArr = []
+        tempArr.push(`fn version`)
+        tempOutStr = tempArr[0].match(/.*(version.*)/)[1]
+        return tempOutStr
+    end
+
+
 
     # createFileNameArr
     # Creates an array of file names replacing space with dash.
@@ -95,6 +106,10 @@ class FnCliGen
             fileOutArr.push "[" + command + "](ref/" + @fileNameArr[x] + ".md" + ")  \n"
             x = x + 1  # Counter for syncing arrays
         end
+        
+        # Add Fn Version
+        fileOutArr.push("\n<sub>" + @fnVersion + "</sub>")
+
 
         # Write REFLIST.md file to disk
         puts "Writing: " + "REFLIST" + ".md"
@@ -103,7 +118,6 @@ class FnCliGen
         end
 
     end
-
 
     def main
         createFileNameArr()
