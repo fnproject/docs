@@ -4,6 +4,7 @@
 
 [fn build](ref/fn-build.md)  
 [fn bump](ref/fn-bump.md)  
+[fn call](ref/fn-call.md)  
 [fn config](ref/fn-config.md)  
 [fn create](ref/fn-create.md)  
 [fn create app](ref/fn-create-app.md)  
@@ -11,6 +12,7 @@
 [fn create function](ref/fn-create-function.md)  
 [fn create route](ref/fn-create-route.md)  
 [fn create trigger](ref/fn-create-trigger.md)  
+[fn delete](ref/fn-delete.md)  
 [fn deploy](ref/fn-deploy.md)  
 [fn get](ref/fn-get.md)  
 [fn get call](ref/fn-get-call.md)  
@@ -26,6 +28,7 @@
 [fn list contexts](ref/fn-list-contexts.md)  
 [fn list routes](ref/fn-list-routes.md)  
 [fn list triggers](ref/fn-list-triggers.md)  
+[fn migrate](ref/fn-migrate.md)  
 [fn push](ref/fn-push.md)  
 [fn run](ref/fn-run.md)  
 [fn start](ref/fn-start.md)  
