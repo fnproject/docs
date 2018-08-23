@@ -1,8 +1,11 @@
 ## <img src="https://fnproject.io/images/fn-300x125.png" alt="Fn Project Logo" height="21" width="50"> CLI Guide
 
-#### Table of Contents
-[Fn Command Reference](#fn-command-reference)  
-[Fn CLI How-to Guides](#fn-cli-how-to-guides)
+##### Table of Contents
+
+<sub>
+<a href="#fn-command-reference">Fn Command Reference</a><br>  
+<a href="#fn-cli-how-to-guides">Fn CLI How-to Guides</a>
+</sub>
 
 ### Fn Command Reference
 
