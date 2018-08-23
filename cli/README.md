@@ -18,6 +18,7 @@
 [fn help](ref/fn-help.md)  
 [fn init](ref/fn-init.md)  
 [fn inspect](ref/fn-inspect.md)  
+[fn invoke](ref/fn-invoke.md)  
 [fn list](ref/fn-list.md)  
 [fn list apps](ref/fn-list-apps.md)  
 [fn list calls](ref/fn-list-calls.md)  
@@ -41,7 +42,7 @@
 [fn use](ref/fn-use.md)  
 [fn version](ref/fn-version.md)  
 
-<sub>version: 0.4.149</sub>
+<sub>version: 0.4.150</sub>
 
 ### [Fn CLI How-to Guides](how-to/README.md)
 

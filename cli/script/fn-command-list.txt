@@ -14,6 +14,7 @@ fn get config
 fn help
 fn init
 fn inspect
+fn invoke
 fn list
 fn list apps
 fn list calls
