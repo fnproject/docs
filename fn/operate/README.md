@@ -7,7 +7,7 @@ If you are operating Fn, this section is for you.
 ### Getting Started
 
 * [Running in Production](production.md)
-* [Database for use with Fn](databases/README.md)
+* [Databases for running Fn](databases/README.md)
 * [Logging](logging.md)
 * [Message Queues](message-queues.md)
 * [Metrics](metrics.md)
