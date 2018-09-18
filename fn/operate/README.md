@@ -7,12 +7,16 @@ If you are operating Fn, this section is for you.
 ### Getting Started
 
 * [Running in Production](production.md)
+* [Database for use with Fn](databases/README.md)
 * [Logging](logging.md)
 * [Message Queues](message-queues.md)
 * [Metrics](metrics.md)
 * [Operating on Windows](windows.md)
 * [Private Registries](private_registries.md)
+* [Running an LB Pool of Runners](runner_pools.md)
+* [Running on SELinux Systems](selinux.md)
 * [Runtime Options](options.md)
+* [Testing Locally](local-testing.md)
 * [User Interface](ui.md)
 
 ### Advanced
