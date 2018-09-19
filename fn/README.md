@@ -22,7 +22,7 @@ If you are a developer using Fn through the API, this section is for you.
 ### Examples and Tutorials
 
 * [Examples](examples)
-* [Tutorials](https://github.com/fnproject/tutorials)
+* [Tutorials](https://fnproject.io/tutorials)
 
 ### Advanced
 
@@ -63,5 +63,5 @@ If you are operating Fn, this section is for you.
 
 If you are working on the Fn Project, want to work on it or are creating extensions, this section is for you.
 
-* [Writing Extensions](https://github.com/fnproject/fn/blob/master/docs/contributors/extensions.md)
-* [Using Annotations](https://github.com/fnproject/fn/blob/master/docs/contributors/annotations.md)
+* [Writing Extensions](develop/extensions.md)
+* [Using Annotations](develop/annotations.md)
