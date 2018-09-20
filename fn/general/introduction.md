@@ -21,7 +21,7 @@ The Fn serverless platform provides an open source implementation of these ideas
 
 ![Fn Architecture Diagram](images/fn-architecture.png)
 
-A load balancer provides a front end to several Fn servers. Each server manages and executes function code as needed. Servers can be scaled up or done as needed.
+A load balancer provides a front end to several Fn servers. Each server manages and executes function code as needed. Servers can be scaled up or down as needed.
 
  With Fn, each function is a [Docker](https://www.docker.com) container. Containers are lightweight and can be customized to include just the tools and languages you need to execute your function. Thus, containers are an ideal option for running function code.
 
@@ -30,18 +30,18 @@ A load balancer provides a front end to several Fn servers. Each server manages 
 
  * Gets input via STDIN
  * Produces output to STDOUT
- * Logs any errors to STERR
+ * Logs any errors to STDERR
 
-You code is deployed to an Fn server where it is staged and ready to go when a call is made for that function. For example, to create deploy an Fn function create a `myfunc` directory, change into it, and execute these commands:
+You code is deployed to an Fn server where it is staged and ready to go when a call is made for that function. For example, to create and deploy an Fn function, create a `myfunc` directory, change into it, and execute these commands:
 
 * `fn init --runtime node`
     * Creates a boilerplate Node.js app in the current directory.
 * `fn run`
     * Runs the function locally to test the output.
 * `fn deploy --app nodeapp`
-    * Deploys your app to the Fn server. The function is now a part of the app "nodeapp" and the function name is picked up from your directory name. In this case "myfunc". Now your function is up and running.
+    * Deploys your app to the Fn server. The function is now a part of the app "nodeapp" and the function name is picked up from your directory name. In this case "myfunc". Now your function is deployed and ready to be invoked.
 * `fn call nodeapp myfunc`
-    * Call the function stored on the Fn server.
+    * Call the function deployed on the Fn server.
 * `curl http://localhost:8080/r/nodeapp/myfunc`
     * Make the same call, but this time to an URL and curl.
 
