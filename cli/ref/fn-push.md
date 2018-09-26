@@ -1,6 +1,6 @@
 # `fn push`
 
-```yaml
+```c
 $ fn push
 
 DEVELOPMENT COMMANDS

@@ -1,6 +1,6 @@
 # `fn update trigger`
 
-```yaml
+```c
 $ fn update trigger
 
 MANAGEMENT COMMAND

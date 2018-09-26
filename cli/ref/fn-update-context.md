@@ -1,6 +1,6 @@
 # `fn update context`
 
-```yaml
+```c
 $ fn update context
 
 MANAGEMENT COMMAND

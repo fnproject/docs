@@ -1,6 +1,6 @@
 # `fn list`
 
-```yaml
+```c
 $ fn list
 
 MANAGEMENT COMMAND
@@ -10,15 +10,14 @@ USAGE
   fn [global options] list [command options] <subcommand>
     
 DESCRIPTION
-  This command returns a list of created objects ('app', 'call', 'context', 'function', 'route' or 'trigger') or configurations.
+  This command returns a list of created objects ('app', 'call', 'context', 'function' or 'trigger') or configurations.
     
 SUBCOMMANDS
   apps, app, a                 List all created applications
-  calls, call, cl              List all calls for the specific app (route is optional)
-  config, config, cf           Manage configurations for apps and routes
+  calls, call, cl              List all calls for a specific function
+  config, config, cf           Manage configurations for apps and functions
   contexts, context, ctx       List contexts
   functions, funcs, f, fn      List functions for an application
-  routes, route, r             list routes for an application
   triggers, trigs, t, tr       List all triggers
   help, h                      Shows a list of commands or help for one command
                            

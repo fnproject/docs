@@ -1,6 +1,6 @@
 # `fn create context`
 
-```yaml
+```c
 $ fn create context
 
 MANAGEMENT COMMAND

@@ -11,13 +11,11 @@
 
 [fn build](ref/fn-build.md)  
 [fn bump](ref/fn-bump.md)  
-[fn call](ref/fn-call.md)  
 [fn config](ref/fn-config.md)  
 [fn create](ref/fn-create.md)  
 [fn create app](ref/fn-create-app.md)  
 [fn create context](ref/fn-create-context.md)  
 [fn create function](ref/fn-create-function.md)  
-[fn create route](ref/fn-create-route.md)  
 [fn create trigger](ref/fn-create-trigger.md)  
 [fn delete](ref/fn-delete.md)  
 [fn deploy](ref/fn-deploy.md)  
@@ -33,7 +31,6 @@
 [fn list calls](ref/fn-list-calls.md)  
 [fn list config](ref/fn-list-config.md)  
 [fn list contexts](ref/fn-list-contexts.md)  
-[fn list routes](ref/fn-list-routes.md)  
 [fn list triggers](ref/fn-list-triggers.md)  
 [fn migrate](ref/fn-migrate.md)  
 [fn push](ref/fn-push.md)  
@@ -46,13 +43,12 @@
 [fn update app](ref/fn-update-app.md)  
 [fn update context](ref/fn-update-context.md)  
 [fn update function](ref/fn-update-function.md)  
-[fn update route](ref/fn-update-route.md)  
 [fn update server](ref/fn-update-server.md)  
 [fn update trigger](ref/fn-update-trigger.md)  
 [fn use](ref/fn-use.md)  
 [fn version](ref/fn-version.md)  
 
-<sub>version: 0.4.150</sub>
+<sub>version: 0.5.6</sub>
 
 ### [Fn CLI How-to Guides](how-to/README.md)
 

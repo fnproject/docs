@@ -1,6 +1,6 @@
 # `fn create app`
 
-```yaml
+```c
 $ fn create app
 
 MANAGEMENT COMMAND

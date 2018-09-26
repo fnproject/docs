@@ -1,6 +1,6 @@
 # `fn stop`
 
-```yaml
+```c
 $ fn stop
 
 SERVER COMMANDS

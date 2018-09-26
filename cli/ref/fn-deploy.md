@@ -1,10 +1,10 @@
 # `fn deploy`
 
-```yaml
+```c
 $ fn deploy
 
 DEVELOPMENT COMMANDS
-  fn deploy -   Deploys a function to the functions server (bumps, build, pushes and updates route).
+  fn deploy -   Deploys a function to the functions server (bumps, build, pushes and updates functions and/or triggers).
                 
 USAGE
   fn [global options] deploy [command options] [function-subdirectory] 

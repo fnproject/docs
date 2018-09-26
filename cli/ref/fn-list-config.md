@@ -1,21 +1,20 @@
 # `fn list config`
 
-```yaml
+```c
 $ fn list config
 
 MANAGEMENT COMMAND
-  fn list config - Manage configurations for apps and routes
+  fn list config - Manage configurations for apps and functions
     
 USAGE
   fn [global options] list config [command options] <subcommand>
     
 DESCRIPTION
-  This command unsets the configuration of created objects ('app', 'function' or 'route').
+  This command unsets the configuration of created objects ('app' or 'function').
     
 SUBCOMMANDS
   app, apps, a               List configuration key/value pairs for this application
   function, func, f, fn      List configuration key/value pairs for this function
-  route, routes, r           List configuration key/value pairs for this route
   help, h                    Shows a list of commands or help for one command
                          
 COMMAND OPTIONS
