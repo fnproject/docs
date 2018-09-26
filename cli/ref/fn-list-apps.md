@@ -1,6 +1,6 @@
 # `fn list apps`
 
-```yaml
+```c
 $ fn list apps
 
 MANAGEMENT COMMAND
@@ -15,6 +15,7 @@ DESCRIPTION
 COMMAND OPTIONS
   --cursor value  Pagination cursor
   -n value        Number of apps to return (default: 100)
+  --output value  Output format (json)
   
 ```
 

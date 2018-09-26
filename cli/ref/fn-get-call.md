@@ -1,6 +1,6 @@
 # `fn get call`
 
-```yaml
+```c
 $ fn get call
 
 MANAGEMENT COMMAND

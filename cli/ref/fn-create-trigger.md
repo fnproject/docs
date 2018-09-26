@@ -1,6 +1,6 @@
 # `fn create trigger`
 
-```yaml
+```c
 $ fn create trigger
 
 MANAGEMENT COMMAND

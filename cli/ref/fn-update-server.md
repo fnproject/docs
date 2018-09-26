@@ -1,6 +1,6 @@
 # `fn update server`
 
-```yaml
+```c
 $ fn update server
 
 MANAGEMENT COMMAND

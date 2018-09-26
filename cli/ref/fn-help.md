@@ -1,6 +1,6 @@
 # `fn help`
 
-```yaml
+```c
 $ fn help
 
 

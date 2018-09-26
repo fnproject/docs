@@ -1,6 +1,6 @@
 # `fn build`
 
-```yaml
+```c
 $ fn build
 
 DEVELOPMENT COMMANDS

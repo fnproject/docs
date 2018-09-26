@@ -1,6 +1,6 @@
 # `fn migrate`
 
-```yaml
+```c
 $ fn migrate
 
 DEVELOPMENT COMMANDS

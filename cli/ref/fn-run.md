@@ -1,6 +1,6 @@
 # `fn run`
 
-```yaml
+```c
 $ fn run
 
 DEVELOPMENT COMMANDS

@@ -1,6 +1,6 @@
 # `fn get`
 
-```yaml
+```c
 $ fn get
 
 MANAGEMENT COMMAND
@@ -10,11 +10,11 @@ USAGE
   fn [global options] get [command options] <subcommand>
     
 DESCRIPTION
-  This commands gets a 'call', 'configuaration' or 'log' to retrieve information for an object ('app', 'route' or 'function').
+  This command gets a 'call', 'configuration' or 'log' to retrieve information for an object ('app' or 'function').
     
 SUBCOMMANDS
   call, calls, cl         Get function call info per app
-  config, config, cf      Manage configurations for apps and routes
+  config, config, cf      Manage configurations for apps and functions
   logs, log, lg           Get logs for a call, providing call_id or last (l)
   help, h                 Shows a list of commands or help for one command
                       

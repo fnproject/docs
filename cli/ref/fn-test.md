@@ -1,6 +1,6 @@
 # `fn test`
 
-```yaml
+```c
 $ fn test
 
 DEVELOPMENT COMMANDS
