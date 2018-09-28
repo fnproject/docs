@@ -14,6 +14,7 @@ If you are a developer using Fn through the API, this section is for you.
 * [Function file (func.yaml)](fn/develop/func-file.md)
 * [FDKs](fn/develop/fdks.md)
 * [Hot functions](fn/develop/hot-functions.md)
+* [Pagination](fn/develop/pagination.md)
 * [Testing functions](fn/develop/testing.md)
 * [Triggers](fn/develop/triggers.md)
 
@@ -33,6 +34,7 @@ If you are operating Fn, this section is for you.
 
 * [Running in Production](fn/operate/production.md)
 * [Logging](fn/operate/logging.md)
+* [Log Stores](fn/operate/log-stores.md)
 * [Message Queues](fn/operate/message-queues.md)
 * [Metrics](fn/operate/metrics.md)
 * [Operating on Windows](fn/operate/windows.md)
