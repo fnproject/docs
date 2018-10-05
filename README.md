@@ -1,5 +1,7 @@
 ## <img src="https://fnproject.io/images/fn-300x125.png" alt="Fn Project Logo" height="21" width="50"> Project Documentation
 
+If you are new to Fn, check out this [introduction](fn/general/introduction.md). 
+
 ## For Developers
 
 If you are a developer using Fn through the API, this section is for you.
