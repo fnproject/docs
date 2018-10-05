@@ -44,7 +44,7 @@ Your code is deployed to an Fn server where it is staged and ready to go when a 
 * `fn invoke nodeapp nodefn`
     * Invoke the function stored on the Fn server.
 * `curl http://localhost:8080/t/nodeapp/nodefn-trigger`
-    * Invoke the same function, but this time to an URL with `curl`.
+    * To request the same function using a trigger, you can use a URL with `curl`.
 
 ### What happens during Deploy
 When you deploy your function to an application on Fn server, the following happens:
