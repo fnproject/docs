@@ -19,7 +19,7 @@ request's `?cursor` parameter to receive the next page.
 Briefly, what this means, is user code should look similar to this:
 
 ```
-req = "http://my.fn.com/v1/apps/"
+req = "http://my.fn.com/v2/apps/"
 cursor = ""
 
 for {
