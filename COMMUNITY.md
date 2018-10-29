@@ -15,25 +15,25 @@ Chad Arimura ((carimura)[http://github.com/carimura/])
 ## Workstreams
 
 
-1. Evaluate Fn’s future on top of Kubernetes
-  - Evaluate possibility of using Knative underneath Fn
-  - Using CRD’s to manage funcs
-  - Accessing secrets
-  - Using pods to schedule work.
+1. Tighter Kubernetes integration
+    - Evaluate possibility of using Knative underneath Fn
+    - Using CRD's to manage funcs
+    - Accessing secrets
+    - Using pods to schedule work.
 
 2. Build a CI/CD story with Jenkins and Spinnaker
-  - Scaffolding to fn init a function with a staging and prod pipeline and a promotion process
-  - Maybe done as Jenkins plugin, or building off the teams Jenkins X work
+    - Scaffolding to fn init a function with a staging and prod pipeline and a promotion process
+    - Maybe done as Jenkins plugin, or building off the teams Jenkins X work
 
 3. Better async
 
 4. Additional triggers
-  - Kafka
-  - OracleDB
-  - MySQL
+    - Kafka
+    - OracleDB
+    - MySQL
 
 5. API Gateway story to build webapps
-  - Kong integration
-  - Other?
+    - Kong integration
+    - Other?
 
 
