@@ -5,16 +5,16 @@
 Before proceeding, please review the Fn [Code of Conduct](CODE_OF_CONDUCT.md).
 
 Welcome to the Fn Project Community! As our community grows, there's a need for more public 
-roadmap exposure, organization of issues, and cadence on meetings in the open. I'll start by 
-posting what we think is the road to 1.0 and beyond, and we'll start getting meetings on the 
-calendar in the next few weeks as well as organizing this page.
+roadmap exposure, organization of issues, and cadence on meetings in the open. Here's a general list
+of workstreams that have been talked about, which will be proposed as roadmap items once we 
+start our weekly community calls in a few weeks.
 
 Stay tuned for more.
 
 Chad Arimura ([carimura](http://github.com/carimura/))
 
 
-## Workstreams
+## Workstreams (unordered)
 
 
 1. Tighter Kubernetes integration
