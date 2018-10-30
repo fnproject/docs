@@ -15,7 +15,7 @@ The requirements for an init-image are:
   - the output _should not_ contain a `func.yaml` file
   - the output _must_ contain a file called `func.init.yaml` which has a subset of the keys from a `func.yaml`
   - the `func.init.yaml` _must_ contain the following keys: `runtime`
-  - the `func.init.yaml` _may_ also contain the following keys: `build`, `buildImage`, `cmd`, `content_type`, `entrypoint`, `expects`, `format`, `headers`, `runImage`, and `tests`
+  - the `func.init.yaml` _may_ also contain the following keys: `build`, `buildImage`, `cmd`, `content_type`, `entrypoint`, `expects`, `headers`, `runImage`, and `tests`
 
 
 The CLI will:
