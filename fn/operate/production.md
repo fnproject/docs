@@ -25,7 +25,7 @@ The database is pluggable and we currently support a few options that can be [fo
 
 The message queue is an important part of asynchronous functions, buffering requests for processing when resources are available. The reliability and scale of the message queue will play an important part in how well Fn runs, in particular if you use a lot of asynchronous function calls.
 
-The message queue is pluggable and we currently support a few options that can be [found here](mqs/README.md). We welcome pull requests for more!
+The message queue is pluggable and we currently support a few options that can be [found here](../operate/message-queues.md). We welcome pull requests for more!
 
 ## Logging, Metrics and Monitoring
 
