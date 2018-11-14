@@ -10,7 +10,6 @@ If you are a developer using Fn through the API, this section is for you.
 
 * [Quickstart](https://github.com/fnproject/fn#quickstart)
 * [Applications - groups of functions](fn/develop/apps.md)
-* [Async functions](fn/develop/async.md)
 * [Config Vars for Functions](fn/develop/configs.md)
 * [FAQ](fn/general/faq.md)
 * [Function file (func.yaml)](fn/develop/func-file.md)
