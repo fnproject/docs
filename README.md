@@ -15,7 +15,6 @@ If you are a developer using Fn through the API, this section is for you.
 * [FAQ](fn/general/faq.md)
 * [Function file (func.yaml)](fn/develop/func-file.md)
 * [FDKs](fn/develop/fdks.md)
-* [Hot functions](fn/develop/hot-functions.md)
 * [Pagination](fn/develop/pagination.md)
 * [Testing functions](fn/develop/testing.md)
 * [Triggers](fn/develop/triggers.md)
@@ -25,7 +24,6 @@ If you are a developer using Fn through the API, this section is for you.
 * [API Reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml)
 * [API Clients](fn/develop/clients.md)
 * [CLI Source](https://github.com/fnproject/cli/)
-* [Open Function Format](fn/develop/function-format.md)
 * [Packaging functions](fn/develop/packaging.md)
 
 ## For Operators
