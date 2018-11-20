@@ -25,10 +25,8 @@
 [fn list triggers](fn-list-triggers.md)  
 [fn migrate](fn-migrate.md)  
 [fn push](fn-push.md)  
-[fn run](fn-run.md)  
 [fn start](fn-start.md)  
 [fn stop](fn-stop.md)  
-[fn test](fn-test.md)  
 [fn unset](fn-unset.md)  
 [fn update](fn-update.md)  
 [fn update app](fn-update-app.md)  
@@ -38,3 +36,5 @@
 [fn update trigger](fn-update-trigger.md)  
 [fn use](fn-use.md)  
 [fn version](fn-version.md)  
+
+<sub>version: 0.5.29</sub>

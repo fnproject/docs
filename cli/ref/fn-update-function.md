@@ -7,7 +7,7 @@ MANAGEMENT COMMAND
   fn update function - Update a function in application
     
 USAGE
-  fn [global options] update function [command options] <app-name> 
+  fn [global options] update function [command options] <app-name> <function-name> 
     
 DESCRIPTION
   This command updates a function in an application.

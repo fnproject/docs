@@ -34,10 +34,8 @@
 [fn list triggers](ref/fn-list-triggers.md)  
 [fn migrate](ref/fn-migrate.md)  
 [fn push](ref/fn-push.md)  
-[fn run](ref/fn-run.md)  
 [fn start](ref/fn-start.md)  
 [fn stop](ref/fn-stop.md)  
-[fn test](ref/fn-test.md)  
 [fn unset](ref/fn-unset.md)  
 [fn update](ref/fn-update.md)  
 [fn update app](ref/fn-update-app.md)  
@@ -48,7 +46,7 @@
 [fn use](ref/fn-use.md)  
 [fn version](ref/fn-version.md)  
 
-<sub>version: 0.5.6</sub>
+<sub>version: 0.5.29</sub>
 
 ### [Fn CLI How-to Guides](how-to/README.md)
 

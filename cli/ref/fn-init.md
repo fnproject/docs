@@ -15,7 +15,7 @@ DESCRIPTION
 COMMAND OPTIONS
   --name value                   Name of the function. Defaults to directory name in lowercase.
   --force                        Overwrite existing func.yaml
-  --runtime value                Choose an existing runtime - go, java8, java9, java, node, python, python3.6, python, python3.7, ruby, rust, kotlin
+  --runtime value                Choose an existing runtime - go, java8, java9, java, node, python, python3.6, python, python3.7, ruby, kotlin
   --init-image value             A Docker image which will create a function template
   --entrypoint value             Entrypoint is the command to run to start this function - equivalent to Dockerfile ENTRYPOINT.
   --cmd value                    Command to run to start this function - equivalent to Dockerfile CMD.
