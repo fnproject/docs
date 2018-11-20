@@ -23,10 +23,8 @@ fn list contexts
 fn list triggers
 fn migrate
 fn push
-fn run
 fn start
 fn stop
-fn test
 fn unset
 fn update
 fn update app
