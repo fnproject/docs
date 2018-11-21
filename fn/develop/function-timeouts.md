@@ -19,8 +19,8 @@ This time of timeouts defines for how long function execution may happen before 
 }
 ```
 
-This timeout parameter used with both types of functions: async and sync.
-It starts at the beginning of function call.
+The timeout parameter is  used by all functions.
+It starts at the beginning of the function call.
 
 ## Function idle timeout
 
@@ -43,12 +43,12 @@ It starts after last request being processed by hot function.
 
 This two timeouts are independent. The order of timeouts for hot functions:
 
- 0. start hot function be sending first timeout-bound request to it
- 1. make request to function with `timeout`
- 2. if call finished (no matter successful or not) check for more requests to dispatch
- 3. if none - start idle timeout
- 4. if new request appears - stop idle timeout and serve request
- 5. if none - terminate hot function
+ 1. start hot function be sending first timeout-bound request to it
+ 2. make request to function with `timeout`
+ 3. if call finished (no matter successful or not) check for more requests to dispatch
+ 4. if none - start idle timeout
+ 5. if new request appears - stop idle timeout and serve request
+ 6. if none - terminate hot function
 
 ## Function idle timeout edge cases
 

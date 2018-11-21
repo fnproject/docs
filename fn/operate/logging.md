@@ -13,16 +13,7 @@ All logs are emitted in [logfmt](https://godoc.org/github.com/kr/logfmt) format 
 ## Call ID
 
 Every function call/request is assigned a `call_id`. If you search your logs, you can track all the activity
-for each function call and find errors on a call by call basis. For example, these are the log lines for an aynschronous
-function call:
-
-![async logs](/docs/assets/async-log-full.png)
-
-Note the easily searchable `call_id=x` format.
-
-```sh
-call_id=477949e2-922c-5da9-8633-0b2887b79f6e
-```
+for each function call and find errors on a call by call basis. 
 
 ## Remote syslog for functions
 
