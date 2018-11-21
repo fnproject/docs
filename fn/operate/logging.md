@@ -10,9 +10,11 @@ We recommend using [logspout](https://github.com/gliderlabs/logspout) to forward
 
 All logs are emitted in [logfmt](https://godoc.org/github.com/kr/logfmt) format for easy parsing.
 
-## Call ID
+Each line contains timestamp, app id, and function id. Here's a sample:
 
-Every function call/request is assigned a `call_id`. If you search your logs, you can track all the activity.
+```txt
+2018-11-21T13:50:28-05:00 linuxkit-025000000001 app_id=01CV2SYZ9NNG8G00RZJ0000001,fn_id=01CWVSNBD0NG8G00RZJ00000 Caused by: java.lang.RuntimeException: Something went horribly wrong!
+```
 
 ## Remote syslog for functions
 
