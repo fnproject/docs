@@ -12,8 +12,7 @@ All logs are emitted in [logfmt](https://godoc.org/github.com/kr/logfmt) format 
 
 ## Call ID
 
-Every function call/request is assigned a `call_id`. If you search your logs, you can track all the activity
-for each function call and find errors on a call by call basis. 
+Every function call/request is assigned a `call_id`. If you search your logs, you can track all the activity.
 
 ## Remote syslog for functions
 
