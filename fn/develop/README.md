@@ -8,7 +8,6 @@ If you are a developer using Fn through the API, this section is for you.
 
 * [Quickstart](https://github.com/fnproject/fn#quickstart)
 * [Applications - groups of functions](apps.md)
-* [Async functions](async.md)
 * [Cloud Events](cloudevents.md)
 * [Config Vars for Functions](configs.md)
 * [FAQ](faq.md)

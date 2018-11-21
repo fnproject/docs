@@ -23,8 +23,6 @@ Chad Arimura ([carimura](http://github.com/carimura/))
     - Accessing secrets
     - Using pods to schedule work.
 
-2. Better async
-
 3. Additional triggers
     - Kafka
     - OracleDB
