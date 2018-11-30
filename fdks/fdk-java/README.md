@@ -177,10 +177,6 @@ actually instantiating the same runtime wrapping function invocations, so that
 during the test your function will be invoked in exactly the same way that it
 would when deployed.
 
-There is much more functionality to construct tests in the testing library.
-Testing functions is covered in more detail in [Testing
-Functions](../../fn/develop/testing.md).
-
 ### 5. Run using HTTP and the local Fn server
 The previous example used `fn run` to run a function directly via docker, you
 can also  use the Fn server locally to test the deployment of your function and

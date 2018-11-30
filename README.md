@@ -15,7 +15,6 @@ If you are a developer using Fn through the API, this section is for you.
 * [Function file (func.yaml)](fn/develop/func-file.md)
 * [FDKs](fn/develop/fdks.md)
 * [Pagination](fn/develop/pagination.md)
-* [Testing functions](fn/develop/testing.md)
 * [Triggers](fn/develop/triggers.md)
 
 ### Advanced
