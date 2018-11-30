@@ -28,5 +28,4 @@ If you are a developer using Fn through the API, this section is for you.
 * [API Reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger.yml)
 * [API Clients](clients.md)
 * [CLI Source](https://github.com/fnproject/cli/)
-* [Open Function Format](function-format.md)
 * [Packaging functions](packaging.md)
