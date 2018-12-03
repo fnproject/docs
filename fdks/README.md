@@ -6,3 +6,4 @@
 ### [fdk-python](fdk-python/README.md)
 ### [fdk-ruby](fdk-ruby/README.md)
 
+For information on the [Fn container contract and the FDK click here.](../fn/develop/fn-format.md)

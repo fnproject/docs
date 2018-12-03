@@ -3,8 +3,6 @@
 NOTE: THIS IS WORK IN PROGRESS AND ITS API IS SUBJECT TO CHANGE
 
 This document will describe the details of how a function works, inputs/outputs, etc.
-(It is meant to replace (./function-format.md) - if the time has come, remove this line,
-for now it defines the 'http-stream' format option)
 
 The basic idea is to handle http requests over a unix domain socket. Each
 container will only receive one request at a time, in that until a response is
