@@ -45,7 +45,6 @@ If you are operating Fn, this section is for you.
 * [Docker Configuration](fn/operate/docker.md)
 * [Extending Fn](fn/operate/extending.md)
 * [Kubernetes Helm Chart for Fn](https://github.com/fnproject/fn-helm/)
-* [Setting up development environment with Docker compose](fn/operate/compose.md)
 
 ## For Contributors
 
