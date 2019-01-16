@@ -78,7 +78,7 @@ The below are the environment variables that a function can expect to use.
 FDKs __SHOULD__ provide a facility to easily access these without having to
 use an OS library.
 
-* `FN_ID` - fn id
+* `FN_FN_ID` - fn id
 * `FN_APP_ID` - app id of the fn
 * `FN_NAME` - name of the fn
 * `FN_APP_NAME` - the name of the application of the fn
