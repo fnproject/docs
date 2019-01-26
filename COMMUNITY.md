@@ -27,7 +27,7 @@ Chad Arimura ([carimura](http://github.com/carimura/))
     - Kafka
     - OracleDB
     - MySQL
-    - Scheduled
+    - Scheduled (CRON like)
 
 4. Building out our public community pages (starting here)
     - Roadmap
