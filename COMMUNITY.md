@@ -23,11 +23,13 @@ Chad Arimura ([carimura](http://github.com/carimura/))
     - Accessing secrets
     - Using pods to schedule work.
 
-3. Additional triggers
+2. Additional triggers
     - Kafka
     - OracleDB
     - MySQL
     - Scheduled (CRON like)
+    
+3. Update and Fix UI (might be complete rewrite)
 
 4. Building out our public community pages (starting here)
     - Roadmap
