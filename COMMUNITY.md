@@ -14,7 +14,7 @@ Stay tuned for more.
 Chad Arimura ([carimura](http://github.com/carimura/))
 
 
-## Workstreams (unordered)
+## Workstreams (unordered list to start the conversation)
 
 
 1. Tighter Kubernetes integration
@@ -27,6 +27,7 @@ Chad Arimura ([carimura](http://github.com/carimura/))
     - Kafka
     - OracleDB
     - MySQL
+    - Scheduled
 
 4. Building out our public community pages (starting here)
     - Roadmap
