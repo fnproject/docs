@@ -10,7 +10,7 @@ USAGE
   fn [global options] list apps [command options] 
     
 DESCRIPTION
-  This command provides a list of defined application.
+  This command provides a list of defined applications.
     
 COMMAND OPTIONS
   --cursor value  Pagination cursor
