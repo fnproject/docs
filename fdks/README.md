@@ -1,9 +1,5 @@
 ## <img src="https://fnproject.io/images/fn-300x125.png" alt="Fn Project Logo" height="21" width="50"> FDK Documentation
 
-### [fdk-go](fdk-go/README.md)
-### [fdk-java](fdk-java/README.md)
-### [fdk-node](fdk-node/README.md)
-### [fdk-python](fdk-python/README.md)
-### [fdk-ruby](fdk-ruby/README.md)
+This information has moved to the FDK repos themselves. A list of our officially supported FDKs is here:
 
-For information on the [Fn container contract and the FDK click here.](../fn/develop/fn-format.md)
+https://github.com/fnproject/docs/blob/master/fn/develop/fdks.md
