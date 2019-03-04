@@ -6,9 +6,7 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
 * Open Source
 * Native Docker: use any Docker container as your Function
 * Supports all languages
-* Run anywhere
-  * Public, private and hybrid cloud
-  * Import Lambda functions and run them anywhere
+* Run anywhere: Public, private and hybrid clouds
 * Easy to use for developers
 * Easy to manage for operators
 * Written in Go
@@ -74,7 +72,6 @@ If you are working on the Fn Project, want to work on it or are creating extensi
 * Learn how to [contribute](CONTRIBUTING.md)
 * Find [issues](https://github.com/fnproject/fn/issues) and become a contributor
 * Join us at one of our [Fn Events](http://events.fnproject.io) or even speak at one!
-* Coming in Q1'19: Regularly scheduled planning meetings for contributing to the Fn Project
 
 
 ## Other Resources
@@ -82,9 +79,8 @@ If you are working on the Fn Project, want to work on it or are creating extensi
 * [Ask your question on StackOverflow](https://stackoverflow.com/questions/tagged/fn) and tag it with `fn`
 * Join our [Slack Community](http://slack.fnproject.io)
 * Join us at one of our [Fn Events](http://events.fnproject.io) or even speak at one!
-* Coming in Q1'19: Regularly scheduled planning meetings for contributing to the Fn Project
 * For a full presentation with lots of content you can use in your own presentations, see [The Fn Project Presentation Master](http://deck.fnproject.io)
-* Check out our sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui), [FnLB](https://github.com/fnproject/lb)
+* Check out our sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui)
 
 
 ### Stay Informed
