@@ -47,14 +47,16 @@ c18ac6172e0d        registry:2          "/entrypoint.sh /e..."   2 seconds ago  
 
 Given a function called "dummy":
 
-```bash
+```sh
 $ ls ./dummy
 func.go    func.yaml
+```
+
+```sh
 $ cat ./dummy/func.yaml
 version: 0.0.1
 runtime: go
 entrypoint: ./func
-format: http
 ```
 
 Upload it to your registry (notice the use of `--registry`):
