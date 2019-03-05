@@ -3,9 +3,14 @@
 
 <sub>
 <b>Table of Contents</b><br>
+<a href="#cli-source-code">CLI Source Code</a><br>  
 <a href="#fn-command-reference">Fn Command Reference</a><br>  
 <a href="#fn-cli-how-to-guides">Fn CLI How-to Guides</a>
 </sub>
+
+### CLI Source Code
+
+* [https://github.com/fnproject/cli/](https://github.com/fnproject/cli/)
 
 ### Fn Command Reference
 
