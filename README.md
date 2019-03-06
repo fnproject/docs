@@ -63,15 +63,8 @@ If you are operating Fn, this section is for you.
 
 ## For Contributors
 
-If you are working on the Fn Project, want to work on it or are creating extensions, this section is for you.
+We love contributions! To get started, please visit our [community page](/community/README.md) and [contributing guidelines](community/CONTRIBUTING.md) page.
 
-* [Writing Extensions](fn/develop/extensions.md)
-* [Using Annotations](fn/develop/annotations.md)
-* Join our [Slack Community](http://slack.fnproject.io)
-* See our new [Community Page](https://github.com/fnproject/docs/blob/master/COMMUNITY.md)
-* Learn how to [contribute](CONTRIBUTING.md)
-* Find [issues](https://github.com/fnproject/fn/issues) and become a contributor
-* Join us at one of our [Fn Events](http://events.fnproject.io) or even speak at one!
 
 
 ## Other Resources
