@@ -7,7 +7,7 @@ contribution, please file an issue or assign an issue to yourself.
 
 ## Resources for Contributors
 
-* See our new [Community Page](https://github.com/fnproject/docs/blob/master/README.md)
+* See our new [Community Page](https://github.com/fnproject/docs/blob/master/community/README.md)
 * Join our [Slack Community](http://slack.fnproject.io)
 * Find [issues](https://github.com/fnproject/fn/issues) and become a contributor
 * Join us at one of our [Fn Events](http://events.fnproject.io) or even speak at one!
