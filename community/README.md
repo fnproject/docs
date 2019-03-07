@@ -23,17 +23,19 @@ This list is unordered and simply a placeholder to start the conversation. May m
 
 1. Fn Server core performance work
 
-2. Tighter Kubernetes integration
+2. Terraform scripts for full "prod" deployment on multiple clouds
+
+3. Tighter Kubernetes integration
     - Using CRD's to manage funcs
     - Accessing secrets
     - Using pods to schedule work
 
-3. Additional triggers
-    - Kafka
+4. Additional triggers
+    - Kafka (in progress)
     - OracleDB
     - MySQL
     - Scheduled (CRON like)
     
-4. Update and Fix UI (might be complete rewrite)
+5. Update and Fix UI (might be complete rewrite)
     
 To start using the Fn Project, visit our main repo here: [https://github.com/fnproject/fn](https://github.com/fnproject/fn)
