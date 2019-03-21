@@ -1,14 +1,15 @@
-# Fn Java Functions Developer Kit (FDK)
-[![CircleCI](https://circleci.com/gh/fnproject/fdk-java.svg?style=svg&circle-token=348bec5610c34421f6c436ab8f6a18e153cb1c01)](https://circleci.com/gh/fnproject/fdk-java)
 
-This project adds support for writing functions in Java on the [Fn
-platform](https://github.com/fnproject/fn), with full support for Java 9
-as the default out of the box.
+# Java Function Development Kit (FDK)
+The Java Function Development Kit (FDK) makes it easy to build and deploy Java functions to Fn with full support for Java 11+ as the default out of the box.
 
-# FAQ
-Some common questions are answered in [our FAQ](../../fn/general/faq.md).
+Some of the Java FDK's features include:
 
-# Quick Start Tutorial
+- Parsing input and writing output
+- Flexible data binding to Java objects
+- Function testing using JUNit rules
+- And more!
+
+# Quickstart
 
 By following this step-by-step guide you will learn to create, run and deploy
 a simple app written in Java on Fn.
@@ -20,20 +21,22 @@ Before you get started you will need the following things:
 * The [Fn CLI](https://github.com/fnproject/cli) tool
 * [Docker-ce 17.06+ installed locally](https://docs.docker.com/engine/installation/)
 
-### Install the Fn CLI tool
+## Install the Fn CLI tool
 
-To install the Fn CLI tool, just run the following:
-
+MacOS installation:
+```sh
+brew update && brew install fn
 ```
+
+or
+
+Alternatively for Linux/Unix/MacOS:
+
+```sh
 curl -LSs https://raw.githubusercontent.com/fnproject/cli/master/install | sh
 ```
 
-This will download a shell script and execute it. If the script asks for
-a password, that is because it invokes sudo.
-
-## Your first Function
-
-### 1. Create your first Java Function:
+## 1. Create your first Java Function
 
 ```bash
 $ mkdir hello-java-function && cd hello-java-function
@@ -49,7 +52,8 @@ Java FDK that is useful for developing your Java functions.
 
 You can now import this project into your favourite IDE as normal.
 
-### 2. Deep dive into your first Java Function:
+## 2. Deep dive into your first Java Function
+
 We'll now take a look at what makes up our new Java Function. First, lets take
 a look at the `func.yaml`:
 
@@ -94,7 +98,8 @@ public class HelloFunction {
 
 The function takes some optional input and returns a greeting dependent on it.
 
-### 3. Run your first Java Function:
+## 3. Run your first Java Function
+
 You are now ready to run your Function locally using the Fn CLI tool.
 
 ```bash
@@ -141,7 +146,8 @@ $ echo -n "Universe" | fn run
 Hello, Universe!
 ```
 
-### 4. Testing your function
+## 4. Testing your function
+
 The Fn Java FDK includes a testing library providing useful [JUnit
 4](http://junit.org/junit4/) rules to test functions. Look at the test in
 `src/test/java/com/example/fn/HelloFunctionTest.java`:
@@ -232,7 +238,8 @@ $ curl http://localhost:8080/r/java-app/hello-java-function
 Hello, world!
 ```
 
-### 6. Something more interesting
+## 6. Something more interesting
+
 The Fn Java FDK supports [flexible data binding](DataBinding.md)  to make
 it easier for you to map function input and output data to Java objects.
 
@@ -303,6 +310,11 @@ deserialization is performed by defining your own bindings.
 See the [Data Binding](DataBinding.md) tutorial for other out-of-the-box
 options and the [Extending Data Binding](ExtendingDataBinding.md) tutorial
 for how to define and use your own bindings.
+
+#### Handling HTTP Requests
+
+Want to access HTTP details such as request or response headers or the HTTP status? Check out [Accessing HTTP Information from Functions](docs/HTTPGatewayFunctions.md).
+
 
 ### Asynchronous workflows
 
