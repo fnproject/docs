@@ -22,5 +22,5 @@ Because the Fn Project can use any container, almost any language or package can
 
 https://fnproject.io/tutorials/ContainerAsFunction/
 
-Also read about the [Fn Container Contract](../fn/develop/fn-format.md) for more information.
+Also read about the [Fn Container Contract](fn-format.md) for more information.
 
