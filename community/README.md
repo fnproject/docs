@@ -29,6 +29,7 @@ This list is unordered and simply a placeholder to start the conversation. May m
     - Using CRD's to manage funcs
     - Accessing secrets
     - Using pods to schedule work
+    - Possible integrations with Knative build, serve, or eventing
 
 4. Additional triggers
     - Kafka (in progress)
@@ -37,5 +38,7 @@ This list is unordered and simply a placeholder to start the conversation. May m
     - Scheduled (CRON like)
     
 5. Update and Fix UI (might be complete rewrite)
+
+6. [Fn Flow](https://github.com/fnproject/flow)
     
 To start using the Fn Project, visit our main repo here: [https://github.com/fnproject/fn](https://github.com/fnproject/fn)
