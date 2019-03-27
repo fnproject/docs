@@ -12,7 +12,7 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
 * Written in Go
 * Simple yet powerful extensibility
 
-The fastest way to experience Fn is to follow the quickstart below, or you can jump right to our [full documentation](https://github.com/fnproject/docs), [API Docs](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml), or hit us up in our [Slack Community](http://slack.fnproject.io) or [Community Page](https://github.com/fnproject/docs/blob/master/COMMUNITY.md)!
+The fastest way to experience Fn is to follow the quickstart below, or you can jump right to our [full documentation](https://github.com/fnproject/docs), [API Docs](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml), or hit us up in our [Slack Community](http://slack.fnproject.io) or [Community Page](https://github.com/fnproject/docs/tree/master/community/README.md)!
 
 If you are new to serverless in general, you might find our [introduction](fn/general/introduction.md) useful. 
 
