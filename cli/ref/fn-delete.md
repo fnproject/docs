@@ -14,6 +14,7 @@ DESCRIPTION
     
 SUBCOMMANDS
   app, apps, a               Delete an application
+  config, config, cf         Delete configurations for apps and functions
   context, ctx               Delete a context
   function, func, f, fn      Delete a function from an application
   trigger, trig, t, tr       Delete a trigger

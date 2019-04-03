@@ -14,7 +14,7 @@ DESCRIPTION
     
 SUBCOMMANDS
   call, calls, cl         Get function call info per app
-  config, config, cf      Manage configurations for apps and functions
+  config, config, cf      Get configurations for apps and functions
   logs, log, lg           Get logs for a call, providing call_id or last (l)
   help, h                 Shows a list of commands or help for one command
                       

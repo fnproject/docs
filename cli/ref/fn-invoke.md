@@ -14,9 +14,9 @@ DESCRIPTION
     
 COMMAND OPTIONS
   --endpoint value      Specify the function invoke endpoint for this function, the app-name and func-name parameters will be ignored
-  --method value        Http method for function
   --content-type value  The payload Content-Type for the function invocation.
   --display-call-id     whether display call ID or not
+  --output value        Output format (json)
   
 ```
 

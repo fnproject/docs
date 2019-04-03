@@ -4,7 +4,7 @@
 $ fn list config
 
 MANAGEMENT COMMAND
-  fn list config - Manage configurations for apps and functions
+  fn list config - List configurations for apps and functions
     
 USAGE
   fn [global options] list config [command options] <subcommand>

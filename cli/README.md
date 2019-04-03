@@ -51,7 +51,7 @@
 [fn use](ref/fn-use.md)  
 [fn version](ref/fn-version.md)  
 
-<sub>version: 0.5.51</sub>
+<sub>version: 0.5.69</sub>
 
 ### [Fn CLI How-to Guides](how-to/README.md)
 

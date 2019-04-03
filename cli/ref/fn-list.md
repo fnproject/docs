@@ -15,7 +15,7 @@ DESCRIPTION
 SUBCOMMANDS
   apps, app, a                 List all created applications
   calls, call, cl              List all calls for a specific function
-  config, config, cf           Manage configurations for apps and functions
+  config, config, cf           List configurations for apps and functions
   contexts, context, ctx       List contexts
   functions, funcs, f, fn      List functions for an application
   triggers, trigs, t, tr       List all triggers

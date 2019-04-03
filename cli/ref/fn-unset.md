@@ -13,7 +13,7 @@ DESCRIPTION
   This command unsets elements ('configurations') for a created object ('app', 'function' or 'context').
     
 SUBCOMMANDS
-  config, config, cf      Manage configurations for apps and functions
+  config, config, cf      Unset configurations for apps and functions
   context, ctx            Unset current-context
   help, h                 Shows a list of commands or help for one command
                       
