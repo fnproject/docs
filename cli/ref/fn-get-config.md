@@ -4,7 +4,7 @@
 $ fn get config
 
 MANAGEMENT COMMAND
-  fn get config - Manage configurations for apps and functions
+  fn get config - Get configurations for apps and functions
     
 USAGE
   fn [global options] get config [command options] <subcommand>
