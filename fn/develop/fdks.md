@@ -16,6 +16,9 @@ The Fn team has chosen a set of FDKs to initially support, while other FDKs will
 
 To search for all FDK work, you can [search the fnproject GitHub org](https://github.com/fnproject?utf8=%E2%9C%93&q=FDK).
 
+## Community Supported FDKs
+ * [C# / .NET Core](https://github.com/Daniel15/fdk-dotnet)
+
 ## Bring your own Container
 
 Because the Fn Project can use any container, almost any language or package can be used to build functions. The following tutorial helps with this process:
