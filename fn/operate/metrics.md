@@ -26,7 +26,7 @@ It is easy to get an all-in-one container of jaeger running to test:
 
 And then point fn to jaeger with the environment variable:
 
-`JAEGER_URL=http://jaeger:14268`
+`JAEGER_URL=http://localhost:14268/api/traces?format=jaeger.thrift`
 
 Open browser to observe:
 
@@ -35,5 +35,3 @@ Open browser to observe:
 ## Prometheus
 
 Fn offers a prometheus metrics endpoint at `/metrics`
-
-TODO we need to consolidate docs around this (3 places).
