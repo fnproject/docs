@@ -8,11 +8,11 @@ The Fn team has chosen a set of FDKs to initially support, while other FDKs will
 
 ## Officially Supported FDKs
 
-* [Go](https://github.com/fnproject/docs/tree/master/fdks/fdk-go)
-* [Java](https://github.com/fnproject/docs/blob/master/fdks/fdk-java/README.md)
-* [Python](https://github.com/fnproject/docs/blob/master/fdks/fdk-python/README.md)
-* [Ruby](https://github.com/fnproject/docs/tree/master/fdks/fdk-ruby)
-* [NodeJS](https://github.com/fnproject/docs/tree/master/fdks/fdk-node)
+* [Go](https://github.com/fnproject/fdk-go/)
+* [Java](https://github.com/fnproject/fdk-java)
+* [Python](https://github.com/fnproject/fdk-python)
+* [Ruby](https://github.com/fnproject/fdk-ruby)
+* [NodeJS](https://github.com/fnproject/fdk-node)
 
 To search for all FDK work, you can [search the fnproject GitHub org](https://github.com/fnproject?utf8=%E2%9C%93&q=FDK).
 
