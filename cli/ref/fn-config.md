@@ -1,6 +1,6 @@
 # `fn config`
 
-```yaml
+```c
 $ fn config
 
 MANAGEMENT COMMAND
@@ -10,12 +10,11 @@ USAGE
   fn [global options] config [command options] <subcommand>
     
 DESCRIPTION
-  This command sets a configuaration key for an 'app', 'function' or 'route'.
+  This command sets a configuaration key for an 'app' or 'function'.
     
 SUBCOMMANDS
   app, apps, a               Store a configuration key for this application
   function, func, f, fn      Store a configuration key for this function
-  route, routes, r           Store a configuration key for this route
   help, h                    Shows a list of commands or help for one command
                          
 COMMAND OPTIONS

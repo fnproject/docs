@@ -1,6 +1,6 @@
 # `fn list triggers`
 
-```yaml
+```c
 $ fn list triggers
 
 MANAGEMENT COMMAND

@@ -23,28 +23,28 @@ The Fn serverless platform provides an open source implementation of these ideas
 
 A load balancer provides a front end to several Fn servers. Each server manages and executes function code as needed. Servers can be scaled up or down as needed.
 
- With Fn, each function is a [Docker](https://www.docker.com) container. Containers are lightweight and can be customized to include just the tools and languages you need to execute your function. Thus, containers are an ideal option for running function code.
+With Fn, each function is a [Docker](https://www.docker.com) container. Containers are lightweight and can be customized to include just the tools and languages you need to execute your function. Thus, containers are an ideal option for running function code.
 
- ## Functions with Fn
- Writing a function for Fn is easy. You just create a small chunk of code that does the following:
+## Functions with Fn
+A function is a small piece of code that takes an input and and writes an output.  Our language FDKs make this easy, you just create a small handler function that does the following:
 
- * Gets input via STDIN
- * Produces output to STDOUT
- * Logs any errors to STDERR
+* Reads data passed to the function from Fn and processes it
+* Writes output back to Fn
+* Logs any errors to STERR
 
-You code is deployed to an Fn server where it is staged and ready to go when a call is made for that function. For example, to create and deploy an Fn function, create a `myfunc` directory, change into it, and execute these commands:
+> **Note:** See the [tutorial](https://fnproject.io/tutorials) for your language for an example of an Fn function for that language.
 
-* `fn init --runtime node`
-    * Creates a boilerplate Node.js app in the current directory.
-* `fn run`
-    * Runs the function locally to test the output.
+Your code is deployed to an Fn server where it is staged and ready to go when a call is made for that function. Assuming an Fn server is running, follow these steps to deploy and test an Fn function:
+
+* Create an `nodefn` directory and change into it.
+* `fn init --runtime node --trigger http`
+    * Creates a boilerplate `node.js` app in the current directory.
 * `fn deploy --app nodeapp`
-    * Deploys your app to the Fn server. The function is now a part of the app "nodeapp" and the function name is picked up from your directory name. In this case "myfunc". Now your function is deployed and ready to be invoked.
-* `fn call nodeapp myfunc`
-    * Call the function deployed on the Fn server.
-* `curl http://localhost:8080/r/nodeapp/myfunc`
-    * Make the same call, but this time to an URL and curl.
-
+    * Deploys your app to the Fn server. The function is now a part of the app "nodeapp" and the function name is picked up from your directory name. In this case `nodefn`. Now your function is up and running.
+* `fn invoke nodeapp nodefn`
+    * Invoke the function stored on the Fn server.
+* `curl http://localhost:8080/t/nodeapp/nodefn-trigger`
+    * To request the same function using a trigger, you can use a URL with `curl`.
 
 ### What happens during Deploy
 When you deploy your function to an application on Fn server, the following happens:
@@ -53,9 +53,9 @@ When you deploy your function to an application on Fn server, the following happ
 
 1. A container image is built with your code and the version number is bumped.
 2. Your container image is pushed to your container registry (DockerHub by default).
-3. A route is created to your function on the server.
+3. A trigger is created for your function on the server.
 
-That's it. When you call the function via the call command or curl, the container is executed and the results are returned to you.
+That's it. When you call the function via the call command or `curl`, the container is executed and the results are returned to you.
 
 ### Fn FDKs Makes Function Development Easy
 The Fn platform has Function Development Kits (FDKs) which are a set of helper libraries that handle the system internals (protocols, parsing input and output, logic for hot function containers, etc.) automatically thereby making function development easier. Fn has FDKs for popular languages - Java, Node.js, Python, Go, and Ruby.

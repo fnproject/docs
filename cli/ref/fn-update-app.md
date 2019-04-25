@@ -1,6 +1,6 @@
 # `fn update app`
 
-```yaml
+```c
 $ fn update app
 
 MANAGEMENT COMMAND
@@ -13,7 +13,7 @@ DESCRIPTION
   This command updates a created application.
     
 COMMAND OPTIONS
-  --config value, -c value  Route configuration
+  --config value, -c value  Application configuration
   --annotation value        Application annotations
   --syslog-url value        Syslog URL to send application logs to
   

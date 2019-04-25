@@ -1,16 +1,16 @@
 # `fn list calls`
 
-```yaml
+```c
 $ fn list calls
 
 MANAGEMENT COMMAND
-  fn list calls - List all calls for the specific app (route is optional)
+  fn list calls - List all calls for a specific function
     
 USAGE
-  fn [global options] list calls [command options] <app-name> 
+  fn [global options] list calls [command options] <app-name> <function-name> 
     
 DESCRIPTION
-  This command provides a list of defined calls for a specific application.
+  This command provides a list of defined calls for a specific function.
     
 COMMAND OPTIONS
   --path value       Function's path
@@ -18,6 +18,7 @@ COMMAND OPTIONS
   --from-time value  'start' timestamp
   --to-time value    'stop' timestamp
   -n value           Number of calls to return (default: 100)
+  --output value     Output format (json)
   
 ```
 

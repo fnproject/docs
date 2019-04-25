@@ -1,6 +1,6 @@
 # `fn init`
 
-```yaml
+```c
 $ fn init
 
 DEVELOPMENT COMMANDS
@@ -15,21 +15,18 @@ DESCRIPTION
 COMMAND OPTIONS
   --name value                   Name of the function. Defaults to directory name in lowercase.
   --force                        Overwrite existing func.yaml
-  --runtime value                Choose an existing runtime - go, java8, java9, java, node, python, python3.6, python, python3.7, ruby, rust, kotlin
+  --runtime value                Choose an existing runtime - go, java8, java11, java, node, python, python3.6, python, python3.7.1, ruby, kotlin
   --init-image value             A Docker image which will create a function template
   --entrypoint value             Entrypoint is the command to run to start this function - equivalent to Dockerfile ENTRYPOINT.
   --cmd value                    Command to run to start this function - equivalent to Dockerfile CMD.
   --version value                Set initial function version (default: "0.0.1")
   --working-dir value, -w value  Specify the working directory to initialise a function, must be the full path.
-  --trigger value                Specify the trigger type.
+  --trigger value                Specify the trigger type - permitted values are 'http'.
   --memory value, -m value       Memory in MiB (default: 0)
-  --type value, -t value         Route type - sync or async
-  --config value, -c value       Route configuration
-  --headers value                Route response headers
-  --format value, -f value       Hot container IO format - default or http
-  --timeout value                Route timeout (eg. 30) (default: 0)
-  --idle-timeout value           Route idle timeout (eg. 30) (default: 0)
-  --annotation value             Route annotation (can be specified multiple times)
+  --config value, -c value       Function configuration
+  --timeout value                Function timeout (eg. 30) (default: 0)
+  --idle-timeout value           Function idle timeout (eg. 30) (default: 0)
+  --annotation value             Function annotation (can be specified multiple times)
   
 ```
 

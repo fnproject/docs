@@ -1,6 +1,6 @@
 # `fn use`
 
-```yaml
+```c
 $ fn use
 
 MANAGEMENT COMMAND

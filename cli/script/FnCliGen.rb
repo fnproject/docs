@@ -52,7 +52,7 @@ class FnCliGen
         @cmdListArr.each do |command|
             # Start markdown file
             fileOutArr.push "# `" + command + "`\n\n"  #title
-            fileOutArr.push "```yaml\n"  # Start help text code block
+            fileOutArr.push "```c\n"  # Start help text code block
             fileOutArr.push "$ " + command + "\n"  # Command
             command = command + " --help"
             fileOutArr.push `#{command}`  # Execute command, get result

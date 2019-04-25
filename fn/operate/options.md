@@ -5,7 +5,16 @@
 This will run with docker in docker.
 
 ```sh
-docker run --privileged --rm --name fns -it -v $PWD/data:/app/data -p 80:8080 fnproject/fnserver
+docker run --privileged \
+  --rm \
+  --name fns \
+  -it \
+  -v $PWD/data:/app/data \
+  -v $PWD/data/iofs:/iofs \
+  -e "FN_IOFS_DOCKER_PATH=$PWD/data/iofs" \
+  -e "FN_IOFS_PATH=/iofs" \
+  -p 80:8080 \
+  fnproject/fnserver
 ```
 
 See below for starting without docker in docker.

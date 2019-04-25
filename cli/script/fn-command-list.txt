@@ -1,12 +1,10 @@
 fn build
 fn bump
-fn call
 fn config
 fn create
 fn create app
 fn create context
 fn create function
-fn create route
 fn create trigger
 fn delete
 fn deploy
@@ -22,20 +20,16 @@ fn list apps
 fn list calls
 fn list config
 fn list contexts
-fn list routes
 fn list triggers
 fn migrate
 fn push
-fn run
 fn start
 fn stop
-fn test
 fn unset
 fn update
 fn update app
 fn update context
 fn update function
-fn update route
 fn update server
 fn update trigger
 fn use

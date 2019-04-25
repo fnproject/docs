@@ -1,21 +1,20 @@
 # `fn get config`
 
-```yaml
+```c
 $ fn get config
 
 MANAGEMENT COMMAND
-  fn get config - Manage configurations for apps and routes
+  fn get config - Get configurations for apps and functions
     
 USAGE
   fn [global options] get config [command options] <subcommand>
     
 DESCRIPTION
-  This command unsets the configuration of created objects ('app', 'function' or 'route').
+  This command unsets the configuration of created objects ('app' or 'function').
     
 SUBCOMMANDS
   app, apps, a               Inspect configuration key for this application
   function, func, f, fn      Inspect configuration key for this function
-  route, routes, r           Inspect configuration key for this route
   help, h                    Shows a list of commands or help for one command
                          
 COMMAND OPTIONS

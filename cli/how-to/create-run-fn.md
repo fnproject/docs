@@ -20,7 +20,6 @@ name: nodefn
 version: 0.0.1
 runtime: node
 entrypoint: node func.js
-format: json
 ```
 
 For more information on possible value in the `func.yaml` file see **Link to funcfile doc**.
@@ -37,7 +36,6 @@ name: t1
 version: 1.0.1
 runtime: node
 entrypoint: node func.js
-format: json
 ```
 
 ## Create a `func.yaml` using an Existing Function File
@@ -52,7 +50,6 @@ name: t3
 version: 0.0.1
 runtime: node
 entrypoint: node func.js
-format: json
 ```
 
 

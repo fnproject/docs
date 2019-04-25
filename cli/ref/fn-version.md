@@ -1,6 +1,6 @@
 # `fn version`
 
-```yaml
+```c
 $ fn version
 
 

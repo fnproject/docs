@@ -1,6 +1,6 @@
 # `fn bump`
 
-```yaml
+```c
 $ fn bump
 
 DEVELOPMENT COMMANDS

@@ -21,7 +21,7 @@ end
 
 * context - provides runtime information for your function, such as configuration values, headers, etc.
 * input – This parameter is a string containing body of the request.
-* output - is where you can return data back to the caller. Whatever you return will be sent back to the caller. If `async`, this value is ignored.
+* output - is where you can return data back to the caller. Whatever you return will be sent back to the caller.
   * Default output format should be in JSON, as Content-Type header will be `application/json` by default. You can be more flexible if you create and return
     an FDK::Response object instead of a string.
 

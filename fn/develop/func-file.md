@@ -40,7 +40,7 @@ route updated to use it.
 `version` represents the current version of the function. When deploying, it is appended to the image as a tag.
 
 `runtime` represents programming language runtime, for example,
-'go', 'python', 'java', etc.  The runtime 'docker' will use the existing Dockerfile if one exists.
+'go', 'python', 'java', etc.  The runtime 'docker' will use the existing Dockerfile if one exists. Current valid values for runtime as of v0.5.40 are: go, java8, java9, java, java11, node, python, python3.6, python, python3.7, ruby, and kotlin.
 
 `build_image` (optional) base Docker image to use for building your function. Default images used are the `dev` tagged images from the [dockers repo](https://github.com/fnproject/dockers).
 

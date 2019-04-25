@@ -1,6 +1,6 @@
 # `fn delete`
 
-```yaml
+```c
 $ fn delete
 
 MANAGEMENT COMMAND
@@ -10,13 +10,13 @@ USAGE
   fn [global options] delete [command options] <subcommand>
     
 DESCRIPTION
-  This command deletes a created object ('app', 'context', 'function', 'route' or 'trigger').
+  This command deletes a created object ('app', 'context', 'function' or 'trigger').
     
 SUBCOMMANDS
   app, apps, a               Delete an application
+  config, config, cf         Delete configurations for apps and functions
   context, ctx               Delete a context
   function, func, f, fn      Delete a function from an application
-  route, routes, r           Delete a route
   trigger, trig, t, tr       Delete a trigger
   help, h                    Shows a list of commands or help for one command
                          

@@ -1,6 +1,6 @@
 # `fn start`
 
-```yaml
+```c
 $ fn start
 
 SERVER COMMANDS

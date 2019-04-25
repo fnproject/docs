@@ -8,9 +8,7 @@ locally.
 ### Best Practices
 
 Included in each function invocation will be the request url for how the
-function was invoked, see [formats](../developers/function-format.md) for where exactly,
-this will look something like `request_url` or `FN_REQUEST_URL` depends on the
-format. In FDKs, this will be exposed in the context object for each language.
+function was invoked. In FDKs, this will be exposed in the context object for each language.
 If your function invokes other functions, it's recommended to either configure
 the host that your function should use to invoke the other functions yourself
 (by sending it in the payload, or elsewhere), or to parse the `request_url`

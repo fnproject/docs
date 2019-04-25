@@ -3,8 +3,6 @@
 NOTE: THIS IS WORK IN PROGRESS AND ITS API IS SUBJECT TO CHANGE
 
 This document will describe the details of how a function works, inputs/outputs, etc.
-(It is meant to replace (./function-format.md) - if the time has come, remove this line,
-for now it defines the 'http-stream' format option)
 
 The basic idea is to handle http requests over a unix domain socket. Each
 container will only receive one request at a time, in that until a response is
@@ -32,7 +30,7 @@ If `FN_FORMAT` is `http-stream`, then absence of `FN_LISTENER` or "unix:" prefix
 
 Before exiting, FDKs __SHOULD__ remove the UDS file (from `FN_LISTENER` path).
 
-FDKs upon creation of UDS file on disk with bind system call __SHOULD__ be ready to receive and handle traffic. Upon bind call, the UDS file __MUST__ be writable by fn-agent. In order to create a properly permissioned UDS file, FDKs __MUST__ create a file with [at least] permissions of `0666`, if the language provides support for creating this file with the right permissions this may be easily achieved; users may alternatively bind to a file that is not `FN_LISTENER`, modify its permissions to the required setting, and then symlink that file to `FN_LISTENER` (see fdk-go for an example).
+FDKs upon creation of UDS file on disk with bind system call __SHOULD__ be ready to receive and handle traffic. Upon creation of the file specified at `FN_LISTENER`, the UDS file __MUST__ be writable by fn-agent. In order to create a properly permissioned UDS file, FDKs __MUST__ create a file with [at least] permissions of `0666`, if the language provides support for creating this file with the right permissions this may be easily achieved; users may alternatively bind to a file that is not `FN_LISTENER`, modify its permissions to the required setting, and then symlink that file to `FN_LISTENER` (see fdk-go for an example).
 
 Path in `FN_LISTENER` (after "unix:" prefix) cannot be larger than 107 bytes.
 
@@ -80,7 +78,7 @@ The below are the environment variables that a function can expect to use.
 FDKs __SHOULD__ provide a facility to easily access these without having to
 use an OS library.
 
-* `FN_ID` - fn id
+* `FN_FN_ID` - fn id
 * `FN_APP_ID` - app id of the fn
 * `FN_NAME` - name of the fn
 * `FN_APP_NAME` - the name of the application of the fn

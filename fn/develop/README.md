@@ -8,7 +8,6 @@ If you are a developer using Fn through the API, this section is for you.
 
 * [Quickstart](https://github.com/fnproject/fn#quickstart)
 * [Applications - groups of functions](apps.md)
-* [Async functions](async.md)
 * [Cloud Events](cloudevents.md)
 * [Config Vars for Functions](configs.md)
 * [FAQ](faq.md)
@@ -16,7 +15,6 @@ If you are a developer using Fn through the API, this section is for you.
 * [Function file (func.yaml)](func-file.md)
 * [Function Timeouts](function-timeouts.md)
 * [Hot functions](hot-functions.md)
-* [Testing functions](testing.md)
 * [Triggers](triggers.md)
 
 ### Examples and Tutorials
@@ -29,5 +27,4 @@ If you are a developer using Fn through the API, this section is for you.
 * [API Reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger.yml)
 * [API Clients](clients.md)
 * [CLI Source](https://github.com/fnproject/cli/)
-* [Open Function Format](function-format.md)
 * [Packaging functions](packaging.md)

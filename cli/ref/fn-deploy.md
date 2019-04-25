@@ -1,10 +1,10 @@
 # `fn deploy`
 
-```yaml
+```c
 $ fn deploy
 
 DEVELOPMENT COMMANDS
-  fn deploy -   Deploys a function to the functions server (bumps, build, pushes and updates route).
+  fn deploy -   Deploys a function to the functions server (bumps, build, pushes and updates functions and/or triggers).
                 
 USAGE
   fn [global options] deploy [command options] [function-subdirectory] 
@@ -14,6 +14,7 @@ DESCRIPTION
     
 COMMAND OPTIONS
   --app value                     App name to deploy to
+  --create-app                    Enable automatic creation of app if it doesn't exist during deploy
   --verbose, -v                   Verbose mode
   --no-cache                      Don't use Docker cache for the build
   --local, --skip-push            Do not push Docker built images onto Docker Hub - useful for local development.
