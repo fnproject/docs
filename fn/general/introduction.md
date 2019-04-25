@@ -21,7 +21,7 @@ The Fn serverless platform provides an open source implementation of these ideas
 
 ![Fn Architecture Diagram](images/fn-architecture.png)
 
-A load balancer provides a front end to several Fn servers. Each server manages and executes function code as needed. Servers can be scaled up or done as needed.
+A load balancer provides a front end to several Fn servers. Each server manages and executes function code as needed. Servers can be scaled up or down as needed.
 
 With Fn, each function is a [Docker](https://www.docker.com) container. Containers are lightweight and can be customized to include just the tools and languages you need to execute your function. Thus, containers are an ideal option for running function code.
 

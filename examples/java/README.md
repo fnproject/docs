@@ -29,7 +29,7 @@ This function parses the query parameters of a GET request (through the
 the `InputEvent` and `OutputEvent` interfaces which provide low level
 access to data entering the `fn` Java FDK.
 
-## 4. [Asynchronous thumbnails generation]()
+## 4. [Asynchronous thumbnails generation](https://github.com/fnproject/fdk-java/tree/master/examples/async-thumbnails)
 
 This example showcases the Fn Flow asynchronous execution API, by
 creating a workflow that takes an image and asynchronously generates three
