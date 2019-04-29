@@ -14,7 +14,7 @@ Then you will be able to run `fn start` as normal.
 Alternatively, use the docker-in-docker deployment that a production system would use:
 
 ```sh
-docker run --privileged --rm --name fns -it -v $PWD/data:/app/data -p 8080:8080 fnproject/functions
+docker run --privileged --rm --name fns -it -v $PWD/data:/app/data -p 8080:8080 fnproject/fnserver
 ```
 
 Check the [operating options](options.md) for further details about this.
