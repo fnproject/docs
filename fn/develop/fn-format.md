@@ -63,10 +63,23 @@ Content-type: application/cloudevent+json
 <Body here>
 ```
 
+Trigger:
+
 ```
 HTTP/1.1 200 OK
 Fn-Http-Status: 204
 Fn-Http-H-My-Header: foo
+Fn-Fdk-Version: fdk-go/0.0.42
+Content-type: text/plain
+
+<Body here>
+```
+
+Invoke: 
+
+```
+HTTP/1.1 200 OK
+Fn-Fdk-Version: fdk-go/0.0.42
 Content-type: text/plain
 
 <Body here>
@@ -91,8 +104,14 @@ In addition to these, all config variables set on `app.config` or `fn.config` wi
 
 ### Headers
 
+Request:
+
 * `Fn-Call-Id` - id for the call
 * `Fn-Deadline` - RFC3339 timestamp indicating the deadline for a function call
 * `Fn-*` - reserved for future usage
 * `*` - any other headers, potentially rooted from an http trigger
+
+Response:
+
+* `Fn-Fdk-Version` - (optional, not required for unofficial FDK) header carrying the fdk version, e.g. `fdk-go/0.0.42`
 
