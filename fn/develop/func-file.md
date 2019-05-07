@@ -48,7 +48,7 @@ route updated to use it.
 
 `cmd` (optional) execution command for jvm based runtimes
 
-`entrypoint` (optional) excution entry point for native runtimes
+`entrypoint` (optional) execution entry point for native runtimes
 
 `memory` (optional) allows you to set a maximum memory threshold for this
 function. If this function exceeds this limit during execution, it is stopped
