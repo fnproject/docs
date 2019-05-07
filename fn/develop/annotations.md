@@ -8,7 +8,7 @@ Annotations can be used to either communicate and carry information externally (
 
 ### Externally defined/consumed annotations
 
-Software using Fn as a service,  attaches non-identifying metadata annotatinos to Fn resources for subsequent reads (e.g. my reference for this function/app )
+Software using Fn as a service,  attaches non-identifying metadata annotations to Fn resources for subsequent reads (e.g. my reference for this function/app )
 
 Writer : API user, Reader: API user
 
@@ -82,7 +82,7 @@ HTTP/1.1  400 Invalid operation
 ## Content Examples
 example : user attaches local annotations
 
-```json
+```
 PUT /v1/apps/foo
 
 {
@@ -92,8 +92,8 @@ PUT /v1/apps/foo
          "mylabel": "super-cool-fn",
          "myMetaData": {
            "k1": "foo",
-           "number": 5000
-           "array" : [1,2,3]
+           "number": 5000,
+           "array": [1, 2, 3]
          }
      }
   ...
