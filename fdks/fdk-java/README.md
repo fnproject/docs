@@ -1,19 +1,23 @@
-# Fn Java Functions Developer Kit (FDK)
+# Fn Java Functions Developer Kit - Docs and Examples
 [![CircleCI](https://circleci.com/gh/fnproject/fdk-java.svg?style=svg&circle-token=348bec5610c34421f6c436ab8f6a18e153cb1c01)](https://circleci.com/gh/fnproject/fdk-java)
 
-This project adds support for writing functions in Java on the [Fn
-platform](https://github.com/fnproject/fn), with full support for Java 9
-as the default out of the box.
+This page provides links to docs and examples on how to use the Java Functions Development Kit (Java FDK) to develop applications.
 
-# FAQ
-Some common questions are answered in [our FAQ](../../fn/general/faq.md).
+## Docs
+* [Data Binding for function input and output](DataBinding.md)
+* [Extending the data binding functionality](ExtendingDataBinding.md)
+* [Function initialization and configuration](FunctionConfiguration.md)
+* [Accessing HTTP information From functions](HTTPGatewayFunction.md)
+* [Spring cloud functions with Fn](SpringCloudFunctionSupport.md)
+* [Testing your functions](TestingFunctions.md)
 
-# Quick Start Tutorial
+## Examples
+* To be Linked
 
-By following this step-by-step guide you will learn to create, run and deploy
-a simple app written in Java on Fn.
+## Develop the Java FDK
+If wish to contribute to the Java FDK development see our [Contributing to Fn Guide](https://github.com/fnproject/fn/tree/master/docs#for-contributors).
 
-## Pre-requisites
+For details on the Java FDK Development see the [Java FDK Repo](https://github.com/fnproject/fdk-java).
 
 Before you get started you will need the following things:
 
