@@ -1,4 +1,4 @@
-# Extending the Data Binding functionality
+# Extending the data binding functionality
 
 By following this step-by-step guide you will learn to configure custom handling for input and output types of a simple Java function running on the Fn platform.
 
