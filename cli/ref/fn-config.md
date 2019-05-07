@@ -10,7 +10,7 @@ USAGE
   fn [global options] config [command options] <subcommand>
     
 DESCRIPTION
-  This command sets a configuaration key for an 'app' or 'function'.
+  This command sets a configuration key for an 'app' or 'function'.
     
 SUBCOMMANDS
   app, apps, a               Store a configuration key for this application
