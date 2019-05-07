@@ -148,4 +148,4 @@ Fn may return a larger number of keys.
 
 ## Extension interaction with resource modification
 
-An extension  may prevent a PUT,PATCH or POST operation on a domain object based on the value of an annotation passed in by a user, in this case this should result in an HTTP  400 error with an informational message indicating that an error was present in the annotations and containing the exact key  or keys which caused the error.
+An extension may prevent a PUT, PATCH or POST operation on a domain object based on the value of an annotation passed in by a user, in this case this should result in an HTTP  400 error with an informational message indicating that an error was present in the annotations and containing the exact key  or keys which caused the error.
