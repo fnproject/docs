@@ -143,7 +143,7 @@ public class Events {
         String responseBody = "Received '" + text + "' with my header '" + header + "'.\n";
         
         Map<String, String> customHeaders = new HashMap<>();
-        customheaders.put("X-My-Response-Header", "any value here");
+        customHeaders.put("X-My-Response-Header", "any value here");
 
         OutputEvent out = OutputEvent.fromBytes(
             responseBody.getBytes(), // Data
