@@ -79,7 +79,7 @@ Both these methods return a `java.util.Optional`. The contract for this return v
 
 - If an empty `Optional` is returned, the coercion is not the appropriate coercion to be used for the provided data, and the runtime is allowed to attempt to use another coercion.
 - If the `Optional` contains an object, the coercion has successfully performed the required conversion.
-- If a `RuntimeException` is thrown, the coercion was supposed to work with the provided data but some kind of error has occurred. Because the data may have been partially consumed it is not safe to continue so the function invocation will be completed unsucessfully and no further action will be attempted.
+- If a `RuntimeException` is thrown, the coercion was supposed to work with the provided data but some kind of error has occurred. Because the data may have been partially consumed it is not safe to continue so the function invocation will be completed unsuccessfully and no further action will be attempted.
 
 A common pattern for coercions is to first check that they can process the provided data into the required type, and return an empty `Optional` if they cannot. Then they can try to perform the conversion and wrap any exception (for example I/O exceptions) into an input/output handling exception.
 
