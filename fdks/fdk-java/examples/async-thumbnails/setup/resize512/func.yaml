@@ -1,0 +1,5 @@
+schema_version: 20180708
+name: resize512
+version: 0.0.8
+entrypoint: convert - -resize 512x512 -
+format: default
