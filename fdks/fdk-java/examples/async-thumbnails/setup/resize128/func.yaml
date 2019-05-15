@@ -1,0 +1,5 @@
+schema_version: 20180708
+name: resize128
+version: 0.0.5
+entrypoint: convert - -resize 128x128 -
+format: default

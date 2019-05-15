@@ -1,0 +1,7 @@
+name: fn-example/regex-query
+version: 0.0.1
+runtime: java
+timeout: 30
+format: http
+cmd: com.fnproject.fn.examples.RegexQuery::query
+path: /query

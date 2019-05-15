@@ -1,0 +1,4 @@
+name: gradle_build
+version: 0.0.3
+runtime: docker
+format: http
