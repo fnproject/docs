@@ -8,7 +8,7 @@ Annotations can be used to either communicate and carry information externally (
 
 ### Externally defined/consumed annotations
 
-Software using Fn as a service,  attaches non-identifying metadata annotatinos to Fn resources for subsequent reads (e.g. my reference for this function/app )
+Software using Fn as a service,  attaches non-identifying metadata annotations to Fn resources for subsequent reads (e.g. my reference for this function/app )
 
 Writer : API user, Reader: API user
 
@@ -82,7 +82,7 @@ HTTP/1.1  400 Invalid operation
 ## Content Examples
 example : user attaches local annotations
 
-```json
+```
 PUT /v1/apps/foo
 
 {
@@ -92,8 +92,8 @@ PUT /v1/apps/foo
          "mylabel": "super-cool-fn",
          "myMetaData": {
            "k1": "foo",
-           "number": 5000
-           "array" : [1,2,3]
+           "number": 5000,
+           "array": [1, 2, 3]
          }
      }
   ...
@@ -148,4 +148,4 @@ Fn may return a larger number of keys.
 
 ## Extension interaction with resource modification
 
-An extension  may prevent a PUT,PATCH or POST operation on a domain object based on the value of an annotation passed in by a user, in this case this should result in an HTTP  400 error with an informational message indicating that an error was present in the annotations and containing the exact key  or keys which caused the error.
+An extension may prevent a PUT, PATCH or POST operation on a domain object based on the value of an annotation passed in by a user, in this case this should result in an HTTP  400 error with an informational message indicating that an error was present in the annotations and containing the exact key  or keys which caused the error.
