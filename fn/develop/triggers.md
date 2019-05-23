@@ -14,4 +14,4 @@ type: http
 source: /trigger-path
 ```
 
-This will cause the system to route requests arriving at the fn service at `/trigger-path` to the function specified in the fn.yaml file.
+This will cause the system to route requests arriving at the fn service at `/trigger-path` to the function specified in the func.yaml file.

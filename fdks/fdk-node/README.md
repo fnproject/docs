@@ -18,9 +18,9 @@ cd nodefunc
 This creates a simple hello world function in `func.js`:
 
 ```javascript
-var fdk=require('@fnproject/fdk');
+var fdk = require('@fnproject/fdk');
 
-fdk.handle(function(input){
+fdk.handle(function(input) {
   var name = 'World';
   if (input.name) {
     name = input.name;
@@ -76,9 +76,9 @@ in the following example the `call_id` is obtained from the context and included
 the response message:
 
 ```javascript
-var fdk=require('@fnproject/fdk');
+var fdk = require('@fnproject/fdk');
 
-fdk.handle(function(input, ctx){
+fdk.handle(function(input, ctx) {
   var name = 'World';
   if (input) {
     name = input;
@@ -97,11 +97,11 @@ by Fn like `app_name`, `path`, `memory`, etc.
 You return an asynchronous response from a function by returning a Javascript `Promise` from the function body: 
 
 ```javascript
-var fdk=require('@fnproject/fdk');
+var fdk = require('@fnproject/fdk');
 
-fdk.handle(function(input, ctx){
-  return new Promise((resolve,reject)=>{
-     setTimeout(()=>resolve("Hello"),1000);
+fdk.handle(function(input, ctx) {
+  return new Promise((resolve, reject) => {
+     setTimeout(() => resolve("Hello"), 1000);
   });
 })
 ```
@@ -117,9 +117,9 @@ Likewise by default the output of a function will be treated as a JSON object an
 You can read http headers passed into a function invocation using `ctx.protocol.header(key)`, this returns the first header value of the header matching `key` (after canonicalization)  and `ctx.protocol.headers` which returns an object containing all headers.  
 
 ```javascript
-var fdk=require('@fnproject/fdk');
+var fdk = require('@fnproject/fdk');
 
-fdk.handle(function(input, ctx){
+fdk.handle(function(input, ctx) {
   console.log("Authorization header:" , ctx.protocol.header("Authorization"))
   console.log( ctx.protocol.headers) // prints e.g. { "Content-Type": ["application/json"],"Accept":["application/json","text/plain"] } 
 })
@@ -131,10 +131,10 @@ To update the outbound status-code set  `ctx.protocol.statusCode`.  To modify ou
 
 
 ```javascript
-var fdk=require('@fnproject/fdk');
+var fdk = require('@fnproject/fdk');
 
-fdk.handle(function(input, ctx){
-   ctx.protocol.setHeader("Location","http://example.com")
+fdk.handle(function(input, ctx) {
+   ctx.protocol.setHeader("Location", "http://example.com")
    ctx.protocol.statusCode = 302
 })
 ```
