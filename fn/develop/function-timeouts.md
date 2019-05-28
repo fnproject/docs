@@ -9,9 +9,9 @@ for more details. So, what are those timeouts and what are they used for?
 
 This time of timeouts defines for how long function execution may happen before it'll be terminated along with notifying caller that function terminated with error - timed out.
 
-```json
+```
 {
-	"route":{
+	"route": {
 	    ...
 		"timeout": 30,
 	    ...
@@ -26,9 +26,9 @@ It starts at the beginning of the function call.
 
 This type of timeout defines for how long should hot function hang around before its termination in case if there are no incoming requests.
 
-```json
+```
 {
-	"route":{
+	"route": {
 	    ...
 		"idle_timeout": 30,
 	    ...
