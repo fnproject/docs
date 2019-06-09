@@ -47,7 +47,6 @@ If you are operating Fn, this section is for you.
 
 * [Running in Production](fn/operate/production.md)
 * [Logging](fn/operate/logging.md)
-* [Log Stores](fn/operate/log-stores.md)
 * [Message Queues](fn/operate/message-queues.md)
 * [Metrics](fn/operate/metrics.md)
 * [User Interface](fn/operate/ui.md)
