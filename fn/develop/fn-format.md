@@ -1,15 +1,11 @@
 # Fn container contract
 
-NOTE: THIS IS WORK IN PROGRESS AND ITS API IS SUBJECT TO CHANGE
-
 This document will describe the details of how a function works, inputs/outputs, etc.
 
 The basic idea is to handle http requests over a unix domain socket. Each
 container will only receive one request at a time, in that until a response is
 returned from a previous request, no new requests will be issued to a
 container's http server.
-
-### XXX(reed): motivation section for future us posterity?
 
 ### FDK Contract outline
 
@@ -63,24 +59,13 @@ Content-type: application/cloudevent+json
 <Body here>
 ```
 
-Trigger:
-
-```
-HTTP/1.1 200 OK
-Fn-Http-Status: 204
-Fn-Http-H-My-Header: foo
-Fn-Fdk-Version: fdk-go/0.0.42
-Content-type: text/plain
-
-<Body here>
-```
-
-Invoke: 
+Invoke Response: 
 
 ```
 HTTP/1.1 200 OK
 Fn-Fdk-Version: fdk-go/0.0.42
 Content-type: text/plain
+My-Header: foo
 
 <Body here>
 ```
@@ -108,6 +93,7 @@ Request:
 
 * `Fn-Call-Id` - id for the call
 * `Fn-Deadline` - RFC3339 timestamp indicating the deadline for a function call
+* `Fn-Intent` - optional, may contain value for handling certain kinds of requests (see gateway protocol)
 * `Fn-*` - reserved for future usage
 * `*` - any other headers, potentially rooted from an http trigger
 
@@ -115,3 +101,47 @@ Response:
 
 * `Fn-Fdk-Version` - (optional, not required for unofficial FDK) header carrying the fdk version, e.g. `fdk-go/0.0.42`
 
+###  HTTP Gateway Protocol Extension
+
+This protocol applies for any requests where `Fn-Intent` is set to `httprequest`. 
+
+This is an extension to the invoke protocol designed to encapsulate existing HTTP requests and responses (e.g. from an upstream HTTP gateway or  a Fn Trigger Endpoint)  - It transposes request and response attributes in to invoke attributes (sent as headers in request/response objects) under the following terms:
+
+* Request URL is available via the `Fn-Http-Request-URL` header
+* Request method is available via the `Fn-Http-Method` header
+* all incoming headers will be available via `Fn-Http-H-{orig-key}`, with one exception:
+* `Content-Type` is not modified with any prefix
+
+FDKs should allow users to access headers under the original key rather than the modified `Fn-Http-H-X` header. 
+
+FDKs are also responsible for encapsulating http response headers under certain rules, as well:
+
+* http status code must be set via `Fn-Http-Status`
+* all outgoing headers that are not prefixed with `Fn-` (eg `Fn-Fdk-Version`) must be prefixed with `Fn-Http-H-`, with the exception of `Content-Type`
+* `Content-Type` should not be modified with any prefix
+
+Example request / response:
+
+```
+POST /call HTTP/1.1
+Fn-Call-Id : 12345678910
+Fn-Deadline: <date/time>
+Fn-Http-Request-Url: https://my.fn.com/t/hello/world
+Fn-Http-Request-Method: PUT
+Fn-Http-H-Custom-Header: foo
+Content-type: text/plain
+
+<Body here>
+```
+
+Trigger Response:
+
+```
+HTTP/1.1 200 OK
+Fn-Http-Status: 204
+Fn-Http-H-My-Header: foo
+Fn-Fdk-Version: fdk-go/0.0.42
+Content-type: text/plain
+
+<Body here>
+```
