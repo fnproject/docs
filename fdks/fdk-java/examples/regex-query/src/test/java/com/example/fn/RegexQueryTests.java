@@ -1,4 +1,4 @@
-package com.fnproject.fn.examples;
+package com.example.fn;
 
 import com.fnproject.fn.testing.FnTestingRule;
 import org.json.JSONException;

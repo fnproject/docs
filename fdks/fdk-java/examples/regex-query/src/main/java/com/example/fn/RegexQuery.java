@@ -1,4 +1,4 @@
-package com.fnproject.fn.examples;
+package com.example.fn;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegexQuery {
+       
     public Response query(Query query) {
         return new Response(query.regex, query.text, getMatches(query));
     }

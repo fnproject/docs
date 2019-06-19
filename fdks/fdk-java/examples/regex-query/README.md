@@ -3,7 +3,7 @@
 This example provides an HTTP endpoint for performing regex matching on strings.
 
 ```bash
-$ curl -d '{ "text": "One, 2, Three, 4, Five", "regex": "\\\\d" }' 'http://localhost:8080/r/regex-query/query'
+$ curl -d '{"text":"One, 2, Three, 4, Five", "regex":"\\d"}' 'http://localhost:8080/t/regex-query/query'
 {"regex":"\\d","text":"One, 2, Three, 4, Five","matches":[{"start":5,"end":6,"match":"2"},{"start":15,"end":16,"match":"4"}]}
 ```
 
@@ -34,7 +34,7 @@ Create an app and route to host the function
 
 ```bash
 $ fn create app regex-query
-$ fn create route regex-query /query
+$ fn --verbose deploy --app regex-query --local
 ```
 
 Invoke the function to perform a regex search
@@ -48,7 +48,7 @@ $ curl -d '{ "text": "One, 2, Three, 4, Five", "regex": "\\\\d" }' 'http://local
 ## Code walkthrough
 
 The entrypoint to the function is specified in `func.yaml` in the `cmd` key.
-This is set to be `com.fnproject.fn.examples.RegexQuery::query`. The class
+This is set to be `com.example.fn.RegexQuery::query`. The class
 containing the function is shown below:
 
 
