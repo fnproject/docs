@@ -13,7 +13,6 @@ If you are a developer using Fn through the API, this section is for you.
 * [FAQ](faq.md)
 * [FDKs](fdks.md)
 * [Function file (func.yaml)](func-file.md)
-* [Function Timeouts](function-timeouts.md)
 * [Hot functions](hot-functions.md)
 * [Triggers](triggers.md)
 
