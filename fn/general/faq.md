@@ -40,7 +40,7 @@ The Fn Project today consists of 4 major components:
 
 1. Fn Server is the Functions-as-a-Service system that allows developers to easily build, deploy, and scale their functions into a multi-cloud environment. It’s fast, reliable, scalable, and container-native, which I’ll discuss more below.
 
-2. The Fn Load Balancer (Fn LB) allows operators to deploy clusters of Fn servers and route traffic to them intelligently. Most importantly, it will route traffic to nodes where hot functions are running to ensure optimal performance, as well as distribute load if traffic to a specific function increases. It also gathers information about the entire cluster which you can use to know when to scale out (add more Fn servers) or in (decrease Fn servers).
+2. The Fn Load Balancer (Fn LB) allows operators to deploy clusters of Fn servers and route traffic to them intelligently. Most importantly, it will route traffic to nodes where functions are running to ensure optimal performance, as well as distribute load if traffic to a specific function increases. It also gathers information about the entire cluster which you can use to know when to scale out (add more Fn servers) or in (decrease Fn servers).
 
 3. Fn FDK’s — Starting with Java, we are releasing a number of FDK’s, or Function Development Kits, aimed at quickly bootstrapping functions in all languages, providing a data binding model for function inputs, make testing your functions easier, as well as lay the foundation for building more complex serverless applications.
 
@@ -89,16 +89,8 @@ Yes, as Fn packages and deploys all functions as Docker containers it’s possib
 
 ### What is the lifecycle of a function?
 
-Functions are packaged as Docker images and by default individual containers are created to handle a function request and are then destroyed.  However, [Hot Functions](../develop/hot-functions.md) are not disposed of after handling a single request.
+Functions are packaged as Docker images. When a function is called, a container is created and the function request is handled. After the request is complete, a function hangs around based on an idle timeout, by default 30 seconds. If no request is made in that 30 seconds, the container is disposed of. When the next function request is made the cycle starts again.
 
-Hot functions are started once and kept alive while there is an incoming workload. A hot function hangs around based on an idle timeout. By default this parameter is set to 30 seconds. The timer starts after the last request is processed by the hot function.
-
-Hot functions can process two types of input. Using JSON, Fn reads the HTTP request body, assembles JSON and writes it to function’s STDIN. Using HTTP, Fn dumps incoming HTTP requests to the function’s STDIN.
-
-
-### What’s a `Hot Function`?
-
-`Hot Functions` are functions that are not destroyed after a single use but are retained and used to handle subsequent requests.  Hot Functions accept HTTP and JSON input.
 
 <a id="General"></a>
 ## General
@@ -152,9 +144,8 @@ We currently don't yet offer Fn as a managed service which would manage network 
 
 ### How long can a function run? Can we make it run forever?
 
-We support 'hot functions' (see the end of [this tutorial](https://github.com/fnproject/tutorials/blob/master/JavaFDKIntroduction/README.md) for an example).  Hot functions will continue to live if they are used but, if not, will eventually be cleaned up.
+Function timeout is configurable. Please see [func.yaml options](https://github.com/fnproject/fn/blob/master/docs/developers/func-file.md). The upper execution timeout limit for a function is 120 seconds. An idle function is cleaned up after 30 seconds.
 
-Function timeout is configurable. Please see <https://github.com/fnproject/fn/blob/master/docs/developers/func-file.md>. Note though configurable, timeouts do have limits. For example, sync functions have a maximum upper limit of 120 seconds.
 
 ### How does the service trace the liveliness of the function? If my function dies/crashes will the service provision it again?
 
@@ -179,7 +170,7 @@ State management is not part of Fn but you can use any storage service or databa
 
 ### Can we build a state function which will update itself based on the previous computation? Will it persist across function restarts?
 
-The problem you face is the lack of a guarantee of which instance of a hot function is called.  Standard practice is to externalize state.
+The problem you face is the lack of a guarantee of which instance of a function is called.  Standard practice is to externalize state.
 
 If your need for stateful functions is motivated by managing steps of a workflow that spans several functions (or several calls to the same function), check out [Fn Flow](https://github.com/fnproject/flow). 
 
