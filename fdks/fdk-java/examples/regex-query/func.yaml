@@ -1,7 +1,12 @@
-name: fn-example/regex-query
-version: 0.0.1
+schema_version: 20180708
+name: query
+version: 0.0.4
 runtime: java
-timeout: 30
-format: http
-cmd: com.fnproject.fn.examples.RegexQuery::query
-path: /query
+build_image: fnproject/fn-java-fdk-build:jdk11-1.0.96
+run_image: fnproject/fn-java-fdk:jre11-1.0.96
+cmd: com.example.fn.RegexQuery::query
+triggers:
+- name: query
+  type: http
+  source: /query
+  

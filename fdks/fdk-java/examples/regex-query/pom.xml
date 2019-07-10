@@ -7,14 +7,14 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-        <fdk.version>1.0.0-SNAPSHOT</fdk.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <fdk.version>1.0.96</fdk.version>
         <jackson.version>2.9.9</jackson.version>
     </properties>
 
-    <groupId>com.fnproject.fn.examples</groupId>
+    <groupId>com.example.fn</groupId>
     <artifactId>regex-query</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <dependencies>
         <dependency>
@@ -35,6 +35,11 @@
         </dependency>
         <dependency>
             <groupId>com.fnproject.fn</groupId>
+            <artifactId>api</artifactId>
+            <version>${fdk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fnproject.fn</groupId>
             <artifactId>testing-core</artifactId>
             <version>${fdk.version}</version>
             <scope>test</scope>
@@ -52,6 +57,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
@@ -77,8 +83,16 @@
 
     <repositories>
         <repository>
-            <id>fn-maven-releases</id>
+            <id>fn-release-repo</id>
             <url>https://dl.bintray.com/fnproject/fnproject</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
     </repositories>
+
+
 </project>

@@ -1,4 +1,4 @@
-package com.fnproject.fn.examples;
+package com.example.fn;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
