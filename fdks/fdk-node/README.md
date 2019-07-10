@@ -1,7 +1,7 @@
 # Fn Function Developer Kit for Node.js
 
 This Function Developer Kit makes it easy to deploy Node.js functions to Fn.
-It currently supports default (cold) and hot functions using the JSON format.
+
 
 ## Creating a Node Function
 

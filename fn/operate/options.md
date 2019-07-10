@@ -47,7 +47,7 @@ docker run -e VAR_NAME_FILE=/path/to/secret ...
 | `FN_LOG_PREFIX` | If supplying a syslog url in `FN_LOG_DEST`, a prefix to add to each log line
 | `FN_API_CORS_ORIGINS` | A comma separated list of URLs to enable [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for (or `*` for all domains). This corresponds to the allowed origins in the `Acccess-Control-Allow-Origin` header.  | None |
 | `FN_API_CORS_HEADERS` | A comma separated list of Headers to enable [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for. This corresponds to the allowed headers in the `Access-Control-Allow-Headers` header.  | Origin,Content-Length,Content-Type |
-| `FN_FREEZE_IDLE_MSECS` | Set this option to specify the amount of time to wait in milliseconds before pausing/freezing an idle hot container. Set to 0 to freeze idle containers without any delay. Set to negative integer to disable freeze/pause of idle hot containers. | 50 |
+| `FN_FREEZE_IDLE_MSECS` | Set this option to specify the amount of time to wait in milliseconds before pausing/freezing an idle container. Set to 0 to freeze idle containers without any delay. Set to negative integer to disable freeze/pause of idle hot containers. | 50 |
 | `FN_EJECT_IDLE_MSECS` | Set this option to specify the amount of time in milliseconds for an idle hot container to become eligible for eviction if the system is starved for CPU and Memory resources. Set to negative integer to disable this feature. | 1000 |
 | `FN_MAX_RESPONSE_SIZE` | Set this option to specify the http body or json response size in bytes from the containers. | 0 (off) |
 | `DOCKER_HOST` | Docker remote API URL. | /var/run/docker.sock |

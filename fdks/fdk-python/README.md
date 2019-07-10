@@ -4,7 +4,7 @@ Purpose of this library to provide simple interface to parse HTTP 1.1 requests.
 
 Following examples are showing how to use API of this library to work with streaming HTTP requests from Fn service.
 
-## Handling Hot JSON Functions
+## Handling JSON Functions
 
 A main loop is supplied that can repeatedly call a user function with a series of HTTP requests.
 In order to utilise this, you can write your `func.py` as follows:

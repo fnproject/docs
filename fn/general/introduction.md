@@ -58,7 +58,7 @@ When you deploy your function to an application on Fn server, the following happ
 That's it. When you call the function via the call command or `curl`, the container is executed and the results are returned to you.
 
 ### Fn FDKs Makes Function Development Easy
-The Fn platform has Function Development Kits (FDKs) which are a set of helper libraries that handle the system internals (protocols, parsing input and output, logic for hot function containers, etc.) automatically thereby making function development easier. Fn has FDKs for popular languages - Java, Node.js, Python, Go, and Ruby.
+The Fn platform has Function Development Kits (FDKs) which are a set of helper libraries that handle the system internals (protocols, parsing input and output, logic for function containers, etc.) automatically thereby making function development easier. Fn has FDKs for popular languages - Java, Node.js, Python, Go, and Ruby.
 
 ![Pictures of supported languages](images/fn-fdks.png)
 

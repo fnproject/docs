@@ -73,7 +73,7 @@ The following sends an event with a simple string body to your function, and the
   }
 ```
 
-It is also possible to send multiple events and then check the pending responses. This simulates the behaviour of *hot functions*. With hot functions all enqueued events will be executed by the runtime before results can be checked; use `getResults()` to get a list of `FnResult` objects that describe the output.
+It is also possible to send multiple events and then check the pending responses. With functions all enqueued events will be executed by the runtime before results can be checked; use `getResults()` to get a list of `FnResult` objects that describe the output.
 
 ```java
   @Test
