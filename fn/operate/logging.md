@@ -22,7 +22,7 @@ You may add a syslog url to any function application and all functions that
 exist under that application will ship all of their logs to it. You may
 provide a comma separated list, if desired. Currently, we support `tcp`,
 `udp`, and `tcp+tls`, and this will not work if behind a proxy [yet?] (this is
-my life now). This feature only works for 'hot' functions.
+my life now).
 
 An example syslog url is:
 

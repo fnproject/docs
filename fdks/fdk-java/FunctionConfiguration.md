@@ -52,7 +52,7 @@ public class ConstructorConfig {
 
 In addition to using the constructor you can also annotate instance or static methods with  [@FnConfiguration](../api/src/main/java/com/fnproject/fn/api/FnConfiguration.java) to initialize your function object or class state.
 
-The configuration method will be called for you once per runtime (i.e. once for multiple invocations of a "hot function") so changes made within this method will apply to all invocations of your function.
+The configuration method will be called for you once per runtime (i.e. once for multiple invocations of a function) so changes made within this method will apply to all invocations of your function.
 
 This method must have a `void` return value and if your function method is static, the configuration method must also be static.
 
