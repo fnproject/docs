@@ -86,6 +86,9 @@ class FnCliGen
             x = x + 1  # Counter for syncing arrays
         end
 
+        # Add Fn Version
+        fileOutArr.push("\n<sub>" + @fnVersion + "</sub>")
+
         # Write README.md file to disk
         puts "Writing: " + "README" + ".md"
         File.open("README.md", "w") do |f|
