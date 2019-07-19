@@ -9,7 +9,6 @@ fn create trigger
 fn delete
 fn deploy
 fn get
-fn get call
 fn get config
 fn help
 fn init
@@ -17,7 +16,6 @@ fn inspect
 fn invoke
 fn list
 fn list apps
-fn list calls
 fn list config
 fn list contexts
 fn list triggers

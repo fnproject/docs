@@ -25,7 +25,6 @@
 [fn delete](ref/fn-delete.md)  
 [fn deploy](ref/fn-deploy.md)  
 [fn get](ref/fn-get.md)  
-[fn get call](ref/fn-get-call.md)  
 [fn get config](ref/fn-get-config.md)  
 [fn help](ref/fn-help.md)  
 [fn init](ref/fn-init.md)  
@@ -33,7 +32,6 @@
 [fn invoke](ref/fn-invoke.md)  
 [fn list](ref/fn-list.md)  
 [fn list apps](ref/fn-list-apps.md)  
-[fn list calls](ref/fn-list-calls.md)  
 [fn list config](ref/fn-list-config.md)  
 [fn list contexts](ref/fn-list-contexts.md)  
 [fn list triggers](ref/fn-list-triggers.md)  
@@ -51,7 +49,7 @@
 [fn use](ref/fn-use.md)  
 [fn version](ref/fn-version.md)  
 
-<sub>version: 0.5.69</sub>
+<sub>version: 0.5.83</sub>
 
 ### [Fn CLI How-to Guides](how-to/README.md)
 
