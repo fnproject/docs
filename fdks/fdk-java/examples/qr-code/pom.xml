@@ -7,12 +7,12 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <fdk.version>1.0.0-SNAPSHOT</fdk.version>
+        <fdk.version>1.0.98</fdk.version>
     </properties>
 
-    <groupId>com.fnproject.fn.examples</groupId>
+    <groupId>com.example.fn</groupId>
     <artifactId>qr-code</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <dependencies>
         <dependency>
@@ -51,18 +51,18 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.3</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8.2</version>
+                <artifactId>maven-surfire-plugin</artifactId>
+                <version>2.22.1</version>
                 <configuration>
-                    <skip>true</skip>
+                    <useSystemClassLoader>false</useSystemClassLoader>
                 </configuration>
             </plugin>
         </plugins>
@@ -73,7 +73,7 @@
             <url>https://jitpack.io</url>
         </repository>
         <repository>
-            <id>fn-maven-releases</id>
+            <id>fn-release-repo</id>
             <url>https://dl.bintray.com/fnproject/fnproject</url>
         </repository>
     </repositories>
