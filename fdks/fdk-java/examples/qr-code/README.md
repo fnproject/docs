@@ -28,11 +28,11 @@ Build the function locally
 $ fn build
 ```
 
-Create an app and route to host the function
+Create an app and deploy the function
 
 ```bash
 $ fn create app qr-app
-$ fn create route qr-app /qr
+$ fn --verbose deploy --app qr-app --local
 ```
 
 Invoke the function to create a QR code
@@ -85,7 +85,7 @@ which can be seen by inspecting the functions server logs.
 
 Function configuration is injected into the constructor optionally taking
 a `RuntimeContext` parameter giving access to parameters set on the
-app and route hosting the function.
+app and hosting the function.
 
 ```java
 ...
