@@ -91,7 +91,7 @@ $ mc ls -r example-storage-server
 ## Code walkthrough
 
 The entrypoint to the function is specified in `func.yaml` in the `cmd` key.
-It is set to `com.fnproject.fn.examples.ThumbnailsFunction::handleRequest`.
+It is set to `com.example.fn.ThumbnailsFunction::handleRequest`.
 
 The class `ThumbnailsFunction` has a constructor [which reads configuration data](../../docs/FunctionConfiguration.md)
 to obtain the details of the storage server host, username and password:

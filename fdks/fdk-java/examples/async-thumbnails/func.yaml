@@ -1,9 +1,10 @@
 schema_version: 20180708
 name: async-thumbnails
-version: 0.0.8
+version: 0.0.6
 runtime: java
-cmd: com.fnproject.fn.examples.ThumbnailsFunction::handleRequest
-format: http-stream
+build_image: fnproject/fn-java-fdk-build:jdk11-1.0.98
+run_image: fnproject/fn-java-fdk:jre11-1.0.98
+cmd: com.example.fn.ThumbnailsFunction::handleRequest
 timeout: 120
 triggers:
 - name: async-thumbnails
