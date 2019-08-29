@@ -1,5 +1,5 @@
-# How-to: Run Fn Client on Windows
-You can run the Fn client on Windows 10 Professional. This document provides the steps to make that happen.
+# How-to: Run Fn client on Windows and connect to a remote Fn server 
+You can run the Fn client on Windows 10 Professional and connect to a remote Fn server. This document provides the steps to make that happen.
 
 ## Fn System Requirements
 To install Fn on Windows, you need the following software:
@@ -43,7 +43,7 @@ There are three ways to install the Fn client on Windows.
 The Fn client is now in your `PATH` and ready to go.
 
 ### (2) Windows 10 without Access to System Directories
-If you IT department has locked you out of your system directories, then there are more steps for you to do.
+If your IT department has locked you out of your system directories, then there are more steps for you to do.
 
 1. Go to: <https://github.com/fnproject/cli/releases>
 2. Download the latest `fn.exe`.
@@ -62,7 +62,7 @@ If you IT department has locked you out of your system directories, then there a
     8. **Click** the **New** button.
     9. Enter in your directory name `c:\fn`.
     10. **Click** the **OK** button.
-    11. Click **OK** in three successive dialog boxes, and the the System dialog box closes.
+    11. Click **OK** in three successive dialog boxes, and the System dialog box closes.
 
 Now when you open a Windows **Command Prompt**, the Fn client should be in the path.
 
@@ -76,10 +76,10 @@ Fn should work just like it does on Linux or MacOS.
 
 
 ## Setup an Fn Server on Linux or MacOS
-Next you need to setup an Fn server on another machine or virtual machine. See the [fn tutorials](https://fnproject.io/tutorials/) for information on starting the server. The machine must accessible on the network from your client machine.
+Next you need to setup an Fn server on another machine or virtual machine. See the [fn tutorials](https://fnproject.io/tutorials/) for information on starting the server. The machine must be accessible on the network from your client machine.
 
 ## Configure your Fn Client
-Next you need to configure you Fn client to connect to the machine running Fn server.
+Next you need to configure your Fn client to connect to the machine running Fn server.
 
 ### Change your context
 You need to configure you context to point at DockerHub and your Fn server.
@@ -94,36 +94,23 @@ CURRENT NAME    PROVIDER        API URL                 REGISTRY
 
 Response: `Now using context: default`
 
-(3) Check your context: `fn list context`
-
-```
-CURRENT NAME    PROVIDER        API URL                 REGISTRY
-*       default default         http://localhost:8080
-```
-
-(4) Change your API context to point to your sever machine:  
+(3) Change your API context to point to your sever machine:  
 `fn update context api-url http://host.example.com:8080`  
 
 Response: `Current context updated api-url with http://host.example.com:8080`
 
-(5) Check your context: `fn list context`
-```
-CURRENT NAME    PROVIDER        API URL                       REGISTRY
-*       default default         http://host.example.com:8080
-```
-
-(6) Set your DockerHub user id: `fn update context registry <your-dockerhub-id>`  
+(4) Set your DockerHub user id: `fn update context registry <your-dockerhub-id>`  
 
 Response: `Current context updated registry with <your-dockerhub-id>`
 
-(7) Check your context: `fn list context`
+(5) Check your context: `fn list context`
 
 ```
 CURRENT NAME    PROVIDER        API URL                       REGISTRY
 *       default default         http://host.example.com:8080  <your-dockerhub-id>
 ```
 
-(8) You are all Set. You should be able to make apps, and invoke and deploy functions just like normal. Just open a **Command Prompt** window rather than a Terminal window. Just follow the tutorial of you choice at: <https://fnproject.io/tutorials/>.
+(6) You are all Set. You should be able to make apps, and invoke and deploy functions just like normal. Just open a **Command Prompt** window rather than a Terminal window. Just follow the tutorial of you choice at: <https://fnproject.io/tutorials/>.
 
 ### Note
 Text quoting is different in Windows. For example, from a **Command Prompt** window to pass JSON data to your function the command looks like this:
