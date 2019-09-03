@@ -9,7 +9,7 @@ To install Fn on Windows, you need the following software:
 * Docker Desktop for Windows (2.1.0.1 +)
 * Microsoft Hyper-V and Containers support installed
 
-Links to the get all this installed is provided below.
+Links to the get all this installed are provided below.
 
 
 ## Install Docker Desktop for Windows
@@ -20,7 +20,7 @@ To install Docker, you have to have all of the following.
 
 * Virtualization enabled in your laptop's BIOS. See the documentation from your manufacturer for this step.
 * Windows 10 64-bit: Pro, Enterprise, or Education (Build 15063 or later).
-* Enable the Hyper-V and Containers features for Windows 10.
+* Enable the Hyper-V and Containers features for Windows 10 Professional.
 
 ### Install Docker
 These are the steps to install Docker.
@@ -110,7 +110,7 @@ CURRENT NAME    PROVIDER        API URL                       REGISTRY
 *       default default         http://host.example.com:8080  <your-dockerhub-id>
 ```
 
-(6) You are all Set. You should be able to make apps, and invoke and deploy functions just like normal. Just open a **Command Prompt** window rather than a Terminal window. Just follow the tutorial of you choice at: <https://fnproject.io/tutorials/>.
+(6) You are all Set. You should be able to make apps, and invoke and deploy functions just like normal. Just open a **Command Prompt** window rather than a Terminal window. Just follow the tutorial of your choice at: <https://fnproject.io/tutorials/>.
 
 ### Note
 Text quoting is different in Windows. For example, from a **Command Prompt** window to pass JSON data to your function the command looks like this:
