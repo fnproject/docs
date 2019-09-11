@@ -1,4 +1,8 @@
+schema_version: 20180708
 name: gradle_build
-version: 0.0.3
+version: 0.0.39
 runtime: docker
-format: http
+triggers:
+- name: gradle_build
+  type: http
+  source: /gradle_build
