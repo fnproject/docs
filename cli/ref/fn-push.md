@@ -13,7 +13,7 @@ DESCRIPTION
   This command pushes the created image to the Docker registry.
     
 COMMAND OPTIONS
-  -v                              Verbose mode
+  --verbose, -v                   Verbose mode
   --registry --registry username  Set the Docker owner for images and optionally the registry. This will be prefixed to your function name for pushing to Docker registries.
  eg: --registry username will set your Docker Hub owner. `--registry registry.hub.docker.com/username` will set the registry and owner.
   
