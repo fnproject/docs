@@ -1,4 +1,5 @@
-FROM gradle:4.5.1-jdk8 as build-stage
+FROM gradle:5.6.2-jdk11 as build-stage
+
 WORKDIR /function
 # needed for gradle?
 USER root
@@ -14,7 +15,7 @@ COPY src /function/src
 
 RUN ["gradle", "-s", "--no-daemon","--console","plain","build"]
 # Container build
-FROM fnproject/fn-java-fdk:1.0.56
+FROM fnproject/fn-java-fdk:jre11-1.0.98
 WORKDIR /function
 COPY --from=build-stage /function/build/libs/*.jar /function/build/deps/*.jar /function/app/
 CMD ["com.example.fn.HelloFunction::handleRequest"]
