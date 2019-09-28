@@ -1,76 +1,60 @@
-# Example Java Function: String Reverse
+# Setting Configuration Variables
 
-This example provides an HTTP trigger endpoint for reversing strings.
+You can get configuration variables into a function and make them available as environment variables.
 
-```bash
-$ curl -d "Hello World" http://localhost:8080/t/string-reverse-app/string-reverse
-dlroW olleH
-```
+The `configuration-variables` function creates a database connection string. This function has four variables: `DB_URL`, `DB_DRIVER`, `DB_USER`, and `DB_PASSWORD`.
+ 
+The `DB_DRIVER` configuration variable is set during deployment and it is defined in the `func.yaml` file.
+The rest of the configuration variables are set while configuring the application and the function.
 
+## Step by step: Set the configuration values 
+Ensure you have the Fn server running to host your function.
 
-## Demonstrated FDK features
-
-This example uses **none** of the Fn Java FDK features, in fact it doesn't have
-any dependency on the Java FDK.  It is just plain old Java code.
-
-## Step by step
-
-Ensure you have the Fn server running to host your function and provide the HTTP endpoint that invokes it:
-
-(1) Start the server
+(1) Start the server.
 
 ```sh
 $ fn start
 ```
 
-(2) Create an app for the function
+(2) Go to the `configuration-variables` directory.
 
 ```sh
-$ fn create app string-reverse-app
+$ cd configuration-variables
 ```
 
-(3) Deploy the function to your app from the `string-reverse` directory.
+(3) Create an app for the function.
 
 ```sh
-fn deploy --app string-reverse-app --local
+fn create app configuration-variables-app
 ```
 
-(4) Invoke the function and reverse the string.
+(4) At the application level, configure the `DB_URL` environment variable.
 
 ```sh
-echo "Hello World" | fn invoke string-reverse-app string-reverse
-dlroW olleH
+fn config app configuration-variables-app DB_URL jdbc:mysql
 ```
 
-(5) Invoke the function using curl and  a trigger to reverse a string.
+(5) At the application level, configure the `DB_USER` environment variable.
 
-```bash
-$ curl -d "Hello World" http://localhost:8080/t/string-reverse-app/string-reverse
-dlroW olleH
+```sh
+fn config app configuration-variables-app DB_USER superadmin
 ```
 
+(6) At the function level, configure the `DB_PASSWORD` environment variable.
 
-## Code walkthrough
-
-The entrypoint to the function is specified in `func.yaml` in the `cmd` key.
-It is set to `com.example.fn.StringReverse::reverse`. The whole class
-`StringReverse` is shown below:
-
-
-```java
-package com.example.fn;
-
-public class StringReverse {
-    public String reverse(String str) {
-        return new StringBuilder(str).reverse().toString();
-    }
-}
+```sh
+fn config function configuration-variables-app configuration-variables DB_PASSWORD superadmin
 ```
 
-As you can see, this is plain Java with no references to the Fn API. The
-Fn Java FDK handles the marshalling of the HTTP body into the `str`
-parameter as well as the marshalling of the returned reversed string into the HTTP
-response body (see [Data Binding](../../DataBinding.md) for more
-information on how marshalling is performed).
+(7) Deploy the application.
 
+```sh
+fn deploy --app configuration-variables-app --local
+```
+
+(8) Invoke the `configuration-variables` function.
+
+```sh
+fn invoke configuration-variables-app configuration-variables
+```
 
