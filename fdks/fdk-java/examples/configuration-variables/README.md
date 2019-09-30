@@ -62,7 +62,7 @@ The entrypoint to the function is specified in `func.yaml` in the `cmd` key.
 It is set to `com.example.fn.Connection::getConnection`. The whole class
 `Connection` is shown below:
 
-
+```sh
 package com.example.fn;
 
 import com.fnproject.fn.api.FnConfiguration;
@@ -114,6 +114,7 @@ public class Connection {
     }
 }
 
+```
 
 The DB_URL, DB_DRIVER, DB_USER, and DB_PASSWORD environment variables are set on different configuration levels. 
 For example, the value of the DB_DRIVER variable is read from the func.yaml file in the `config` key. The DB_URL and DB_USER
