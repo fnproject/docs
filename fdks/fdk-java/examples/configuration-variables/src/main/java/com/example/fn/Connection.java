@@ -5,16 +5,11 @@ import com.fnproject.fn.api.FnConfiguration;
 import com.fnproject.fn.api.RuntimeContext;
 
 
-public class Connection {
-	
-		
+public class Connection {			
 	private String url;
 	private String driver;
 	private String user;
-	private String password;
-
-	   	
-    
+	private String password;  
 	
     @FnConfiguration
     public void config(RuntimeContext ctx) {
