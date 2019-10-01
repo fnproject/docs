@@ -4,6 +4,10 @@ You can get configuration variables into a function and make them available as e
 
 The `configuration-variables` function creates a database connection string. This function has four variables: `DB_URL`, `DB_DRIVER`, `DB_USER`, and `DB_PASSWORD`.
  
+The `DB_URL`, `DB_DRIVER`, `DB_USER`, and `DB_PASSWORD` environment variables are set on different configuration levels. 
+For example, the value of the `DB_DRIVER` variable is read from the `func.yaml` file in the `config` key. The `DB_URL` and `DB_USER`
+environment variables are set in the application configuration level, and the `DB_PASSWORD` environment variable is set in the 
+function configuration level.
 
 ## Step by step: Set the configuration values 
 Ensure you have the Fn server running to host your function.
@@ -62,11 +66,10 @@ The entrypoint to the function is specified in `func.yaml` in the `cmd` key.
 It is set to `com.example.fn.Connection::getConnection`. The whole class
 `Connection` is shown below:
 
-```sh
+```java
 package com.example.fn;
 
 import com.fnproject.fn.api.FnConfiguration;
-//import com.fnproject.fn.api.FnConfiguration;
 import com.fnproject.fn.api.RuntimeContext;
 
 
@@ -115,10 +118,6 @@ public class Connection {
     }
 }
 
-
 ```
 
-The DB_URL, DB_DRIVER, DB_USER, and DB_PASSWORD environment variables are set on different configuration levels. 
-For example, the value of the DB_DRIVER variable is read from the func.yaml file in the `config` key. The DB_URL and DB_USER
-environment variable are set in the application configuration level and the DB_PASSWORD environment variable is set in the 
-function configuration level.
+

@@ -1,7 +1,6 @@
 package com.example.fn;
 
 import com.fnproject.fn.api.FnConfiguration;
-//import com.fnproject.fn.api.FnConfiguration;
 import com.fnproject.fn.api.RuntimeContext;
 
 
