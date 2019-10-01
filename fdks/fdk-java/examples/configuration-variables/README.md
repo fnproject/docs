@@ -23,37 +23,37 @@ $ cd configuration-variables
 (3) Create an app for the function.
 
 ```sh
-fn create app configuration-variables-app
+$ fn create app connection-app
 ```
 
 (4) At the application level, configure the `DB_URL` environment variable.
 
 ```sh
-fn config app configuration-variables-app DB_URL jdbc:mysql
+$ fn config app connection-app DB_URL jdbc:mysql
 ```
 
 (5) At the application level, configure the `DB_USER` environment variable.
 
 ```sh
-fn config app configuration-variables-app DB_USER superadmin
+$ fn config app connection-app DB_USER superadmin
 ```
 
-(6) At the function level, configure the `DB_PASSWORD` environment variable.
+(6) Deploy the application.
 
 ```sh
-fn config function configuration-variables-app configuration-variables DB_PASSWORD superadmin
+$ fn deploy --app connection-app --local
+```
+(7) At the function level, configure the `DB_PASSWORD` environment variable.
+
+```sh
+$ fn config function connection-app connection DB_PASSWORD superadmin
 ```
 
-(7) Deploy the application.
+(8) Invoke the `connection` function.
 
 ```sh
-fn deploy --app configuration-variables-app --local
-```
-
-(8) Invoke the `configuration-variables` function.
-
-```sh
-fn invoke configuration-variables-app configuration-variables
+$ fn invoke connection-app connection
+driver: mysqlDriver; url: jdbc:mysql; user: superadmin; password: superadmin
 ```
 
 ## Code walkthrough
@@ -76,9 +76,9 @@ public class Connection {
 	private String user;
 	private String password;  
 	
-    @FnConfiguration
+	@FnConfiguration
     public void config(RuntimeContext ctx) {
-    	//Set value at the application configuration level
+		//Set value at the application configuration level
     	url = ctx.getConfigurationByKey("DB_URL")
     			.orElse("jdbc:oracle");
     	//Set value in the func.yaml
@@ -89,7 +89,8 @@ public class Connection {
     			.orElse("admin");	
     }
     
-    public String getUrl() {
+  
+    public String getUrl() {	
     	return  url;
     }
 
@@ -113,6 +114,7 @@ public class Connection {
     	return "driver: " + getDriver() + "; url: " + url + "; user: " + getUser() + "; password: " + getPassword();
     }
 }
+
 
 ```
 
