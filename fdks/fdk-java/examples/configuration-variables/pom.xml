@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <fdk.version>1.0.99</fdk.version>
+        <fdk.version>1.0.99</fdk.version>        
     </properties>
     <groupId>com.example.fn</groupId>
     <artifactId>connection</artifactId>
@@ -47,13 +47,13 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
-        </dependency>
+         </dependency>         
          <dependency>
-            <groupId>com.fnproject.fn.</groupId>
+            <groupId>com.fnproject.fn</groupId>
             <artifactId>flow-testing</artifactId>
             <version>${fdk.version}</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>        
     </dependencies>
 
     <build>
@@ -66,7 +66,7 @@
                     <source>11</source>
                     <target>11</target>
                 </configuration>
-            </plugin>            
+            </plugin>                        
         </plugins>
     </build>
     <name>connection string</name>

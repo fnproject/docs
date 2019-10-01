@@ -1,6 +1,6 @@
 schema_version: 20180708
 name: connection
-version: 0.0.11
+version: 0.0.14
 runtime: java
 build_image: fnproject/fn-java-fdk-build:jdk11-1.0.99
 run_image: fnproject/fn-java-fdk:jre11-1.0.99

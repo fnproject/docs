@@ -11,9 +11,9 @@ public class Connection {
 	private String user;
 	private String password;  
 	
-    @FnConfiguration
+	@FnConfiguration
     public void config(RuntimeContext ctx) {
-    	//Set value at the application configuration level
+		//Set value at the application configuration level
     	url = ctx.getConfigurationByKey("DB_URL")
     			.orElse("jdbc:oracle");
     	//Set value in the func.yaml
@@ -24,7 +24,8 @@ public class Connection {
     			.orElse("admin");	
     }
     
-    public String getUrl() {
+  
+    public String getUrl() {	
     	return  url;
     }
 
