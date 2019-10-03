@@ -3,39 +3,36 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <fdk.version>1.0.98</fdk.version>
+        <fdk.version>1.0.99</fdk.version>        
     </properties>
-
     <groupId>com.example.fn</groupId>
-    <artifactId>qr-code</artifactId>
+    <artifactId>connection</artifactId>
     <version>1.0.0</version>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.github.kenglxn.qrgen</groupId>
-            <artifactId>javase</artifactId>
-            <version>2.3.0</version>
-        </dependency>
+    <repositories>
+        <repository>
+            <id>fn-release-repo</id>
+            <url>https://dl.bintray.com/fnproject/fnproject</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
+    <dependencies>
         <dependency>
             <groupId>com.fnproject.fn</groupId>
             <artifactId>api</artifactId>
             <version>${fdk.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>com.fnproject.fn</groupId>
-            <artifactId>testing</artifactId>
+            <artifactId>testing-core</artifactId>
             <version>${fdk.version}</version>
             <scope>test</scope>
         </dependency>
@@ -45,7 +42,20 @@
             <version>${fdk.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+         </dependency>         
+         <dependency>
+            <groupId>com.fnproject.fn</groupId>
+            <artifactId>flow-testing</artifactId>
+            <version>${fdk.version}</version>
+            <scope>test</scope>
+        </dependency>        
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -53,28 +63,11 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surfire-plugin</artifactId>
-                <version>2.22.1</version>
-                <configuration>
-                    <useSystemClassLoader>false</useSystemClassLoader>
-                </configuration>
-            </plugin>
+            </plugin>                        
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-        <repository>
-            <id>fn-release-repo</id>
-            <url>https://dl.bintray.com/fnproject/fnproject</url>
-        </repository>
-    </repositories>
+    <name>connection string</name>
 </project>

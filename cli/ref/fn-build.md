@@ -13,7 +13,7 @@ DESCRIPTION
   This command builds a new function.
     
 COMMAND OPTIONS
-  -v                             Verbose mode
+  --verbose, -v                  Verbose mode
   --no-cache                     Don't use docker cache
   --build-arg value              Set build-time variables
   --working-dir value, -w value  Specify the working directory to build a function, must be the full path.

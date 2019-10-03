@@ -1,7 +1,11 @@
-name: fn-example/qr-code-gen
-version: 0.0.1
+schema_version: 20180708
+name: qr-code
+version: 0.0.12
 runtime: java
-cmd: com.fnproject.fn.examples.QRGen::create
-format: http
-timeout: 30
-path: /qr
+build_image: fnproject/fn-java-fdk-build:jdk11-1.0.98
+run_image: fnproject/fn-java-fdk:jre11-1.0.98
+cmd: com.example.fn.QRGen::create
+triggers:
+- name: qr
+  type: http
+  source: /qr

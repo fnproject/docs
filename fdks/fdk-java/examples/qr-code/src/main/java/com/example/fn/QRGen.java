@@ -1,4 +1,4 @@
-package com.fnproject.fn.examples;
+package com.example.fn;
 
 import com.fnproject.fn.api.RuntimeContext;
 import com.fnproject.fn.api.httpgateway.HTTPGatewayContext;
@@ -16,17 +16,17 @@ public class QRGen {
 
     public byte[] create(HTTPGatewayContext hctx) {
         ImageType type = getFormat(hctx.getQueryParameters().get("format").orElse(defaultFormat));
-        System.err.println("Default format: " + type.toString());
+        System.err.println(String.format("Default format: {}", type.toString()));
         String contents = hctx.getQueryParameters().get("contents").orElseThrow(() -> new RuntimeException("Contents must be provided to the QR code"));
 
         ByteArrayOutputStream stream = QRCode.from(contents).to(type).stream();
-        System.err.println("Generated QR Code for contents: " + contents);
+        System.err.println(String.format("Generated QR Code for contents: {}", contents));
 
         hctx.setResponseHeader("Content-Type", getMimeType(type));
         return stream.toByteArray();
     }
 
-    private ImageType getFormat(String extension) {
+    private ImageType getFormat(final String extension) {
         switch (extension.toLowerCase()) {
             case "png":
                 return ImageType.PNG;
@@ -38,11 +38,11 @@ public class QRGen {
             case "bmp":
                 return ImageType.BMP;
             default:
-                throw new RuntimeException(String.format("Cannot use the specified format %s, must be one of png, jpg, gif, bmp", extension));
+                throw new RuntimeException(String.format("Cannot use the specified format {}, must be one of png, jpg, gif, bmp", extension)) ;
         }
     }
 
-    private String getMimeType(ImageType type) {
+    private String getMimeType(final ImageType type) {
         switch (type) {
             case JPG:
                 return "image/jpeg";
@@ -53,7 +53,7 @@ public class QRGen {
             case BMP:
                 return "image/bmp";
             default:
-                throw new RuntimeException("Invalid ImageType: " + type);
+                throw new RuntimeException(String.format("Invalid ImageType: {}", type)) ;
         }
     }
 }
