@@ -1,15 +1,16 @@
 # Use of environment variables
 
-If you want to use configuration variables into a function and make them available as environment variables, then you can set them using the Fn tool or the func.yaml file.
+Do you want to use configuration variables into a function and make them available as environment variables? You can set configuration variables using the Fn CLI or the `func.yaml` file.
  
-By using the Fn tool, you can set configuration variables on the application or configuration level.
+By using the Fn CLI, your can set configuration variables on the application or function level.
 
 # Set environment variables
 
-The following three examples shows you how to set the configuration variables on different levels using the `connection-app` application. These are listed in order of preference, the later ones overrides the previous ones:
-
+The following three examples shows you how to set the configuration variables on different levels using the `connection-app` sample application. The configuration examples are listed in order of precedent, the later examples override the previous ones. For example, adding a function key/value pair overrides an application key/value pair with the same name.
 
 (1) Application level configuration
+
+Configuration variables set at the application level apply to all functions contained in that application.
  
 ```sh
 fn config app <app-name> <key> <value>
@@ -38,7 +39,7 @@ See [Function file](func-file.md) for more info.
 
 (3) Function level configuration
 
-After you deploy your function, you can set configuration variables at the level configuration.
+After you deploy your function, you can set function level configuration variables. The variables only apply to the specific function identified.
 ```sh
 fn config function <app-name> <fn-name> <key> <value>
 ```
@@ -106,7 +107,7 @@ public class Connection {
 }
 ```
 
-See [configuration-variables](../../fdks/fdk-java/examples/configuration-variables) for more info.
+See [configuration-variables example application](../../fdks/fdk-java/examples/configuration-variables) for more info.
 
 
 
