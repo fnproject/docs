@@ -1,5 +1,4 @@
-# Example oFunctions project: Regex Query
-
+# Fn Java Example Project: Regex Query
 This example provides an HTTP endpoint for performing regex matching on strings.
 
 ```bash
@@ -10,9 +9,9 @@ $ curl -d '{"text":"One, 2, Three, 4, Five", "regex":"\\d"}' 'http://localhost:8
 
 ## FDK features
 
-The Fn Java FDK API supports JSON input and output through
-[Jackson](https://github.com/FasterXML/jackson). This example function
-demonstrates the input/output mapping through use of POJO data transfer
+The Function Development Kit for Java (FDK for Java) API supports JSON input and
+output through [Jackson](https://github.com/FasterXML/jackson). This example
+function demonstrates the input/output mapping through use of POJO data transfer
 objects.
 
 ## Step by step
@@ -24,21 +23,17 @@ function and provide the HTTP endpoints that invoke it:
 $ fn start
 ```
 
-Build the function locally
-
-```bash
-$ fn build
-```
-
-Create an app and route to host the function
-
+Create an app to host the function
 ```bash
 $ fn create app regex-query
+```
+
+Deploy the function to the Fn server.
+```bash
 $ fn --verbose deploy --app regex-query --local
 ```
 
 Invoke the function to perform a regex search
-
 ```bash
 $ curl -d '{ "text": "One, 2, Three, 4, Five", "regex": "\\\\d" }' 'http://localhost:8080/r/regex-query/query'
 {"regex":"\\d","text":"One, 2, Three, 4, Five","matches":[{"start":5,"end":6,"match":"2"},{"start":15,"end":16,"match":"4"}]}
@@ -48,9 +43,22 @@ $ curl -d '{ "text": "One, 2, Three, 4, Five", "regex": "\\\\d" }' 'http://local
 ## Code walkthrough
 
 The entrypoint to the function is specified in `func.yaml` in the `cmd` key.
-This is set to be `com.example.fn.RegexQuery::query`. The class
-containing the function is shown below:
+This is set to be `com.example.fn.RegexQuery::query`.
+```js
+schema_version: 20180708
+name: query
+version: 0.0.1
+runtime: java
+build_image: fnproject/fn-java-fdk-build:jdk11-1.0.96
+run_image: fnproject/fn-java-fdk:jre11-1.0.96
+cmd: com.example.fn.RegexQuery::query
+triggers:
+- name: query
+  type: http
+  source: /query
+```
 
+The class containing the function is shown below:
 
 ```java
 package com.fnproject.fn.examples;
@@ -76,15 +84,15 @@ public class RegexQuery {
 }
 ```
 
-The fn Java FDK has Jackson coercion support out of the box, annotate your objects with
-Jackson annotations or use POJOs and Jackson will attempt to coerce them to
-and from JSON. The FDK supports a variety of coercions and provides an
-extensibility point for you to inject your own custom coercions see
-[Extending Data Binding](/docs/ExtendingDataBinding.md).
+The Fn FDK for Java has Jackson coercion support out of the box, annotate your
+objects with Jackson annotations or use POJOs and Jackson will attempt to coerce
+them to and from JSON. The FDK supports a variety of coercions and provides an
+extensibility point for you to inject your own custom coercions see [Extending
+Data Binding](../../ExtendingDataBinding.md).
 
 ### Testing
 
-The fn Java FDK provides a testing module in `com.fnproject.fn.testing`
+The Fn FDK for Java provides a testing module in `com.fnproject.fn.testing`
 providing a DSL to easily functionally test your code
 
 `com.fnproject.fn.examples.RegexQueryTests` demonstrates the use
@@ -102,11 +110,12 @@ builder to construct and queue events into the function under test.
 ...
 ```
 
-The function is invoked using `fn.thenRun(<FunctionClass>, <FunctionMethodName>)`
-and assertions use the familiar `Assert.assert*` family of static
-methods (we make use of the
+The function is invoked using `fn.thenRun(<FunctionClass>,
+<FunctionMethodName>)` and assertions use the familiar `Assert.assert*` family
+of static methods (we make use of the
 [JSONAssert](http://jsonassert.skyscreamer.org/) library to simplify testing
-JSON APIs). A variety of methods live on `FnTesting` to get a handle on result(s).
+JSON APIs). A variety of methods live on `FnTesting` to get a handle on
+result(s).
 
 ```java
 ...
@@ -131,5 +140,5 @@ JSON APIs). A variety of methods live on `FnTesting` to get a handle on result(s
 ...
 ```
 
-See the [Testing Functions](/docs/TestingFunctions.md) docs for more information
+See the [Testing Functions](../../TestingFunctions.md) docs for more information
 on testing.
