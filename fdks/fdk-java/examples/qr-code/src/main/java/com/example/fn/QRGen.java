@@ -9,18 +9,20 @@ import java.io.ByteArrayOutputStream;
 
 public class QRGen {
     private final String defaultFormat;
-
+    
     public QRGen(RuntimeContext ctx) {
         defaultFormat = ctx.getConfigurationByKey("FORMAT").orElse("png");
     }
 
     public byte[] create(HTTPGatewayContext hctx) {
+        // If format or contents is empty, set default to png and Hello World
         ImageType type = getFormat(hctx.getQueryParameters().get("format").orElse(defaultFormat));
-        System.err.println(String.format("Default format: {}", type.toString()));
-        String contents = hctx.getQueryParameters().get("contents").orElseThrow(() -> new RuntimeException("Contents must be provided to the QR code"));
-
+        System.err.println("Format set to: " + type.toString());
+        
+        String contents = hctx.getQueryParameters().get("contents").orElse("QRCode Hello World!");
+        System.err.println("QR code generated from contents: " + contents);
+            
         ByteArrayOutputStream stream = QRCode.from(contents).to(type).stream();
-        System.err.println(String.format("Generated QR Code for contents: {}", contents));
 
         hctx.setResponseHeader("Content-Type", getMimeType(type));
         return stream.toByteArray();
@@ -38,7 +40,7 @@ public class QRGen {
             case "bmp":
                 return ImageType.BMP;
             default:
-                throw new RuntimeException(String.format("Cannot use the specified format {}, must be one of png, jpg, gif, bmp", extension)) ;
+                return ImageType.PNG;
         }
     }
 
@@ -53,7 +55,7 @@ public class QRGen {
             case BMP:
                 return "image/bmp";
             default:
-                throw new RuntimeException(String.format("Invalid ImageType: {}", type)) ;
+                return "image/png";
         }
     }
 }

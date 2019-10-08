@@ -1,6 +1,6 @@
 schema_version: 20180708
-name: qr-code
-version: 0.0.12
+name: qr
+version: 0.0.17
 runtime: java
 build_image: fnproject/fn-java-fdk-build:jdk11-1.0.98
 run_image: fnproject/fn-java-fdk:jre11-1.0.98

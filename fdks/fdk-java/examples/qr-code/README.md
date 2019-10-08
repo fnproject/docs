@@ -1,50 +1,56 @@
-# Example oFunctions project: QR Code Gen
+# Java Fn Function Example: QR Code Gen
 
 This example provides an HTTP endpoint for generating QR Codes:
 
 ```bash
-$ curl "http://localhost:8080/r/qr-app/qr?contents=Hello%20world&format=png" -o hello-world.png
+$ curl "http://localhost:8080/t/qrcode/qr?contents=Hello%20world&format=png" -o hello.png
 ```
 
 
 ## FDK features
 
-The fn Java FDK API provides an `InputEvent` object, representing the function's input;
-output should be returned as an `OutputEvent` instance where fine-grained control over
-the output (such as setting a MIME type) is needed.
+The Fn FDK for Java provides an `InputEvent` object, representing the function's
+input. Output should be returned as an `OutputEvent` instance where fine-grained
+control over the output (such as setting a MIME type) is needed. See [Data Binding](../../DataBinding.md) for further information.
 
 ## Step by step
 
-Ensure you have the functions server running using; this will host your
+Ensure you have the Fn server running (`fn start`). The Fn server will host your
 function and provide the HTTP endpoints that invoke it:
 
 ```bash
 $ fn start
 ```
 
-Build the function locally
-
+Create an app.
 ```bash
-$ fn build
+$ fn create app qrcode
 ```
 
-Create an app and deploy the function
+
+Deploy the function.
 
 ```bash
-$ fn create app qr-app
-$ fn --verbose deploy --app qr-app --local
+$ fn --verbose deploy --app qrcode --local
 ```
 
 Invoke the function to create a QR code
 
 ```bash
-$ curl "http://localhost:8080/r/qr-app/qr?contents=Hello%20World" -o hello-world.png
-$ open hello-world.png # or for linux: xdg-open hello-world.png
+$ curl "http://localhost:8080/t/qrcode/qr?contents=Hello%20World" -o hello.png
+$ open hello.png # or for linux: xdg-open hello.png
 ```
 
 Checkout `example.html` which uses the function to present a variety of
-QR codes.
+QR codes. The examples include:
 
+* The response from default URL
+* The text string Hello
+* Instructions phone to make a call to 01234-567890
+* Opens https://www.google.com URL
+* Creates a text message from a QR Code
+
+To try out the examples, point the camera of your iOS or Android device at the QRCode. The appropriate text and actions should just popup in the camera app.
 
 ## Code walkthrough
 
@@ -54,38 +60,37 @@ of the example function. The body of the function is shown below:
 
 
 ```java
+public byte[] create(HTTPGatewayContext hctx) {
+    // If format or contents is empty, set default to png and Hello World
+    ImageType type = getFormat(hctx.getQueryParameters().get("format").orElse(defaultFormat));
+    System.err.println("Format set to: " + type.toString());
 
-    public byte[] create(HTTPGatewayContext hctx) {
-        ImageType type = getFormat(hctx.getQueryParameters().get("format").orElse(defaultFormat));
-        System.err.println("Default format: " + type.toString());
-        String contents = hctx.getQueryParameters().get("contents").orElseThrow(() -> new RuntimeException("Contents must be provided to the QR code"));
+    String contents = hctx.getQueryParameters().get("contents").orElse("QRCode Hello World!");
+    System.err.println("QR code generated from contents: " + contents);
 
-        ByteArrayOutputStream stream = QRCode.from(contents).to(type).stream();
-        System.err.println("Generated QR Code for contents: " + contents);
+    ByteArrayOutputStream stream = QRCode.from(contents).to(type).stream();
 
-        hctx.setResponseHeader("Content-Type", getMimeType(type));
-        return stream.toByteArray();
-    }
-
+    hctx.setResponseHeader("Content-Type", getMimeType(type));
+    return stream.toByteArray();
+}
 ```
 
-The fn Java FDK facilitates access to the HTTP context of events triggered from HTTP gateways via `HTTPGatewayContext` , and response of the function as a bye array, for more fine grained control of the platform. See
-[Data Binding](/docs/DataBinding.md) for further information on the types
-of input that the fn Java FDK provides.
+The Fn FDK for Java facilitates access to the HTTP context of events triggered
+from HTTP gateways via `HTTPGatewayContext`. The function response is a byte
+array. See [Data Binding](../../DataBinding.md) for further information on the
+types of input that the FDK provides.
 
-In this example we take the request URL from the `InputEvent` and parse
-the query parameters present in the URL (using `QueryParametersParser`).
+In this example we take the request URL from the `HTTPGatewayContext` and parse
+the query parameters present in the URL (using `QueryParameters`).
 A QR code is created using `net.glxn.qrgen.javase.QRCode` which is
-then serialised to a byte array used to create an output event `OutputEvent`
-which the fn Java FDK then serialises to an HTTP response.
+serialised to a byte array and returned in an HTTP response.
 
 Logs are written via `System.err` for processing by the `functions` server.
-When a QR code is generated the example logs `"Generated QR Code for contents: [...]"`
-which can be seen by inspecting the functions server logs.
+When a QR code is generated the example logs `"QR code generated from contents: [...]"`.
 
 Function configuration is injected into the constructor optionally taking
-a `RuntimeContext` parameter giving access to parameters set on the
-app and hosting the function.
+a `RuntimeContext` parameter giving access to parameters set for the
+application or the function.
 
 ```java
 ...
@@ -125,16 +130,17 @@ this to handle invocations of functions and retrieving function results
            .withHeader("Fn-Http-Method","GET")
            .enqueue();
          fn.thenRun(QRGen.class, "create");
- 
+
          assertEquals(content, decode(fn.getOnlyResult().getBodyAsBytes()));
      }
 ```
 
-Input events are constructed using `fn.givenEvent()` providing an `FnEventBuilder`
-interface for customising the input event which is then queued event using `enqueue`.
-The function is finally run by `fn.thenRun(<FunctionClass>.class, "<FunctionMethodName>")`.
-The results are retrieved by `fn.getOnlyResult().getBodyAsBytes()` to then compare
-with a pregenerated QR code read from disk.
+Input events are constructed using `fn.givenEvent()` providing an
+`FnEventBuilder` interface for customising the input event which is then queued
+event using `enqueue`. The function is finally run by
+`fn.thenRun(<FunctionClass>.class, "<FunctionMethodName>")`. The results are
+retrieved by `fn.getOnlyResult().getBodyAsBytes()` to then compare with a
+pregenerated QR code read from disk.
 
-See [Function Testing](/docs/FunctionTesting.md) for further information
+See [Function Testing](../../FunctionTesting.md) for further information
 on the features the testing package provides.
