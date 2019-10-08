@@ -21,18 +21,25 @@ If you are new to serverless in general, you might find our [introduction](fn/ge
 If you are a developer using Fn, this section is for you. For operating Fn, see the next section "For Operators".
 
 ### Getting Started
-
 * [Quickstart](https://github.com/fnproject/fn#quickstart)
 * Visit [Fn tutorials](http://fnproject.io/tutorials) for step-by-step guides to creating apps with Fn. These tutorials range from introductory to more advanced.
-* [Applications - groups of functions](fn/develop/apps.md)
-* [Config Vars for Functions](fn/develop/configs.md)
-* [Function file (func.yaml)](fn/develop/func-file.md)
-* [FDKs](fn/develop/fdks.md)
-* [Running Fn Client for Windows](fn/develop/running-fn-client-windows.md)
-* [Triggers](fn/develop/triggers.md)
+* [Applications](fn/develop/apps.md): How to group functions together in an application.
+* [Config Vars for Functions](fn/develop/configs.md): How to set configuration variables for applications, functions, or in `func.yaml`.
+* [Function file](fn/develop/func-file.md): All the values that can be used in `func.yaml`.
+* [Fn FDKs](fn/develop/fdks.md): Function Development Kits for supported languages.
+* [Running Fn Client for Windows](fn/develop/running-fn-client-windows.md): Run the Fn client on Microsoft Windows.
+* [Triggers](fn/develop/triggers.md): Using triggers.
+
+
+### Examples
+* FDK for Java
+    * [Configuration Variables](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/configuration-variables): Set configuration values for applications, function, and in `func.yaml`.
+    * [Gradle Build](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/gradle-build): Use a function to build and run a Java app using Gradle.
+    * [Regex](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/regex-query): Pass a regex to a function.
+    * [Simple Reverse String](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/string-reverse): Reverse the letters in a string.
+
 
 ### Learn More
-
 * [API Reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml)
 * [API Clients](fn/develop/clients.md)
 * [CLI Docs and Reference](cli/README.md)
