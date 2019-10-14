@@ -1,8 +1,8 @@
 # Func files
 
-Func files are used to assist the fn-project to help you when creating functions.
+A func file contains metadata that help the fn project when you create a function.
 
-An example of a func file:
+Example of a func file:
 
 ```yaml
 schema_version: 20180708
@@ -18,9 +18,6 @@ config:
   key: value
   key2: value2
   keyN: valueN
-build:
-- make
-- make test
 expects:
   config:
     - name: SECRET_1
@@ -32,38 +29,33 @@ triggers:
     type: http
     source: /trigger-path
 ```
-`schema_version` represents the version of the specification for this file.
+**schema_version:** Represents the version of the specification for this file.
 
-`name` is the name and tag to which this function will be pushed to and the
-route updated to use it.
+**name:** Unique name for this function.
 
-`version` represents the current version of the function. When deploying, it is appended to the image as a tag.
+**version:** Represents the current version of the function. After deploying, it is appended to the image as a tag.
 
-`runtime` represents programming language runtime, for example,
-'go', 'python', 'java', etc.  The runtime 'docker' will use the existing Dockerfile if one exists. Current valid values for runtime as of v0.5.40 are: go, java8, java9, java, java11, node, python, python3.6, python, python3.7, ruby, and kotlin.
+**runtime:** Represents programming language runtime, for example,
+'go', 'python', 'java', etc.  The runtime 'docker' will use the existing Dockerfile if one exists. Current valid values for runtime as of v0.5.86 are: go, java8, java9, java, java11, node, python, python3.6, python, python3.7, ruby, and kotlin.
 
-`build_image` (optional) base Docker image to use for building your function. Default images used are the `dev` tagged images from the [dockers repo](https://github.com/fnproject/dockers).
+**build_image:** (Optional) Base Docker image used for building your function. Default images used are the `dev` tagged images from the [dockers repo](https://github.com/fnproject/dockers).
 
-`run_image` (optional) base Docker image to use for running your function, part of a multi-stage build. Function will be built with `build_image` and run with `run_image`. Default images used from the [dockers repo](https://github.com/fnproject/dockers).
+**run_image:** (Optional) Base Docker image used for running your function, as part of a multi-stage build. Function will be built with `build_image` and run with `run_image`. Default images used from the [dockers repo](https://github.com/fnproject/dockers).
 
-`cmd` (optional) execution command for jvm based runtimes
+**cmd:** (Optional) Execution command for jvm based runtimes.
 
-`entrypoint` (optional) execution entry point for native runtimes
+**entrypoint:** (Optional) Execution entry point for native runtimes.
 
-`memory` (optional) allows you to set a maximum memory threshold for this
+**memory:** (Optional) Maximum memory threshold for this
 function. If this function exceeds this limit during execution, it is stopped
-and error message is logged. Default: `128`.
+and error message is logged. Set this value in multiples of 64. The maximum memory value allowed is 8 (GB) and the default value is 128 (MB).
 
-`timeout` (optional) is the maximum time a function will be allowed to run. Default is 30 seconds.
+**timeout:** (Optional) Maximum runtime allowed for this function in seconds. The maximum value is 300 and the default values is 30.
 
-`config` (optional) is a set of configuration variables to be passed onto the function as environment variables.
-These configuration options shall override application configuration during functions execution. See [Configuration](configs.md)
+**config:** (Optional) Set of configuration variables pass onto the function as environment variables.
+These configuration options override application configuration during functions execution. See [Configuration](configs.md)
 for more information.
 
-`expects` (optional) a list of config/env vars that are required to run this function. These vars will be used when running/testing locally,
-if found in your local environment. If these vars are not found, local testing will fail.
+**expects:** (Optional) List of configuration environment variables required to run this function. These variables are used when you run or test locally. If these variables are not found in your local environment, then your local testing fails.
 
-`build` (optional) is an array of local shell calls which are used to help
-building the function. TODO: Deprecate this?
-
-`triggers` (optional) is an array of `trigger` entities that specific triggers for the function. See [Trigger](triggers.md).
+**triggers:** (Optional) Array of `trigger` entities that specific triggers for the function. See [Trigger](triggers.md) for more information.
