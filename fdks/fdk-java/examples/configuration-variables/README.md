@@ -3,13 +3,13 @@
 You can get configuration variables into a function and make them available as environment variables.
 
 The `configuration-variables` function creates a database connection string. This function has four variables: `DB_URL`, `DB_DRIVER`, `DB_USER`, and `DB_PASSWORD`.
- 
-The `DB_URL`, `DB_DRIVER`, `DB_USER`, and `DB_PASSWORD` environment variables are set on different configuration levels. 
+
+The `DB_URL`, `DB_DRIVER`, `DB_USER`, and `DB_PASSWORD` environment variables are set on different configuration levels.
 For example, the value of the `DB_DRIVER` variable is read from the `func.yaml` file in the `config` key. The `DB_URL` and `DB_USER`
-environment variables are set in the application configuration level, and the `DB_PASSWORD` environment variable is set in the 
+environment variables are set in the application configuration level, and the `DB_PASSWORD` environment variable is set in the
 function configuration level.
 
-## Step by step: Set the configuration values 
+## Step by step: Set the configuration values
 Ensure you have the Fn server running to host your function.
 
 (1) Start the server.
@@ -78,7 +78,7 @@ public class Connection {
 	private String driver;
 	private String user;
 	private String password;  
-	
+
 	@FnConfiguration
     public void config(RuntimeContext ctx) {
 		//Set value at the application configuration level
@@ -89,30 +89,30 @@ public class Connection {
     			.orElse("OracleDriver");
     	//Set value at the application configuration level
     	user = ctx.getConfigurationByKey("DB_USER")
-    			.orElse("admin");	
+    			.orElse("admin");
     }
-    
-  
-    public String getUrl() {	
+
+
+    public String getUrl() {
     	return  url;
     }
 
-    
+
     public String getDriver() {
     	return  driver;        
     }
-    
-	
+
+
     public String getUser() {
         return  user;        
     }
-    
+
 	//Set value at the function configuration level
     public String getPassword() {
         password = System.getenv().getOrDefault("DB_PASSWORD", "admin");
     	return  password;        
     }
-    
+
     public String getConnection() {
     	return "driver: " + getDriver() + "; url: " + url + "; user: " + getUser() + "; password: " + getPassword();
     }
@@ -120,4 +120,4 @@ public class Connection {
 
 ```
 
-
+For more information see the [configuration vars documentaion page](https://github.com/fnproject/docs/blob/master/fn/develop/configs.md).
