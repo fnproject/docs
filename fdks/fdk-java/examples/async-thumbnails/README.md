@@ -1,4 +1,10 @@
-# Example Fn Java FDK / Fn Flows Project: Asynchronous Thumbnails
+# Example Fn FDK for Java / Fn Flows Project: Asynchronous Thumbnails
+
+#### `Under Construction:`
+```
+Due to ongoing changes to Fn core, parts of this tutorial relating to Fn Flow
+may not function as described. Check back for updates.
+```
 
 This example provides an HTTP endpoint for asynchronously creating three
 thumbnails of an image whose data is provided as the body of the HTTP request
@@ -56,6 +62,10 @@ storage server docker container:
 
 ```bash
 $ docker inspect --type container -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' example-storage-server
+```
+should return something like:
+
+```bash
 172.17.0.4
 ```
 
@@ -74,6 +84,11 @@ Invoke the function by passing the provided test image:
 
 ```bash
 $ curl -X POST --data-binary @test-image.png -H "Content-type: application/octet-stream" "http://localhost:8080/t/myapp/async-thumbnails"
+```
+
+should return JSON data similar to the following:
+
+```bash
 {"imageId":"bd74fff4-0388-4c6f-82f2-8cde9ba9b6fc"}
 ```
 
