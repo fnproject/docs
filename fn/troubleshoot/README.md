@@ -1,5 +1,5 @@
 # Troubleshooting
-This page lists solutions to problems you might encounter with Fn. 
+This page lists solutions to problems you might encounter with Fn. If you want to learn more about troubleshooting, see [Troubleshooting and Logging with Fn](https://github.com/fnproject/tutorials/tree/master/Troubleshooting/README.md).
 
 ## Common Problems
 Here is a list of common problems you might encounter while using Fn.
