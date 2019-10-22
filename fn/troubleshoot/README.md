@@ -1,5 +1,5 @@
 # Troubleshooting
-This page lists solutions to problems you might encounter with Fn.
+This page lists solutions to problems you might encounter with Fn. 
 
 ## Common Problems
 Here is a list of common problems you might encounter while using Fn.
@@ -11,3 +11,8 @@ Here is a list of common problems you might encounter while using Fn.
 This is a list of known issues with Fn. The pages linked here provide detailed information about an issue. These pages are usually linked to a GitHub issue for a particular repo.
 
 * [Trying to invoke a function when using a CentOS based Linux fails with an error message](known-issues/2019-08-fn-invoke-fails.md)
+
+## Debug
+Learn how to get detailed information about what is happening in the Fn server.
+
+* [Debug](debug.md)

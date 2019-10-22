@@ -29,6 +29,8 @@ If you are a developer using Fn, this section is for you. For operating Fn, see 
 * [Fn FDKs](fn/develop/fdks.md): Function Development Kits for supported languages.
 * [Running Fn Client for Windows](fn/develop/running-fn-client-windows.md): Run the Fn client on Microsoft Windows.
 * [Triggers](fn/develop/triggers.md): Using triggers.
+* [Troubleshooting](fn/troubleshoot/README.md): Solution to common problems when working with Fn.
+    * Known Issue: [Trying to invoke a function when using a CentOS based Linux fails with an error message](fn/troubleshoot/known-issues/2019-08-fn-invoke-fails.md)
 
 
 ### Examples
