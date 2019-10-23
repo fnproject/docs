@@ -1,4 +1,4 @@
-package com.fnproject.fn.examples;
+package com.example.fn;
 
 import com.fnproject.fn.api.FnFeature;
 import com.fnproject.fn.api.Headers;
