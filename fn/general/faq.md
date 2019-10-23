@@ -26,7 +26,7 @@ The Fn Project is an evolution of the IronFunctions project from Iron.io and our
 
 * **Container Native:** Containers fundamentally change the way we package software. Our goal for the Fn Project is to abstract out the complexities of containers, even create a “containerless experience”, but expose the power of containers to those who have adopted containers as their packaging format. That is why `fn deploy` can abstract the whole process away from you, but we also support native Docker containers as Functions. This party is optionally BYOD: Bring your own Dockerfile.
 
-* **Programming Model:** The cost, operational benefits, and hype, of serverless has created a rush to adopt, and this has led to many fantastic use cases including ops tooling, event-driven architectures, triggers in the cloud, etc., but there are still technology gaps preventing more complex serverless app design utilizing native language features, true IDE integration, testing, workflow, etc. We want to address this, starting with the release of the Java FDK and Fn Flow as initial blueprints.
+* **Programming Model:** The cost, operational benefits, and hype, of serverless has created a rush to adopt, and this has led to many fantastic use cases including ops tooling, event-driven architectures, triggers in the cloud, etc., but there are still technology gaps preventing more complex serverless app design utilizing native language features, true IDE integration, testing, workflow, etc. We want to address this, starting with the release of the FDK for Java and Fn Flow as initial blueprints.
 
 * **Orchestrator Agnostic:** Kubernetes is great, and deployments of Fn can benefit from it handling all the lower level infrastructure, but it’s not the only game in town, nor do we want end users of Fn having to learn or deal with Kubernetes. A clear separation of serverless and container orchestration is important, thus allowing the project to adapt and evolve in an ever-changing cloud landscape.
 
@@ -172,7 +172,7 @@ State management is not part of Fn but you can use any storage service or databa
 
 The problem you face is the lack of a guarantee of which instance of a function is called.  Standard practice is to externalize state.
 
-If your need for stateful functions is motivated by managing steps of a workflow that spans several functions (or several calls to the same function), check out [Fn Flow](https://github.com/fnproject/flow). 
+If your need for stateful functions is motivated by managing steps of a workflow that spans several functions (or several calls to the same function), check out [Fn Flow](https://github.com/fnproject/flow).
 
 ### Can functions write to a non-persistent location?
 

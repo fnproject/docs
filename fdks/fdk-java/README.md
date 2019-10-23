@@ -1,7 +1,7 @@
 # Fn Java Functions Developer Kit - Docs and Examples
 [![CircleCI](https://circleci.com/gh/fnproject/fdk-java.svg?style=svg&circle-token=348bec5610c34421f6c436ab8f6a18e153cb1c01)](https://circleci.com/gh/fnproject/fdk-java)
 
-This page provides links to docs and examples on how to use the Java Functions Development Kit (Java FDK) to develop applications.
+This page provides links to docs and examples on how to use the Functions Development Kit for Java (FDK for Java) to develop applications.
 
 ## Docs
 * [Data Binding for function input and output](DataBinding.md)
@@ -12,21 +12,21 @@ This page provides links to docs and examples on how to use the Java Functions D
 * [Testing your functions](TestingFunctions.md)
 
 ## Examples
-* [String reverse](examples/string-reverse/README.md): This function takes a string and returns the reverse of the string. The Java FDK handles marshalling data into your
+* [String reverse](examples/string-reverse/README.md): This function takes a string and returns the reverse of the string. The FDK for Java handles marshalling data into your
 function without the function having any knowledge of the FDK API.
 * [Regex query](examples/regex-query/README.md): This function takes a JSON object containing a `text` field
 and a `regex` field and returns a JSON object with a list of matches in the `matches` field. It
 demonstrates the builtin JSON support of the Fn Java wrapper (provided through Jackson) and how the
 platform handles serialization of POJO return values.
 * [QR Code gen](examples/qr-code/README.md): This function parses the query parameters of a GET request (through the `InputEvent` passed into the function) to generate a QR code. It demonstrates
-the `InputEvent` and `OutputEvent` interfaces which provide low level access to data entering the Fn Java FDK.
+the `InputEvent` and `OutputEvent` interfaces which provide low level access to data entering the Fn FDK for Java.
 * [Asynchronous thumbnails generation](examples/async-thumbnails/README.md): This example showcases the Fn Flow asynchronous execution API, by creating a workflow that takes an image and asynchronously generates three thumbnails for it, then uploads them to an object storage.
-* [Gradle build](examples/gradle-build/README.md): This shows how to use Gradle to build functions using the Java FDK. 
+* [Gradle build](examples/gradle-build/README.md): This shows how to use Gradle to build functions using the FDK for Java.
 
-## Contribute to the Java FDK
-If wish to contribute to the Java FDK development see our [Contributing to Fn Guide](https://github.com/fnproject/fn/tree/master/docs#for-contributors).
+## Contribute to the FDK for Java
+If wish to contribute to the FDK for Java development see our [Contributing to Fn Guide](https://github.com/fnproject/fn/tree/master/docs#for-contributors).
 
-For details on the Java FDK Development see the [Java FDK Repo](https://github.com/fnproject/fdk-java).
+For details on the FDK for Java Development see the [FDK for Java Repo](https://github.com/fnproject/fdk-java).
 
 Before you get started you will need the following things:
 
@@ -58,7 +58,7 @@ func.yaml created
 
 This creates the boilerplate for a new Java Function based on Maven and Oracle
 Java 9. The `pom.xml` includes a dependency on the latest version of the Fn
-Java FDK that is useful for developing your Java functions.
+FDK for Java that is useful for developing your Java functions.
 
 You can now import this project into your favourite IDE as normal.
 
@@ -155,7 +155,7 @@ Hello, Universe!
 ```
 
 ### 4. Testing your function
-The Fn Java FDK includes a testing library providing useful [JUnit
+The Fn FDK for Java includes a testing library providing useful [JUnit
 4](http://junit.org/junit4/) rules to test functions. Look at the test in
 `src/test/java/com/example/fn/HelloFunctionTest.java`:
 
@@ -246,7 +246,7 @@ Hello, world!
 ```
 
 ### 6. Something more interesting
-The Fn Java FDK supports [flexible data binding](DataBinding.md)  to make
+The Fn FDK for Java supports [flexible data binding](DataBinding.md)  to make
 it easier for you to map function input and output data to Java objects.
 
 Below is an example to of a Function that returns a POJO which will be
@@ -297,9 +297,9 @@ $ echo -n Michael | fn run
 
 ## 7. Where do I go from here?
 
-Learn more about the Fn Java FDK by reading the next tutorials in the series.
+Learn more about the Fn FDK for Java by reading the next tutorials in the series.
 Also check out the examples in the [`examples` directory](examples) for some
-functions demonstrating different features of the Fn Java FDK.
+functions demonstrating different features of the Fn FDK for Java.
 
 ### Configuring your function
 

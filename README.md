@@ -37,6 +37,7 @@ If you are a developer using Fn, this section is for you. For operating Fn, see 
 * FDK for Java
     * [Configuration Variables](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/configuration-variables): Set configuration values for applications, function, and in `func.yaml`.
     * [Gradle Build](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/gradle-build): Use a function to build and run a Java app using Gradle.
+    * [QR Code](https://github.com/fnproject/docs/blob/master/fdks/fdk-java/examples/qr-code/README.md): Generate QR Codes from data passed to the function.
     * [Regex](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/regex-query): Pass a regex to a function.
     * [Simple Reverse String](https://github.com/fnproject/docs/tree/master/fdks/fdk-java/examples/string-reverse): Reverse the letters in a string.
 

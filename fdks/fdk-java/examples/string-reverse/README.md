@@ -10,8 +10,8 @@ dlroW olleH
 
 ## Demonstrated FDK features
 
-This example uses **none** of the Fn Java FDK features, in fact it doesn't have
-any dependency on the Java FDK.  It is just plain old Java code.
+This example uses **none** of the Fn FDK for Java features, in fact it doesn't
+have any dependency on the FDK for Java.  It is just plain old Java code.
 
 ## Step by step
 
@@ -68,9 +68,7 @@ public class StringReverse {
 ```
 
 As you can see, this is plain Java with no references to the Fn API. The
-Fn Java FDK handles the marshalling of the HTTP body into the `str`
+Fn FDK for Java handles the marshalling of the HTTP body into the `str`
 parameter as well as the marshalling of the returned reversed string into the HTTP
 response body (see [Data Binding](../../DataBinding.md) for more
 information on how marshalling is performed).
-
-

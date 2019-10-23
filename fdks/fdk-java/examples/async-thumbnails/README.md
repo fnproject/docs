@@ -1,4 +1,4 @@
-# Example Fn Java FDK / Fn Flows Project: Asynchronous Thumbnails
+# Example Fn FDK for Java / Fn Flows Project: Asynchronous Thumbnails
 
 This example provides an HTTP endpoint for asynchronously creating three
 thumbnails of an image whose data is provided as the body of the HTTP request
@@ -47,7 +47,7 @@ docker container, so that you can verify when the thumbnails are uploaded.
 Build the function locally:
 
 ```bash
-$ fn deploy --local --app myapp 
+$ fn deploy --local --app myapp
 ```
 
 
@@ -110,7 +110,7 @@ public class ThumbnailsFunction {
                 .orElseThrow(() -> new RuntimeException("Missing configuration: OBJECT_STORAGE_ACCESS"));
         storageSecretKey = ctx.getConfigurationByKey("OBJECT_STORAGE_SECRET")
                 .orElseThrow(() -> new RuntimeException("Missing configuration: OBJECT_STORAGE_SECRET"));
-        
+
         resize128ID = ctx.getConfigurationByKey("RESIZE_128_FN_ID")
                   .orElseThrow(() -> new RuntimeException("Missing configuration: RESIZE_128_FN_ID"));
         resize256ID = ctx.getConfigurationByKey("RESIZE_256_FN_ID")
@@ -311,14 +311,14 @@ public class ThumbnailsFunctionTest {
           .setConfig("RESIZE_128_FN_ID","myapp/resize128")
           .setConfig("RESIZE_256_FN_ID","myapp/resize256")
           .setConfig("RESIZE_512_FN_ID","myapp/resize512");
-        
+
         flow.givenFn("myapp/resize128")
                 .withResult("128".getBytes())
             .givenFn("myapp/resize256")
                 .withResult("256".getBytes())
             .givenFn("myapp/resize512")
                 .withFunctionError();
-        
+
         fn.givenEvent()
              .withBody("testing".getBytes())
              .enqueue();
