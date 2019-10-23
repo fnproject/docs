@@ -1,5 +1,4 @@
 schema_version: 20180708
 name: resize256
-version: 0.0.5
+version: 0.0.8
 entrypoint: convert - -resize 256x256 -
-format: default

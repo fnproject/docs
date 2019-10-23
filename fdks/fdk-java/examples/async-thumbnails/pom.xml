@@ -8,17 +8,16 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <fdk.version>1.0.0-SNAPSHOT</fdk.version>
+        <fdk.version>1.0.98</fdk.version>
         <mockito.version>2.8.47</mockito.version>
         <jackson.version>2.9.10</jackson.version>
     </properties>
 
-    <groupId>com.fnproject.fn.examples</groupId>
+    <groupId>com.example.fn</groupId>
     <artifactId>async-thumbnails</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <dependencies>
-
         <dependency>
             <groupId>com.fnproject.fn</groupId>
             <artifactId>api</artifactId>
@@ -74,25 +73,31 @@
             <artifactId>wiremock</artifactId>
             <version>2.19.0</version>
         </dependency>
-    </dependencies>
+    	<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-simple</artifactId>
+		    <version>1.6.2</version>
+		    <scope>test</scope>
+		</dependency> 	
+    </dependencies>   
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.3</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8.2</version>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
                 <configuration>
-                    <skip>true</skip>
+                    <useSystemClassLoader>false</useSystemClassLoader>
                 </configuration>
             </plugin>
         </plugins>
@@ -100,8 +105,14 @@
 
     <repositories>
         <repository>
-            <id>fn-maven-releases</id>
+            <id>fn-release-repo</id>
             <url>https://dl.bintray.com/fnproject/fnproject</url>
+            <releases>
+            	<enabled>true</enabled>
+            </releases>
+            <snapshots>
+            	<enabled>false</enabled>
+            </snapshots>
         </repository>
     </repositories>
 </project>

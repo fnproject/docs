@@ -1,5 +1,6 @@
-package com.fnproject.fn.examples;
+package com.example.fn;
 
+import com.example.fn.ThumbnailsFunction;
 import com.fnproject.fn.testing.FnTestingRule;
 import com.fnproject.fn.testing.flow.FlowTesting;
 import com.github.tomakehurst.wiremock.client.WireMock;
