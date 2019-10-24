@@ -5,7 +5,7 @@ By following this step-by-step guide you will learn to configure custom handling
 
 ## Overview
 
-In the [Data Binding](DataBinding.md) tutorial you have seen how the raw data received and returned by the function is represented by [InputEvent](../api/src/main/java/com.fnproject.fn/api/InputEvent.java)s and [OutputEvent](../api/src/main/java/com.fnproject.fn/api/OutputEvent.java)s. The Fn Java FDK provides out-of-the-box functionality to convert these to some simple types and POJOs, but you might want to customize the way your input and output data is marshalled from the HTTP request and to the HTTP response.
+In the [Data Binding](DataBinding.md) tutorial you have seen how the raw data received and returned by the function is represented by [InputEvent](../api/src/main/java/com.fnproject.fn/api/InputEvent.java)s and [OutputEvent](../api/src/main/java/com.fnproject.fn/api/OutputEvent.java)s. The Fn FDK for Java provides out-of-the-box functionality to convert these to some simple types and POJOs, but you might want to customize the way your input and output data is marshalled from the HTTP request and to the HTTP response.
 
 This is done through the *Coercion* abstractions.
 

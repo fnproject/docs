@@ -104,7 +104,7 @@ application or the function.
 
 ### Testing
 
-The fn Java FDK provides a `com.fnproject.fn.testing` package for simulating
+The Fn FDK for Java provides a `com.fnproject.fn.testing` package for simulating
 function invocations and inspecting function results. This is accomplished
 by a fake functions server, `FnTesting`, whose life cycle is managed by a [JUnit rule](
 https://github.com/junit-team/junit4/wiki/rules).

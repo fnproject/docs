@@ -1,12 +1,12 @@
 # Data Binding for function input and output
-The Fn Java FDK provides some standard tools for handling binding input to your functions to Java objects and types - You can also configure your own data binding either per-function or publish function data  binding libraries, see [Extending Data Binding](ExtendingDataBinding.md) for details of how to do this.
+The Fn FDK for Java provides some standard tools for handling binding input to your functions to Java objects and types - You can also configure your own data binding either per-function or publish function data  binding libraries, see [Extending Data Binding](ExtendingDataBinding.md) for details of how to do this.
 
 
 ## Simple data binding
 
 Fn functions are invoked from a HTTP request whose body can provide input to the function.
 
-The Fn Java FDK includes functionality to convert the data provided in the body of the HTTP request into frequently used types directly.
+The Fn FDK for Java includes functionality to convert the data provided in the body of the HTTP request into frequently used types directly.
 
 Add a string parameter to your function to receive the HTTP body of the function call as a string and return a string value to set the body of the HTTP response:
 
@@ -108,7 +108,7 @@ public class TestFn {
 ```
 
 ## Working with raw function events
-To get the most flexibility in handling data in and out of your function, the FDK also provides an abstraction of the raw Fn Java FDK events received or returned by the function by means of the [InputEvent](../api/src/main/java/com/fnproject/fn/api/InputEvent.java) and [OutputEvent](../api/src/main/java/com/fnproject/fn/api/OutputEvent.java) interfaces.
+To get the most flexibility in handling data in and out of your function, the FDK also provides an abstraction of the raw Fn FDK for Java events received or returned by the function by means of the [InputEvent](../api/src/main/java/com/fnproject/fn/api/InputEvent.java) and [OutputEvent](../api/src/main/java/com/fnproject/fn/api/OutputEvent.java) interfaces.
 
 Using this approach allows you to:
 
@@ -116,7 +116,7 @@ Using this approach allows you to:
 - read the request body as an `InputStream`;
 - control content type (and other headers) and status of the response.
 
-The Fn Java FDK can automatically convert the input HTTP request into an `InputEvent` and provide it as the parameter of the function. Similarly, it can take the `OutputEvent` returned by the function and construct an appropriate HTTP response.
+The Fn FDK for Java can automatically convert the input HTTP request into an `InputEvent` and provide it as the parameter of the function. Similarly, it can take the `OutputEvent` returned by the function and construct an appropriate HTTP response.
 
 Below is a function that looks at both the body of the request and a custom `X-My-Header` header.
 
@@ -141,13 +141,13 @@ public class Events {
         String text = rawInput.consumeBody(this::readData);
 
         String responseBody = "Received '" + text + "' with my header '" + header + "'.\n";
-        
+
         Map<String, String> customHeaders = new HashMap<>();
         customHeaders.put("X-My-Response-Header", "any value here");
 
         OutputEvent out = OutputEvent.fromBytes(
             responseBody.getBytes(), // Data
-            OutputEvent.SUCCESS,     // Any numeric HTTP status code can be used here 
+            OutputEvent.SUCCESS,     // Any numeric HTTP status code can be used here
             "text/plain",            // Content type
             Headers.fromMap(customHeaders)  // and additional custom headers on output
         );

@@ -1,6 +1,6 @@
 # Testing your functions
 
-The Fn Java FDK testing harness allows you to quickly build and test your Java functions in your IDE and test them in an emulated function runtime without uploading your functions to the cloud. The framework uses [JUnit 4](http://junit.org/junit4/) rules.
+The Fn FDK for Java testing harness allows you to quickly build and test your Java functions in your IDE and test them in an emulated function runtime without uploading your functions to the cloud. The framework uses [JUnit 4](http://junit.org/junit4/) rules.
 
 ## Add the test module to your project
 
@@ -155,9 +155,9 @@ You can test that this is all handled correctly as follows:
 
 # Testing Fn Flows
 
-You can use `FlowTesting` to test [Fn Flows](FnFlowsUserGuide.md) within your functions.  If flow stages are started by functions within `thenRun` then the testing rule will execute the stages of those flows locally, returning when all spawned flows are complete. 
+You can use `FlowTesting` to test [Fn Flows](FnFlowsUserGuide.md) within your functions.  If flow stages are started by functions within `thenRun` then the testing rule will execute the stages of those flows locally, returning when all spawned flows are complete.
 
-Start by importing the `flow-testing` library into your functino in `test` scope: 
+Start by importing the `flow-testing` library into your functino in `test` scope:
 
 ```xml
 <dependency>
@@ -168,11 +168,11 @@ Start by importing the `flow-testing` library into your functino in `test` scope
 </dependency>
 ```
 
-Then create a `FlowTesting` field in your test class, passing the `FnTesting` rule as a parameter: 
+Then create a `FlowTesting` field in your test class, passing the `FnTesting` rule as a parameter:
 
 ```java
-import com.fnproject.fn.testing.FnTestingRule; 
-import com.fnproject.fn.testing.flow.FlowTesting; 
+import com.fnproject.fn.testing.FnTestingRule;
+import com.fnproject.fn.testing.flow.FlowTesting;
 
 public class FunctionTest {
   @Rule
@@ -181,7 +181,7 @@ public class FunctionTest {
   private final FlowTesting flowTesting = FlowTesting.create(testing);
 ```
 
-`FlowTesting` supports  mocking  the behaviour of Fn functions invoked by the  `invokeFunction()` API within flows. 
+`FlowTesting` supports  mocking  the behaviour of Fn functions invoked by the  `invokeFunction()` API within flows.
 
 You can specify that the invocation a function returns a valid value (as a byte array):
 
@@ -234,13 +234,13 @@ The same mechanism can be used to integrate mocking frameworks like [Mockito](ht
 
 Flow stages may execute in parallel. If you have several `withAction` clauses accessing the same shared state, you must ensure that that access is thread-safe.
 
-# Sharing data between tests and your functions 
+# Sharing data between tests and your functions
 To ensure isolation of each function invocation and/or flow stage, and to simulate the behaviour of the
-real Fn platform (where each function invocation can potentially run in a different JVM), the `FnTestingRule` runs each `thenRun` invocation and each Flow stage using a different Java Class Loader. 
+real Fn platform (where each function invocation can potentially run in a different JVM), the `FnTestingRule` runs each `thenRun` invocation and each Flow stage using a different Java Class Loader.
 
-While this improves the veracity of tests, it prevents your tests from accessing or modifying the state of your functions and vice versa. 
+While this improves the veracity of tests, it prevents your tests from accessing or modifying the state of your functions and vice versa.
 
-If you need to share objects or static data between your test classes and your functions (e.g. to pre-initialize global state) you can do so within your tests using the `addSharedClass` (for a specific class) and `addSharedPrefix` (for a package, or class prefix) methods on `FnTestingRule`. 
+If you need to share objects or static data between your test classes and your functions (e.g. to pre-initialize global state) you can do so within your tests using the `addSharedClass` (for a specific class) and `addSharedPrefix` (for a package, or class prefix) methods on `FnTestingRule`.
 
 ```java
     testing.addSharedClass(MyClassWithStaticState.class); // Shares only the specific class
@@ -248,4 +248,4 @@ If you need to share objects or static data between your test classes and your f
     testing.addSharedPrefix("com.example.mysubpackage."); // Shares anything under a package
 ```
 
-While it is possible, it is not generally correct to share the function class itself with the test Class Loader - doing so may result in unexpected (not representative of the real fn platform) initialisation of static fields on the class. With Flows sharing the test class may also result in concurrent access to static data (via `@FnConfiguration` methods). 
+While it is possible, it is not generally correct to share the function class itself with the test Class Loader - doing so may result in unexpected (not representative of the real fn platform) initialisation of static fields on the class. With Flows sharing the test class may also result in concurrent access to static data (via `@FnConfiguration` methods).
