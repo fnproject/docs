@@ -144,16 +144,13 @@ We currently don't yet offer Fn as a managed service which would manage network 
 
 ### How long can a function run? Can we make it run forever?
 
-Function timeout is configurable. Please see [func.yaml options](https://github.com/fnproject/fn/blob/master/docs/developers/func-file.md). The upper execution timeout limit for a function is 120 seconds. An idle function is cleaned up after 30 seconds.
+Function timeout is configurable. Please see [func.yaml options](https://github.com/fnproject/docs/blob/master/fn/develop/func-file.md). The upper execution timeout limit for a function is 120 seconds. An idle function is cleaned up after 30 seconds.
 
 
 ### How does the service trace the liveliness of the function? If my function dies/crashes will the service provision it again?
 
 This is not a microservices platform so the notion is slightly different.  Functions are run when called.  If you call a function that doesn't exist then one will be started.
 
-### How does scaling work? Should this be initiated by a customer?
-
-Fn runs more instances of the function based on requests.  It is automatic. For more information see [scaling](../operate/scaling.md).
 
 ### When one host is overloaded, will this service automatically relocate the function to another host?
 
