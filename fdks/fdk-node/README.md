@@ -1,6 +1,6 @@
-# Fn Function Developer Kit for Node.js
+# Fn Function Development Kit for Node.js
 
-This Function Developer Kit makes it easy to deploy Node.js functions to Fn.
+This Function Development Kit makes it easy to deploy Node.js functions to Fn.
 
 
 ## Creating a Node Function
