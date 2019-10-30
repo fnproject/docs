@@ -10,7 +10,7 @@ If that header is set, it is assumed that the function also supports the CloudEv
 
 ## Trying it out
 
-The Ruby FDK supports CloudEvents, so we'll use that:
+The FDK for Ruby supports CloudEvents, so we'll use that:
 
 ```sh
 fn init --runtime ruby rfunc

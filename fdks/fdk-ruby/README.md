@@ -1,6 +1,6 @@
-# Ruby Function Developer Kit (FDK)
+# Function Development Kit for Ruby 
 
-This provides a Ruby framework for developing functions for us with [Fn](https://fnproject.github.io).
+The Function Development Kit for Ruby (FDK for Ruby) provides a Ruby framework for developing `functions` for us with [Fn](https://fnproject.github.io).
 
 ## Function Handler
 
