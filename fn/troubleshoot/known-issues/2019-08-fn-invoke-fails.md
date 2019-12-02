@@ -1,4 +1,4 @@
-# `fn invoke` fails when using an a CentOS based Linux
+# `fn invoke` fails with the error message "kernel memory accounting disabled in this runc build"
 Date Reported: 7/2/19  Issue: <https://github.com/fnproject/fn/issues/1520>
 
 ### Error messages
