@@ -15,4 +15,5 @@ This is a list of known issues with Fn. The pages linked here provide detailed i
 ## Debug
 Learn how to get detailed information about what is happening in the Fn server.
 
-* [Debug](debug.md)
+* [Debug HTTP Headers with the Fn CLI](debug-headers.md)
+* [Enable DEBUG log-level on the Fn Server](debug-loglevel.md)
