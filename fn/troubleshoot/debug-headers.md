@@ -1,4 +1,4 @@
-# DEBUG=1
+# Use DEBUG=1 for Client Commands
 
 If you're interacting with functions via the `fn` CLI, you can enable debug
 mode to see the full details of the HTTP requests going to the Fn server and
@@ -37,4 +37,3 @@ tutorial	01DQ2STN6KNG8G00GZJ000001Q
 
 All debug output is written to stderr while the normal response is written
 to stdout so it's easy to capture or pipe either for processing.
-
