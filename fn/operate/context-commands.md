@@ -54,9 +54,9 @@ Here are the steps to setup a new context.
 * **Delete** an Fn context with the specified name.
     * `fn delete context <context-name>`
 * **List** a context's settings.
-    * `fn i ctx <context-name>`
+    * `fn inspect context <context-name>`
 * **List all** contexts on this system.
-    * `fn list <context-name>`
+    * `fn list contexts`
 * **Add or Update** key/value data in your context.
     * `fn update context <key> <value>`
 * **Update (Delete)** a name/value pair from your context.
