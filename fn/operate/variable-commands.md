@@ -1,8 +1,8 @@
 # Fn Variable Commands
-The Fn CLI can store variable information in the following spaces:
+The Fn CLI can store config variable information in the following places:
 
-* **Application:** Variables can be accessed by all functions in the application.
-* **Function:** Variables that can only by accessed by a single function.
+* **Applications:** Variables can be accessed by all functions in the application.
+* **Functions:** Variables that can only by accessed by a single function.
 
 
 ## Fn Variable Command Reference
@@ -13,6 +13,7 @@ The following sections provide definitions and examples of all the Fn commands r
 * Create: `fn cf a <your-app-name> <key> <value>`
 * Delete: `fn d cf a <your-app-name> <key>`
 * List: `fn ls cf a <your-app-name>`
+* List all Apps: `fn ls a`
 * Update Name/Value: `fn cf a <your-app-name> <key> <value>`
     * Overwrites the value.
 
@@ -21,6 +22,7 @@ The following sections provide definitions and examples of all the Fn commands r
 * Create: `fn cf f <your-app-name> <your-function-name> <key> <value>`
 * Delete: `fn d cf f <your-app-name> <your-function-name> <key>`
 * List: `fn ls cf f <your-app-name> <your-function-name>`
+* List all Functions: `fn ls f <your-app-name>`
 * Update Name/Value: `fn cf f <your-app-name> <your-function-name> <key> <value>`
     * Overwrites the value.
 
@@ -51,12 +53,21 @@ Here are the steps to setup a function key/value pair.
 * Create: `fn cf a my-app DB_USER my-user-name`
 * Delete: `fn d cf a my-app DB_USER`
 * List: `fn ls cf a my-app`
+* List all Apps: `fn ls a`
 * Update Name/Value: `fn cf a my-app DB_USER my-different-user-name`
     * Overwrites the value.
 
 
+### Fn Function Cheat Sheet
+* Create: `fn cf f my-app my-func DB_HOST myhost`
+* Delete: `fn d cf f my-app my-func DB_HOST`
+* List: `fn ls cf f my-app my-func`
+* List all Functions: `fn ls f my-app`
+* Update Name/Value: `fn cf f my-app my-func DB_HOST mynewhost`
+    * Overwrites the value.
 
-### Detailed Application Command Examples
+
+### Detailed Fn Application Command Examples
 * **Create** a new Fn app variable.
     * `fn config app <your-app-name> <key> <value>`
 * **Delete** an Fn app variable.
@@ -65,3 +76,12 @@ Here are the steps to setup a function key/value pair.
     * `fn list config app <your-app-name>`
 * **Update** key/value data for your application.
     * `fn config app <your-app-name> <key> <value>`
+
+
+### Detailed Fn Function command examples
+* Create: `fn config function <your-app-name> <your-function-name> <key> <value>`
+* Delete: `fn delete config function <your-app-name> <your-function-name> <key>`
+* List: `fn list config function <your-app-name> <your-function-name>`
+* List all Functions: `fn list functions <your-app-name>`
+* Update Name/Value: `fn config function <your-app-name> <your-function-name> <key> <value>`
+    * Overwrites the value.
