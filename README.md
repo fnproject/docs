@@ -47,6 +47,7 @@ If you are a developer using Fn, this section is for you. For operating Fn, see 
 * [API Clients](fn/develop/clients.md)
 * [CLI Docs and Reference](cli/README.md)
     * [CLI Context Commands](fn/operate/context-commands.md)
+    * [CLI Variable Commands](fn/operate/variable-commands.md)
 * [Packaging functions](fn/develop/packaging.md)
 * [FAQ](fn/general/faq.md)
 * [Pagination](fn/develop/pagination.md)
