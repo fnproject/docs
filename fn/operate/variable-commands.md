@@ -9,7 +9,7 @@ The Fn CLI can store config variable information in the following places:
 The following sections provide definitions and examples of all the Fn commands related to the Fn context.
 
 
-### Fn Application Cheat Sheet
+### Fn Application Vars Cheat Sheet
 * Create: `fn cf a <your-app-name> <key> <value>`
 * Delete: `fn d cf a <your-app-name> <key>`
 * List: `fn ls cf a <your-app-name>`
@@ -18,7 +18,7 @@ The following sections provide definitions and examples of all the Fn commands r
     * Overwrites the value.
 
 
-### Fn Function Cheat Sheet
+### Fn Function Vars Cheat Sheet
 * Create: `fn cf f <your-app-name> <your-function-name> <key> <value>`
 * Delete: `fn d cf f <your-app-name> <your-function-name> <key>`
 * List: `fn ls cf f <your-app-name> <your-function-name>`
@@ -49,7 +49,7 @@ Here are the steps to setup a function key/value pair.
     * `fn ls cf f <your-app-name> <your-function-name>`
 
 
-### Application Usage Examples
+### Fn Application Vars Usage Examples
 * Create: `fn cf a my-app DB_USER my-user-name`
 * Delete: `fn d cf a my-app DB_USER`
 * List: `fn ls cf a my-app`
@@ -58,7 +58,7 @@ Here are the steps to setup a function key/value pair.
     * Overwrites the value.
 
 
-### Fn Function Usage Examples
+### Fn Function Vars Usage Examples
 * Create: `fn cf f my-app my-func DB_HOST myhost`
 * Delete: `fn d cf f my-app my-func DB_HOST`
 * List: `fn ls cf f my-app my-func`
@@ -67,7 +67,7 @@ Here are the steps to setup a function key/value pair.
     * Overwrites the value.
 
 
-### Detailed Fn Application Command Examples
+### Detailed Fn Application Vars Command Examples
 * **Create** a new Fn app variable.
     * `fn config app <your-app-name> <key> <value>`
 * **Delete** an Fn app variable.
@@ -78,7 +78,7 @@ Here are the steps to setup a function key/value pair.
     * `fn config app <your-app-name> <key> <value>`
 
 
-### Detailed Fn Function command examples
+### Detailed Fn Function Vars Command Examples
 * Create: `fn config function <your-app-name> <your-function-name> <key> <value>`
 * Delete: `fn delete config function <your-app-name> <your-function-name> <key>`
 * List: `fn list config function <your-app-name> <your-function-name>`
