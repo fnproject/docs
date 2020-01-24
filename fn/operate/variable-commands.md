@@ -58,7 +58,7 @@ Here are the steps to setup a function key/value pair.
     * Overwrites the value.
 
 
-### Fn Function Cheat Sheet
+### Fn Function Usage Examples
 * Create: `fn cf f my-app my-func DB_HOST myhost`
 * Delete: `fn d cf f my-app my-func DB_HOST`
 * List: `fn ls cf f my-app my-func`
