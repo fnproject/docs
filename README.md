@@ -1,20 +1,52 @@
 ## <img src="https://fnproject.io/images/fn-300x125.png" alt="Fn Project Logo" height="21" width="50"> Project Documentation
 
-## Welcome
-Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://github.com/fnproject/docs/blob/master/fn/general/introduction.md) compute platform that you can run anywhere. Some of its key features:
+**[Quickstart](https://github.com/fnproject/fn#quickstart)&nbsp; | &nbsp;[Tutorials](https://fnproject.io/tutorials)&nbsp; |  &nbsp;[Docs](https://github.com/fnproject/docs)&nbsp; | &nbsp;[API](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml)**
 
-* Open Source
-* Native Docker: use any Docker container as your Function
-* Supports all languages
-* Run anywhere: Public, private and hybrid clouds
-* Easy to use for developers
-* Easy to manage for operators
-* Written in Go
-* Simple yet powerful extensibility
+Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://github.com/fnproject/docs/blob/master/fn/general/introduction.md) compute platform that you can run anywhere.
 
-The fastest way to experience Fn is to follow the quickstart below, or you can jump right to our [full documentation](https://github.com/fnproject/docs), [API Docs](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml), or hit us up in our [Slack Community](http://slack.fnproject.io) or [Community Page](https://github.com/fnproject/docs/tree/master/community/README.md)!
+## Getting Started
+* [Quickstart Tutorial](https://github.com/fnproject/fn#quickstart)
+* [Fn Installation](https://fnproject.io/tutorials/install/)
+* [Fn Introduction](fn/general/introduction.md)
+* Using Fn with Java
+    * [Java Tutorial](https://fnproject.io/tutorials/JavaFDKIntroduction/)
+    * [Java Examples](fdks/fdk-java)
+* Using Fn with Node.js
+    * [Node Tutorial](https://fnproject.io/tutorials/node/intro/README.md)
+    * [Node Examples](fdks/fdk-node)
+* Using Fn with Python
+    * [Python Tutorial](https://fnproject.io/tutorials/python/intro/)
+    * [Python Examples](fdks/fdk-python)
+* Creating Functions with Docker
+    * [Create a Function with a Docker Container](https://fnproject.io/tutorials/ContainerAsFunction/)
+    * [Create a Function from a Docker image that contains a Node.js app with Oracle DB Support](https://fnproject.io/tutorials/node/custom-db/)
+    * [Create a Function with a Linux Command and HotWrap](https://fnproject.io/tutorials/docker/CustomLinuxContainer/)
+* [Logging and Debugging Tutorial](https://fnproject.io/tutorials/blob/master/Troubleshooting/README.md)
+    * [Function Debugging](fn/troubleshoot/debug-loglevel.md)
+    * [FAQ](fn/general/faq.md)
+* Using Fn with Other Languages
+    * [Using Fn with C# (Community Supported)](https://fnproject.io/tutorials/csharp/intro/)
+    * [Using Fn with Go](https://fnproject.io/tutorials/Introduction/)
+    * [Using Fn with Ruby](https://fnproject.io/tutorials/ruby/intro/)
+* Exploring Fn
+    * [Create Apps with Fn](https://fnproject.io/tutorials/Apps/)
+    * [Fn Dev with Muliple Contexts](https://fnproject.io/tutorials/basics/UsingContexts/)
+    * [Using the Fn RuntimeContext with Functions](https://fnproject.io/tutorials/basics/UsingRuntimeContext/)
+* Popular Fn Topics
+    * [Fn Function File Format](fn/develop/func-file.md): All the values that can be used in `func.yaml`.
+    * [Fn FDKs](fn/develop/fdks.md): Function Development Kits for supported languages.
+    * [Fn Runtime Options](fn/operate/options.md)
+    * [Kubernetes Helm Chart for Fn](https://github.com/fnproject/fn-helm/)
+    * Fn Sub-projects: [Flow](https://github.com/fnproject/flow), [UI](https://github.com/fnproject/ui)
+    * [Running Fn in Production](fn/operate/production.md)
+    * [Triggers](fn/develop/triggers.md): Using triggers.
+    * [Troubleshooting](fn/troubleshoot/README.md): Solutions to common problems when working with Fn.
+        * Known Issue: [Trying to invoke a function when using a CentOS based Linux fails with an error message](fn/troubleshoot/known-issues/2019-08-fn-invoke-fails.md)
+    * [Windows: Running Fn Client for Windows](fn/develop/running-fn-client-windows.md): Run the Fn client on Microsoft Windows.
 
-If you are new to serverless in general, you might find our [introduction](fn/general/introduction.md) useful.
+
+
+
 
 ## For Developers
 
