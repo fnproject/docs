@@ -12,7 +12,7 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
     * [Java Tutorial](https://fnproject.io/tutorials/JavaFDKIntroduction/)
     * [Java Examples](fdks/fdk-java)
 * Using Fn with Node.js
-    * [Node Tutorial](https://fnproject.io/tutorials/node/intro/README.md)
+    * [Node Tutorial](https://fnproject.io/tutorials/node/intro/)
     * [Node Examples](fdks/fdk-node)
 * Using Fn with Python
     * [Python Tutorial](https://fnproject.io/tutorials/python/intro/)
@@ -21,7 +21,7 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
     * [Create a Function with a Docker Container](https://fnproject.io/tutorials/ContainerAsFunction/)
     * [Create a Function from a Docker image that contains a Node.js app with Oracle DB Support](https://fnproject.io/tutorials/node/custom-db/)
     * [Create a Function with a Linux Command and HotWrap](https://fnproject.io/tutorials/docker/CustomLinuxContainer/)
-* [Logging and Debugging Tutorial](https://fnproject.io/tutorials/blob/master/Troubleshooting/README.md)
+* [Logging and Debugging Tutorial](https://fnproject.io/tutorials/blob/master/Troubleshooting/)
     * [Function Debugging](fn/troubleshoot/debug-loglevel.md)
     * [FAQ](fn/general/faq.md)
 * Using Fn with Other Languages
