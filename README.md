@@ -21,6 +21,7 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
     * [Create a Function with a Docker Container](https://fnproject.io/tutorials/ContainerAsFunction/)
     * [Create a Function from a Docker image that contains a Node.js app with Oracle DB Support](https://fnproject.io/tutorials/node/custom-db/)
     * [Create a Function with a Linux Command and HotWrap](https://fnproject.io/tutorials/docker/CustomLinuxContainer/)
+    * [Build a Function with a Dockerfile](fn/develop/build-function-dockerfile.md)
 * [Logging and Debugging Tutorial](https://fnproject.io/tutorials/Troubleshooting/)
     * [Function Debugging](fn/troubleshoot/debug-loglevel.md)
     * [FAQ](fn/general/faq.md)
