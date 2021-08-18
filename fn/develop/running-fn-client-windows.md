@@ -18,27 +18,58 @@ Fn client requires Docker Desktop for Windows to run. Here are some links to for
 ### Docker System Requirements
 To install Docker, you have to have all of the following.
 
-* Windows 10 64-bit: Pro 2004 (build 19041) or higher, or Enterprise or Education 1909 (build 18363) or higher.
-* Enable the Hyper-V and Containers features for Windows 10 Professional.
-* The following hardware prerequisites are required to successfully run Client Hyper-V on Windows 10
+1. Windows 10 64-bit: Pro 2004 (build 19041) or higher, or Enterprise or Education 1909 (build 18363) or higher.
+2. The following hardware prerequisites are required to successfully run Client Hyper-V on Windows 10
    - 64 bit processor with Second Level Address Translation (SLAT)
    - 4GB system RAM
    - BIOS-level hardware virtualisation support must be enabled in the BIOS settings. See the documentation from your manufacturer for this step. For more information, see Virtualization: <https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled>
+3. Enabled ```Hyper-V and Containers features```for Windows 10.
 
-**Note:**
-Above system need can change with newer docker desktop versions. More on requirements, check here: <https://docs.docker.com/desktop/windows/install/> .You can also download the script:<> locally and execute in below way to see the current system state.
--  Open PowerShell as Administrator(```click Start > Windows PowerShell > Run as Administrator```)
--  Execute command ```Get-ExecutionPolicy```  and note down the outcome as it is needed in subsequent steps.
--  Execute command ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force;```
--  Execute command ```<<downloaded-script-full-path>>\fn_installer.ps1 "get-system-state"```
+**Note:** *Above system need can change with newer docker desktop versions.More on requirements, check: <https://docs.docker.com/desktop/windows/install/>.*
 
-    - ```<<downloaded-script-full-path>>``` is fully-qualified path of  downloaded script. For example: ```C:\Users\<<current_user>>\Downloads\fn_install\```
+ *You can also download the script:<> locally and execute in below way to see the current system state and see whether it is meeting the above need, otherwise Docker desktop will not work.*
+-  Open PowerShell as Administrator
+   ```
+   click Start > Windows PowerShell > Run as Administrator
+   ```
+-  Execute command in opened PowerShell and note down the outcome as it is needed in subsequent steps.
+   ```
+   Get-ExecutionPolicy
+   ```
+-  Execute command in opened PowerShell
+   ```
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force;
+   ```
 
-    - Outcome of above command will show you  system state.
-- Once done with script execution, execute command ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <<old_value>> -Force;```
+-  Execute command in opened PowerShell. Outcome of command will show your system state.
+   ```
+   <<downloaded-script-full-path>>\fn_installer.ps1 "get-system-state"
+   ```
 
-    - ```<<old_value>>``` this is same as the outcome you noted down after execution of command ```Get-ExecutionPolicy``` above.
-    - close the opened ```Powershell```
+    ***<<downloaded-script-full-path>>*** is fully-qualified path of  downloaded script. *For example:*
+    ```C:\Users\<<current_user>>\Downloads\fn_install\```
+
+
+- If just above step is showing that ```Hyper-V``` is not enabled then you can run command in opened PowerShell. This will enable the ```Hyper-V```. 
+  This step may result in system restart, please do follow the steps below post restart. 
+
+    ```
+   <<downloaded-script-full-path>>\fn_installer.ps1 "enable-hyperviser"
+   ```
+    ***<<downloaded-script-full-path>>*** is fully-qualified path of  downloaded script. *For example:*
+    ```C:\Users\<<current_user>>\Downloads\fn_install\```
+
+
+- Once done with above steps, execute command in opened PowerShell
+  ```
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <<old_value>> -Force;
+  ```
+
+    ***<<old_value>>*** this is same as the outcome you noted down after execution of command ```Get-ExecutionPolicy``` above.
+    
+
+- close the opened Powershell
+
 ### Install Docker
 These are the steps to install Docker.
 
@@ -53,20 +84,41 @@ With Docker installed, you are ready to install the Fn client.
 ## Install Fn Client
 Follow the steps below to install the Fn client on Windows.
 
--  Download the script:<> locally and execute in below way to see the current system state.
--  Open PowerShell as Administrator(```click Start > Windows PowerShell > Run as Administrator```)
--  Execute command ```Get-ExecutionPolicy```  and note down the outcome as it is needed in subsequent steps.
--  Execute command ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force;```
--  Execute command ```<<downloaded-script-full-path>>\fn_installer.ps1 "fn-client-install"```
-
-    - ```<<downloaded-script-full-path>>``` is fully-qualified path of  downloaded script. For example: ```C:\Users\<<current_user>>\Downloads\fn_install\```
+-  Download the script:<> locally and execute in below way.
    
-- Once done with script execution, execute command ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <<old_value>> -Force;```
 
-    - ```<<old_value>>``` this is same as the outcome you noted down after execution of command ```Get-ExecutionPolicy``` above.
-    - close the opened ```Powershell```
+-  Open PowerShell as Administrator
+   ```
+   click Start > Windows PowerShell > Run as Administrator
+   ```
+-  Execute command in opened PowerShell and note down the outcome as it is needed in subsequent steps.
+   ```
+   Get-ExecutionPolicy
+   ```
+   
+-  Execute command in opened PowerShell
+   ```
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force;
+   ```
+-  Execute command in opened PowerShell. This will install the latest fn client. More details: <https://github.com/fnproject/cli/releases>
+   ```
+   <<downloaded-script-full-path>>\fn_installer.ps1 "fn-client-install"
+   ```
+    ***<<downloaded-script-full-path>>*** is fully-qualified path of downloaded script. *For example:*
+      ```C:\Users\<<current_user>>\Downloads\fn_install\```
+ 
+  
+- Once done with above steps, execute command in opened PowerShell
+  ```
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <<old_value>> -Force;
+  ```
 
-Now when you open a Windows **Command Prompt**, and execute command ```fn version```.
+    ***<<old_value>>*** this is same as the outcome you noted down after execution of command ```Get-ExecutionPolicy``` above.
+    
+
+- Close the opened PowerShell
+
+Now when you open a Windows **Command Prompt**, and execute command ```fn version```. It should show the fn version.
 
 ### (3) Install the Linux Subsystem for Windows
 The Linux subsystem for Windows is now a standard feature of Windows as of build 16215. The Linux Fn client runs fine in the subsystem. To install the Fn client do the following:
