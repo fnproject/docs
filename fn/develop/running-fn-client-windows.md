@@ -1,13 +1,13 @@
 # How-to: Run Fn client on Windows and connect to a remote Fn server 
-You can run the Fn client on Windows 10 Professional and connect to a remote Fn server. This document provides the steps to make that happen.
+You can run the Fn client on Windows 10 and connect to a remote Fn server. This document provides the steps to make that happen.
 
 ## Fn System Requirements
-To install Fn on Windows, you need the following software:
+To install Fn on Windows, you need the following software/hardware:
 
-* Windows 10 Professional 64 bit Enterprise, or Education (Build 15063 or later)
-    * This is a requirement for Docker
-* Docker Desktop for Windows (2.1.0.1 +)
-* Microsoft Hyper-V and Containers support installed
+* Windows 10 64-bit: Pro 2004 (build 19041) or higher, or Enterprise or Education 1909 (build 18363) or higher.
+    * This is a requirement for Docker.
+* Docker Desktop for Windows (3.3.3 +)
+* Microsoft Hyper-V and Containers support installed 
 
 Links to the get all this installed are provided below.
 
@@ -18,9 +18,50 @@ Fn client requires Docker Desktop for Windows to run. Here are some links to for
 ### Docker System Requirements
 To install Docker, you have to have all of the following.
 
-* Virtualization enabled in your laptop's BIOS. See the documentation from your manufacturer for this step.
-* Windows 10 64-bit: Pro, Enterprise, or Education (Build 15063 or later).
-* Enable the Hyper-V and Containers features for Windows 10 Professional.
+1. Windows 10 64-bit: Pro 2004 (build 19041) or higher, or Enterprise or Education 1909 (build 18363) or higher.
+2. The following hardware prerequisites are required to successfully run Client Hyper-V on Windows 10
+   - 64 bit processor with Second Level Address Translation (SLAT)
+   - 4GB system RAM
+   - BIOS-level hardware virtualisation support must be enabled in the BIOS settings. See the documentation from your manufacturer for this step. For more information, see Virtualization: <https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled>
+3. Enabled ```Hyper-V and Containers features```for Windows 10.
+
+**Note:** *Above system need can change with newer docker desktop versions.More on requirements, check: <https://docs.docker.com/desktop/windows/install/>.*
+
+ *You can also download the script:<https://raw.githubusercontent.com/fnproject/cli/cli_fn_windows_install/fn_windows_installer.ps1> locally and place it at location(```c:\fn_install\```) and execute in below way to see the current system state and see whether it is meeting the above need, otherwise Docker desktop will not work properly.*
+-  Open PowerShell as Administrator
+   ```
+   click Start > Windows PowerShell > Run as Administrator
+   ```
+-  Execute command in opened PowerShell and note down the outcome as it is needed in subsequent steps.
+   ```
+   Get-ExecutionPolicy
+   ```
+-  Execute command in opened PowerShell
+   ```
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force;
+   ```
+
+-  Execute command in opened PowerShell. Outcome of command will show your system state.
+   ```
+   c:\fn_install\fn_windows_installer.ps1 "get-system-state"
+   ```
+    
+- If just above step is showing that ```Hyper-V``` is not enabled then you can run command in opened PowerShell. This will enable the ```Hyper-V```. 
+  This step may result in system restart, please do follow the steps below post restart. 
+
+    ```
+   c:\fn_install\fn_windows_installer.ps1 "enable-hyperviser"
+   ```
+   
+- Once done with above steps, execute command in opened PowerShell
+  ```
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <<old_value>> -Force;
+  ```
+
+    ***<<old_value>>*** this is same as the outcome you noted down after execution of command ```Get-ExecutionPolicy``` above.
+    
+
+- close the opened Powershell
 
 ### Install Docker
 These are the steps to install Docker.
@@ -29,42 +70,45 @@ These are the steps to install Docker.
 2. Enable Hyper-V and Containers features for Windows 10. See: <https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v>
 3. Perform the Docker install. See:  <https://docs.docker.com/docker-for-windows/install/>.
 4. Setup a [DockerHub account](https://hub.docker.com/signup). This is required to store Docker images on the net.
-
+   
+ 
 With Docker installed, you are ready to install the Fn client.
 
 ## Install Fn Client
-There are three ways to install the Fn client on Windows.
+Follow the steps below to install the Fn client on Windows.
 
-### (1) Windows 10 Quick and Dirty
-* Go to: <https://github.com/fnproject/cli/releases>
-* Download the latest `fn.exe`.
-* Copy the file into the `C:\Windows` directory.
+-  Download the script:<https://raw.githubusercontent.com/fnproject/cli/cli_fn_windows_install/fn_windows_installer.ps1> locally and place it at location(```c:\fn_install\```) if not done earlier and execute in below way.
 
-The Fn client is now in your `PATH` and ready to go.
 
-### (2) Windows 10 without Access to System Directories
-If your IT department has locked you out of your system directories, then there are more steps for you to do.
+-  Open PowerShell as Administrator
+   ```
+   click Start > Windows PowerShell > Run as Administrator
+   ```
+-  Execute command in opened PowerShell and note down the outcome as it is needed in subsequent steps.
+   ```
+   Get-ExecutionPolicy
+   ```
+   
+-  Execute command in opened PowerShell
+   ```
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -Force;
+   ```
+-  Execute command in opened PowerShell. This will install the latest fn client. More details: <https://github.com/fnproject/cli/releases>
+   ```
+   c:\fn_install\fn_windows_installer.ps1 "fn-client-install"
+   ```
+      
+- Once done with above steps, execute command in opened PowerShell
+  ```
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <<old_value>> -Force;
+  ```
 
-1. Go to: <https://github.com/fnproject/cli/releases>
-2. Download the latest `fn.exe`.
-3. Create a directory for Fn.
-    1. `cd c:\`
-    2. `mkdir fn`
-4. Copy `fn.exe` to that directory.
-5. Add your new directory to the path.
-    1. **Right-click** the **Start menu**.
-    2. Select **System**.
-    3. Scroll down in the main window and **Click** on the link **System Info**.
-    4. In the System dialog box, click **Advanced system settings**.
-    5. On the Advanced tab of the System Properties dialog box, click **Environment Variables**.
-    6. In the System Variables box of the Environment Variables dialog box, scroll to **Path** and select it.
-    7. **Click** the **lower of the two Edit buttons** in the dialog box.
-    8. **Click** the **New** button.
-    9. Enter in your directory name `c:\fn`.
-    10. **Click** the **OK** button.
-    11. Click **OK** in three successive dialog boxes, and the System dialog box closes.
+    ***<<old_value>>*** this is same as the outcome you noted down after execution of command ```Get-ExecutionPolicy``` above.
+    
 
-Now when you open a Windows **Command Prompt**, the Fn client should be in the path.
+- Close the opened PowerShell
+
+Now when you open a Windows **Command Prompt**, and execute command ```fn version```. It should show the fn version.
 
 ### (3) Install the Linux Subsystem for Windows
 The Linux subsystem for Windows is now a standard feature of Windows as of build 16215. The Linux Fn client runs fine in the subsystem. To install the Fn client do the following:
