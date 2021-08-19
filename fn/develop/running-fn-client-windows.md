@@ -27,7 +27,7 @@ To install Docker, you have to have all of the following.
 
 **Note:** *Above system need can change with newer docker desktop versions.More on requirements, check: <https://docs.docker.com/desktop/windows/install/>.*
 
- *You can also download the script:<https://raw.githubusercontent.com/fnproject/cli/cli_fn_windows_install/fn_windows_installer.ps1> locally and execute in below way to see the current system state and see whether it is meeting the above need, otherwise Docker desktop will not work.*
+ *You can also download the script:<https://raw.githubusercontent.com/fnproject/cli/cli_fn_windows_install/fn_windows_installer.ps1> locally and place it at location(```c:\fn_install\```) and execute in below way to see the current system state and see whether it is meeting the above need, otherwise Docker desktop will not work properly.*
 -  Open PowerShell as Administrator
    ```
    click Start > Windows PowerShell > Run as Administrator
@@ -43,23 +43,16 @@ To install Docker, you have to have all of the following.
 
 -  Execute command in opened PowerShell. Outcome of command will show your system state.
    ```
-   <<downloaded-script-full-path>>\fn_installer.ps1 "get-system-state"
+   c:\fn_install\fn_installer.ps1 "get-system-state"
    ```
-
-    ***<<downloaded-script-full-path>>*** is fully-qualified path of  downloaded script. *For example:*
-    ```C:\Users\<<current_user>>\Downloads\fn_install\```
-
-
+    
 - If just above step is showing that ```Hyper-V``` is not enabled then you can run command in opened PowerShell. This will enable the ```Hyper-V```. 
   This step may result in system restart, please do follow the steps below post restart. 
 
     ```
-   <<downloaded-script-full-path>>\fn_installer.ps1 "enable-hyperviser"
+   c:\fn_install\fn_installer.ps1 "enable-hyperviser"
    ```
-    ***<<downloaded-script-full-path>>*** is fully-qualified path of  downloaded script. *For example:*
-    ```C:\Users\<<current_user>>\Downloads\fn_install\```
-
-
+   
 - Once done with above steps, execute command in opened PowerShell
   ```
   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <<old_value>> -Force;
@@ -84,8 +77,8 @@ With Docker installed, you are ready to install the Fn client.
 ## Install Fn Client
 Follow the steps below to install the Fn client on Windows.
 
--  Download the script:<https://raw.githubusercontent.com/fnproject/cli/cli_fn_windows_install/fn_windows_installer.ps1> locally and execute in below way.
-   
+-  Download the script:<https://raw.githubusercontent.com/fnproject/cli/cli_fn_windows_install/fn_windows_installer.ps1> locally and place it at location(```c:\fn_install\```) if not done earlier and execute in below way.
+
 
 -  Open PowerShell as Administrator
    ```
@@ -102,12 +95,9 @@ Follow the steps below to install the Fn client on Windows.
    ```
 -  Execute command in opened PowerShell. This will install the latest fn client. More details: <https://github.com/fnproject/cli/releases>
    ```
-   <<downloaded-script-full-path>>\fn_installer.ps1 "fn-client-install"
+   c:\fn_install\fn_installer.ps1 "fn-client-install"
    ```
-    ***<<downloaded-script-full-path>>*** is fully-qualified path of downloaded script. *For example:*
-      ```C:\Users\<<current_user>>\Downloads\fn_install\```
- 
-  
+      
 - Once done with above steps, execute command in opened PowerShell
   ```
   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <<old_value>> -Force;
