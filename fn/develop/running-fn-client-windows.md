@@ -27,7 +27,7 @@ To install Docker, you have to have all of the following.
 
 **Note:** *Above system need can change with newer docker desktop versions.More on requirements, check: <https://docs.docker.com/desktop/windows/install/>.*
 
- *You can also download the script:<> locally and execute in below way to see the current system state and see whether it is meeting the above need, otherwise Docker desktop will not work.*
+ *You can also download the script:<https://raw.githubusercontent.com/fnproject/cli/cli_fn_windows_install/fn_windows_installer.ps1> locally and execute in below way to see the current system state and see whether it is meeting the above need, otherwise Docker desktop will not work.*
 -  Open PowerShell as Administrator
    ```
    click Start > Windows PowerShell > Run as Administrator
@@ -84,7 +84,7 @@ With Docker installed, you are ready to install the Fn client.
 ## Install Fn Client
 Follow the steps below to install the Fn client on Windows.
 
--  Download the script:<> locally and execute in below way.
+-  Download the script:<https://raw.githubusercontent.com/fnproject/cli/cli_fn_windows_install/fn_windows_installer.ps1> locally and execute in below way.
    
 
 -  Open PowerShell as Administrator
