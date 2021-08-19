@@ -43,14 +43,14 @@ To install Docker, you have to have all of the following.
 
 -  Execute command in opened PowerShell. Outcome of command will show your system state.
    ```
-   c:\fn_install\fn_installer.ps1 "get-system-state"
+   c:\fn_install\fn_windows_installer.ps1 "get-system-state"
    ```
     
 - If just above step is showing that ```Hyper-V``` is not enabled then you can run command in opened PowerShell. This will enable the ```Hyper-V```. 
   This step may result in system restart, please do follow the steps below post restart. 
 
     ```
-   c:\fn_install\fn_installer.ps1 "enable-hyperviser"
+   c:\fn_install\fn_windows_installer.ps1 "enable-hyperviser"
    ```
    
 - Once done with above steps, execute command in opened PowerShell
@@ -95,7 +95,7 @@ Follow the steps below to install the Fn client on Windows.
    ```
 -  Execute command in opened PowerShell. This will install the latest fn client. More details: <https://github.com/fnproject/cli/releases>
    ```
-   c:\fn_install\fn_installer.ps1 "fn-client-install"
+   c:\fn_install\fn_windows_installer.ps1 "fn-client-install"
    ```
       
 - Once done with above steps, execute command in opened PowerShell
