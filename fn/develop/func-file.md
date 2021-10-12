@@ -59,3 +59,5 @@ for more information.
 **expects:** (Optional) List of configuration environment variables required to run this function. These variables are used when you run or test locally. If these variables are not found in your local environment, then your local testing fails.
 
 **triggers:** (Optional) Array of `trigger` entities that specific triggers for the function. See [Trigger](triggers.md) for more information.
+
+**signing_details:** (Optional) Function image signing information. Supported only when Oracle Provider is used. See [Configure image signature](../../cli/how-to/create-run-fn.md) for mode details.
