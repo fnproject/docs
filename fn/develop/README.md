@@ -22,7 +22,7 @@ If you are a developer using Fn through the API, this section is for you.
 
 ### Advanced
 
-* [API Reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger.yml)
+* [API Reference](http://petstore.swagger.io/?url=https://raw.githubusercontent.com/fnproject/fn/master/docs/swagger_v2.yml)
 * [API Clients](clients.md)
 * [CLI Source](https://github.com/fnproject/cli/)
 * [Packaging functions](packaging.md)
