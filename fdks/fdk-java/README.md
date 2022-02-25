@@ -7,7 +7,7 @@ This page provides links to docs and examples on how to use the Function Develop
 * [Data Binding for function input and output](DataBinding.md)
 * [Extending the data binding functionality](ExtendingDataBinding.md)
 * [Function initialization and configuration](FunctionConfiguration.md)
-* [Accessing HTTP information From functions](HTTPGatewayFunction.md)
+* [Accessing HTTP information From functions](HTTPGatewayFunctions.md)
 * [Spring cloud functions with Fn](SpringCloudFunctionSupport.md)
 * [Testing your functions](TestingFunctions.md)
 
