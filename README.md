@@ -25,7 +25,7 @@ Fn is an event-driven, open source, [Functions-as-a-Service (FaaS)](https://gith
     * [Function Debugging](fn/troubleshoot/debug-loglevel.md)
     * [FAQ](fn/general/faq.md)
 * Using Fn with Other Languages
-    * [Using Fn with C# (Community Supported)](https://fnproject.io/tutorials/csharp/intro/)
+    * [Using Fn with C#](https://fnproject.io/tutorials/csharp/intro/)
     * [Using Fn with Go](https://fnproject.io/tutorials/Introduction/)
     * [Using Fn with Ruby](https://fnproject.io/tutorials/ruby/intro/)
 * Exploring Fn

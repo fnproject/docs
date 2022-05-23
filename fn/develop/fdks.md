@@ -7,7 +7,8 @@ Using the `fn init` CLI command will produce a boilerplate function along with t
 The Fn team has chosen a set of FDKs to initially support, while other FDKs will be labeled as "experimental".
 
 ## Officially Supported FDKs
-
+    
+* [C#](https://fnproject.io/tutorials/csharp/intro/)
 * [Go](https://github.com/fnproject/docs/tree/master/fdks/fdk-go)
 * [Java](https://github.com/fnproject/docs/blob/master/fdks/fdk-java/README.md)
 * [Python](https://github.com/fnproject/docs/blob/master/fdks/fdk-python/README.md)
