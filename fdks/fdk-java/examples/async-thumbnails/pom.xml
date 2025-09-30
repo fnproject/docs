@@ -41,7 +41,7 @@
         <dependency>
             <groupId>io.minio</groupId>
             <artifactId>minio</artifactId>
-            <version>5.0.1</version>
+            <version>8.6.0</version>
         </dependency>
         <dependency>
             <groupId>com.fnproject.fn</groupId>
