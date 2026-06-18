@@ -17,6 +17,7 @@ SUBCOMMANDS
   config, config, cf           List configurations for apps and functions
   contexts, context, ctx       List contexts
   functions, funcs, f, fn      List functions for an application
+  pbfs                         List Pre-Built Function listings and related resources
   triggers, trigs, t, tr       List all triggers
   help, h                      Shows a list of commands or help for one command
                            
