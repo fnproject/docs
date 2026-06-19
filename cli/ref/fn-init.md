@@ -27,8 +27,36 @@ COMMAND OPTIONS
   --timeout value                Function timeout (eg. 30) (default: 0)
   --idle-timeout value           Function idle timeout (eg. 30) (default: 0)
   --annotation value             Function annotation (can be specified multiple times)
+  --tag value                    Freeform tag in key=value form (repeatable)
+  --defined-tag value            Defined tag in namespace.key=value form (repeatable)
+  --provisioned-concurrency value  Provisioned concurrency (none | constant:<count>)
+  --detached-timeout value       Detached invocation timeout (e.g. 20m, 1h)
+  --on-success value             Success destination shorthand (<stream|queue|notifications>:<ocid>)
+  --on-failure value             Failure destination shorthand (<stream|queue|notifications>:<ocid>)
+  --pbf value                    Initialize function from a Pre-Built Function listing OCID
   
 ```
 
-[Some link](#)
+## Examples
+
+Initialize with provisioned concurrency:
+
+```bash
+fn init --runtime go hello-pc --provisioned-concurrency constant:5
+```
+
+Initialize with long-running settings:
+
+```bash
+fn init --runtime java hello-long \
+  --detached-timeout 20m \
+  --on-success stream:ocid1.stream.oc1..aaaa \
+  --on-failure notifications:ocid1.onstopic.oc1..aaaa
+```
+
+Initialize from PBF:
+
+```bash
+fn init --name hello-pbf --pbf ocid1.pbflisting.oc1..aaaa
+```
 
