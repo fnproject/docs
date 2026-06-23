@@ -72,7 +72,7 @@ Hello Tom from Node!
 
 Function invocation context details are available through an optional function argument.
 To receive a context object, simply add a second argument to your handler function.
-in the following example the `call_id` is obtained from the context and included in 
+in the following example the `callID` is obtained from the context and included in 
 the response message:
 
 ```javascript
@@ -83,7 +83,7 @@ fdk.handle(function(input, ctx) {
   if (input) {
     name = input;
   }
-  return 'Hello ' + name + ' from Node call ' + ctx.callId + '!';
+  return 'Hello ' + name + ' from Node call ' + ctx.callID + '!';
 })
 ```
 
