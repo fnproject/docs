@@ -58,9 +58,9 @@ replace those parts with "REDACTED").
 1. Fork the repo on GitHub, add your remote: `$ git remote add fork https://github.com/$you/fn`
 2. Fix an issue or create an issue and fix it
 3. Create a Pull Request that fixes the issue: `$ git push fork $your_branch` -> open PR from your repo to `fnproject/fn`
-4. Sign the [CLA](http://www.oracle.com/technetwork/community/oca-486395.html)
-5. Once processed, our CLA bot will automatically clear the CLA check on the PR
-6. Good Job! Thanks for being awesome!
+4. Sign the Oracle Contributor Agreement. See https://oca.opensource.oracle.com for more information.
+6. Once processed, our CLA bot will automatically clear the CLA check on the PR
+7. Good Job! Thanks for being awesome!
 
 ## Code style
 
